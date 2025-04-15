@@ -39,7 +39,7 @@ const CardList: CardItem[] = [
   },
   {
     title: "Gateways",
-    link: "/gateways/overview/index",
+    link: "/gateways/overview",
     description: (
       <>
         Learn how to interact with DIN through gateway endpoints that provide resilient, decentralized RPC access to multiple blockchain networks.

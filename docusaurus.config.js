@@ -107,7 +107,7 @@ const config = {
           {
             type: "doc",
             position: "left",
-            docId: "gateways/overview/index",
+            docId: "gateways/overview",
             label: "Gateways"
           },
           {
@@ -146,7 +146,7 @@ const config = {
               },
               {
                 label: "Gateways",
-                to: "/gateways/overview/index",
+                to: "/gateways/overview",
               },
               {
                 label: "DIN as an AVS",
