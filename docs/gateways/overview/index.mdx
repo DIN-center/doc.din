@@ -2,23 +2,20 @@
 title: Web3 Gateways Overview
 ---
 
-DIN Gateway Product Overview
+# DIN Gateway Product Overview
+
 DIN Web3 Gateways will be able to:
-Authenticate with the DIN Router using the DIN Authentication Protocol
-Request and receive access to services available on the DIN Router
-Consume the OpenTelemetry Collector from the DIN Router for ONLY the services the Gateway is accessing AND ONLY for the requests that are coming from that specific Gateway
-Note these statistics are used for manual payment invoices through Consensys Software, Inc.
-Receive data from the Watcher (CompareNodes) in order to serve as an additional verification on the requests served by the DIN Router to the Gateway
-Implement session ID to ensure consistency of responses
-Access the DIN Observability Dashboard (includes the OpenTelemetry Collector data)
-The Gateways will need to be able to ONLY consume the telemetry associated with the networks they are consuming and ONLY for the requests coming from that specific Gateway.
-(Directly share JSON file if they’re using Signoz)
-Use open channels to raise any technical issues
-(Possible Incident bot on Slack)
 
+1. Authenticate with the DIN Router using the DIN Authentication Protocol
+2. Request and receive access to services available on the DIN Router
+3. Consume the OpenTelemetry Collector from the DIN Router for ONLY the services the Gateway is accessing AND ONLY for the requests that are coming from that specific Gateway
+   - Note: these statistics are used for manual payment invoices through Consensys Software, Inc.
+4. Receive data from the Watcher (CompareNodes) in order to serve as an additional verification on the requests served by the DIN Router to the Gateway
+5. Implement session ID to ensure consistency of responses
+6. Access the DIN Observability Dashboard (includes the OpenTelemetry Collector data)
+   - The Gateways will need to be able to ONLY consume the telemetry associated with the networks they are consuming and ONLY for the requests coming from that specific Gateway.
+   - (Directly share JSON file if they're using Signoz)
+7. Use open channels to raise any technical issues
+   - (Possible Incident bot on Slack)
 
-
-
-Figure 1: DIN Protocol Overview
-
-Note: This onboarding guide is written in a series of FAQs. Please feel free to reach out to the team din@consensys.net for clarifications on processes.
+> Note: This onboarding guide is written in a series of FAQs. Please feel free to reach out to the team din@consensys.net for clarifications on processes.
