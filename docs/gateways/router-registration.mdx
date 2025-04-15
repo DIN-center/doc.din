@@ -1,0 +1,15 @@
+---
+title: DIN Router initial registration
+---
+
+DIN Router Initial Registration
+This section answers questions on how we manually add the Web3 Gateway / Ingress Operator with your appropriate permissions. A Caddy Proxy router set of configurations is used to make the connection between the user and the provider.
+
+Figure 3: DIN Proxy Request Flowchart
+
+What are the security requirements for this?
+Answer: Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new Gateway is using to access the DIN Router
+Is there an example handshake and what is registered (e.g. IP addresses vs domains)
+Answer: There is an example code that can be shared. An Ethereum address is required in order to authenticate
+What rate limiting protection is created here? All rate limiting is enforced on the Gateway side, and therefore Gateway providers must be able to pay for the requests that they use.
+Answer: The DIN Router will enforce some blocking of certain methods, but the assumption is that any requests that are sent to the DIN router by a gateway are expected to be returned. Therefore, there will be a list of methods that we will suggest do not make sense to forward to the DIN Router for certain networks
