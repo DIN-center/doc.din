@@ -96,6 +96,7 @@ const config = {
       },
       navbar: {
         title: "DIN Documentation",
+        style: 'dark',
         items: [
           {
             type: "doc",
@@ -138,6 +139,24 @@ const config = {
         links: [
           {
             title: "DIN Documentation",
+            items: [
+              {
+                label: "Get Started",
+                to: "/introduction",
+              },
+              {
+                label: "Gateways",
+                to: "/gateways/overview/index",
+              },
+              {
+                label: "DIN as an AVS",
+                to: "/avs/concepts",
+              },
+              {
+                label: "Architecture",
+                to: "/architecture-overview",
+              },
+            ],
           },
           {
             title: "Explore",
@@ -157,6 +176,19 @@ const config = {
               {
                 label: "Consensys home",
                 href: "https://consensys.net/",
+              },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/Consensys/docs-template",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.com/invite/consensys",
               },
             ],
           },

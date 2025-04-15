@@ -6,11 +6,12 @@
  .buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-top: 2rem;
   }
   
   .introductionBlock {
     /* background: var(--ifm-color-primary); */
+    background: linear-gradient(45deg, #0A0B1E, #1A1E32);
     padding: 6rem;
     text-align: left;
     width: 100%;
@@ -26,12 +27,11 @@
   
   .forceColor {
     /* color: var(--ifm-color-content-inverse); */
-    color: #000;
+    color: #fff;
   }
   
   html[data-theme="dark"] .forceColor {
-    color: var(--ifm-font-color-secondary);
-    color: #000;
+    color: #fff;
   }
   
   .title {

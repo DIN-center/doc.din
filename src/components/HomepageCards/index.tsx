@@ -26,12 +26,11 @@ type CardItem = {
 
 const CardList: CardItem[] = [
   {
-    title: "Account",
-    link: "/account",
+    title: "Get Started",
+    link: "/introduction",
     description: (
       <>
-        Got any questions about billing, limits, API keys, or are you
-        experiencing any account-related issues? We&apos;re here to help.
+        Discover how DIN provides secure, decentralized access to blockchain APIs with economic security and a streamlined developer experience.
       </>
     ),
     buttonName: "Read More",
@@ -39,12 +38,11 @@ const CardList: CardItem[] = [
     icon: CardIcon1,
   },
   {
-    title: "Blockchain Networks",
-    link: "/blockchain-networks",
+    title: "Gateways",
+    link: "/gateways/overview/index",
     description: (
       <>
-        If you&apos;re looking to get information on a blockchain or L2 network,
-        this is the section for you.
+        Learn how to interact with DIN through gateway endpoints that provide resilient, decentralized RPC access to multiple blockchain networks.
       </>
     ),
     buttonName: "Read More",
@@ -52,12 +50,11 @@ const CardList: CardItem[] = [
     icon: CardIcon2,
   },
   {
-    title: "IPFS",
-    link: "/ipfs",
+    title: "DIN as an AVS",
+    link: "/avs/concepts",
     description: (
       <>
-        Learn more about working with everyone&apos;s favorite distributed
-        content protocol.
+        Understand how DIN leverages Ethereum's security as an Actively Validated Service to ensure trustless, reliable API service delivery.
       </>
     ),
     buttonName: "Read More",
@@ -65,9 +62,9 @@ const CardList: CardItem[] = [
     icon: CardIcon3,
   },
   {
-    title: "Building with Infura",
-    link: "/building-with-infura",
-    description: <>Learn more about building with Infura.</>,
+    title: "Architecture",
+    link: "/architecture-overview",
+    description: <>Explore DIN's modular architecture including Provider Nodes, DIN Router, and economic security mechanisms that work together to deliver a robust RPC infrastructure.</>,
     buttonName: "Read More",
     buttonType: "primary",
     icon: CardIcon4,

@@ -3,6 +3,7 @@ import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageCards from "@site/src/components/HomepageCards";
+import Link from "@docusaurus/Link";
 
 import styles from "./index.module.css";
 
@@ -13,7 +14,7 @@ function HomepageHeader() {
       style={{ position: "relative" }}>
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <h1 className={clsx("hero__title", styles.forceColor, styles.title)}>
-          How can we<br></br>help you today?
+          Decentralized Infrastructure<br></br>Network
         </h1>
         <p
           className={clsx(
@@ -21,8 +22,15 @@ function HomepageHeader() {
             styles.forceColor,
             styles.subtitle,
           )}>
-          Search our knowledge base for answers to common questions.
+          A reliable decentralized solution for blockchain API services with economic security
         </p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/introduction">
+            Get Started
+          </Link>
+        </div>
       </div>
     </header>
   );

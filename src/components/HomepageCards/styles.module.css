@@ -1,5 +1,5 @@
 .cardSection {
-    background: #fff !important;
+    background: var(--ifm-background-color) !important;
   }
   
   .row {
@@ -13,7 +13,7 @@
     padding-right: 0;
     max-width: 80%;
     transition: max-width 0.3s ease;
-    background-color: #fff;
+    background-color: var(--ifm-background-color);
   }
   
   @media (max-width: 1200px) {
@@ -30,7 +30,7 @@
   }
   
   .cardIcon {
-    color: var(--text-color-2);
+    color: #FF7209;
     scale: 85%;
     position: absolute;
     right: 20px;
@@ -38,7 +38,7 @@
   }
   
   .cardTitle h3 {
-    color: var(--text-color-1);
+    color: #FF7209;
     font-size: 30px;
     padding-right: 80px;
     margin-bottom: 10px;
@@ -46,7 +46,7 @@
   }
   
   .cardBody p {
-    color: var(--text-color-1);
+    color: var(--ifm-font-color-base);
     margin-top: 20px;
     padding-right: 20px;
     font-size: 18px;
@@ -58,7 +58,7 @@
     padding-top: 20px;
     font-weight: 700;
     font-size: 2.5rem;
-    color: var(--text-color-2);
+    color: var(--ifm-font-color-base);
     margin-bottom: 30px;
   }
   
@@ -66,20 +66,26 @@
     width: 25px;
     height: 25px;
     margin-left: 10px;
-    color: var(--text-color-2);
+    color: #FF7209;
   }
   
   .card_glow {
     position: relative;
-    background-color: var(--text-color);
-    color: var(--page-background);
-    border-radius: 4px;
+    background-color: var(--ifm-card-background-color);
+    color: var(--ifm-font-color-base);
+    border-radius: 8px;
     border: none;
     overflow: visible;
     transform: scale(1);
     min-height: 270px;
-    box-shadow: 0 0 15px 2px #e1e1e1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .card_glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
   
   .card {
@@ -89,7 +95,7 @@
   }
   
   .button {
-    background: var(--text-color-1);
+    background: #FF7209;
     height: 50px;
     border: none;
     border-radius: 4px;
@@ -97,11 +103,12 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 32px;
-    transition: none;
+    transition: all 0.3s ease;
+    color: white;
   }
   
   .button:hover {
-    background-color: var(--text-color-2);
+    background-color: #FF9040;
   }
   
   .card__body {
@@ -109,4 +116,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  /* Dark mode adjustments */
+  html[data-theme='dark'] .card_glow {
+    background-color: #0f1128;
+    border: 1px solid #1D3857;
+  }
+
+  html[data-theme='dark'] .cardContainer {
+    background-color: #0A0B1E;
+  }
+
+  html[data-theme='dark'] .cardSection {
+    background-color: #0A0B1E !important;
   }
