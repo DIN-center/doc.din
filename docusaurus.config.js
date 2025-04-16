@@ -80,47 +80,28 @@ const config = {
         },
       },
       navbar: {
-        title: "DIN Documentation",
         style: "dark",
         logo: {
           alt: 'DIN Logo',
           src: 'img/logos/DIN Symbol On Light.svg', // Used in light mode
           srcDark: 'img/logos/DIN Symbol On Dark.svg', // Used in dark mode
-          height: 32,
+          height: 48,
         },
         items: [
           {
             type: "doc",
             position: "left",
             docId: "introduction",
-            label: "Get started",
+            label: "Documentation",
           },
           {
-            type: "doc",
+            href: "https://din.build",
             position: "left",
-            docId: "gateways/overview",
-            label: "Gateways",
+            label: "DIN Home",
           },
           {
-            type: "doc",
-            position: "left",
-            docId: "avs/concepts",
-            label: "DIN as an AVS",
-          },
-          {
-            type: "doc",
-            position: "left",
-            docId: "architecture-overview",
-            label: "Architecture",
-          },
-          {
-            href: "https://github.com/Consensys/docs-template",
+            href: "https://github.com/Consensys/doc.din",
             className: "header-github-link",
-            position: "right",
-          },
-          {
-            href: "https://discord.com/invite/consensys",
-            className: "header-discord-link",
             position: "right",
           },
         ],
