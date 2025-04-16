@@ -3,11 +3,11 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
-import CardIcon1 from "../../../static/img/icon_account.svg";
-import CardIcon2 from "../../../static/img/icon_networks.svg";
-import CardIcon3 from "../../../static/img/icon_ipfs.svg";
-import CardIcon4 from "../../../static/img/icon_building.svg";
-import RightArrowIcon from "../../../static/img/icon_rightarrow.svg";
+import CardIcon1 from "@site/static/img/icon_account.svg";
+import CardIcon2 from "@site/static/img/icon_networks.svg";
+import CardIcon3 from "@site/static/img/icon_ipfs.svg";
+import CardIcon4 from "@site/static/img/icon_building.svg";
+import RightArrowIcon from "@site/static/img/icon_rightarrow.svg";
 
 type CardItem = {
   title: string;

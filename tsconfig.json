@@ -13,9 +13,18 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": ["./*"]
+    }
   },
-  "include": ["src/**/*", "docs/**/*", "blog/**/*"],
+  "include": [
+    "src/**/*", 
+    "docs/**/*", 
+    "blog/**/*",
+    "types.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "build",

@@ -63,12 +63,12 @@
     "@typescript-eslint/parser": "^6.13.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint-plugin-react": "^7.33.2",
     "semantic-release": "^24.0.0",
     "stylelint": "^15.0.0 ",
     "stylelint-config-standard": "^34.0.0",
     "tsc-files": "^1.1.4",
-    "typescript": "~5.3.3",
-    "eslint-plugin-react": "^7.33.2"
+    "typescript": "~5.3.3"
   },
   "browserslist": {
     "production": [
