@@ -1,12 +1,12 @@
 ---
-title: DIN Authentication
+title: Authentication
 ---
 
-# DIN Authentication
+# DIN authentication
 
 This section describes how a DIN Gateway would be added as an Ingress Operator for the router. We have mainly done this manually (as Infura was our only ingress operator in scope), but we are expanding the authentication protocol to include the additional handshake. The alpha testing for security purposes will likely remain manual (in collaboration with our dev team).
 
-## Authentication Overview
+## Authentication overview
 
 **Figure 2: DIN Authentication**
 
@@ -93,7 +93,7 @@ Where:
 - **$USES_LIMIT**: The number of times this key may be used. Either this or "exp" should be specified, not both.
 - **$ERROR_MESSAGE**: A message indicating why the other fields could not be provided.
 
-## Request Flow
+## Request flow
 
 For each request to the DIN Router:
 

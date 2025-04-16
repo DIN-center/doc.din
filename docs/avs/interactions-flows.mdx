@@ -2,15 +2,15 @@
 title: Interactions and flows
 ---
 
-# DIN AVS Interactions and Flows
+# DIN AVS interactions and flows
 
 To be more explicit, Figure 5 shows the screens and actions the DIN as an AVS performs between the DIN Application and the set of DIN backend components (e.g. Router, Payments, Allowlists).
 
 > Note: All sequence diagrams generated from websequencediagrams.com
 
-## DIN Provider Interactions
+## DIN provider interactions
 
-### DIN App - Provider Onboarding Form (with Operator Sets)
+### DIN App - Provider onboarding form (with Operator Sets)
 
 The DIN App Provider Onboarding form allows DIN Providers to get onboarded into the AVS as an operator in the proper Operator Set. Step-by-step, this looks like:
 
@@ -30,7 +30,7 @@ DIN AVS->DIN App: Update Provider onboarding status
 DIN App->DIN Provider: Display onboarding status (e.g., Approved, Pending, or Rejected)
 ```
 
-### DIN App - Provider Onboarding Form (with Token Deposit Contract)
+### DIN App - Provider onboarding form (with Token Deposit Contract)
 
 The DIN App Provider Onboarding form allows DIN Providers to get onboarded via the DIN Token Deposit Contract and AVS. Step-by-step, this looks like:
 
@@ -52,7 +52,7 @@ DIN AVS->DIN App: Notify onboarding status
 DIN App->DIN Provider: Update onboarding status
 ```
 
-### DIN App - Provider New Node Form
+### DIN App - Provider new node form
 
 The DIN App - Provider New Node form allows Providers to register their node metadata and endpoints to initialize testing with DIN Watchers. Step-by-step looks like this:
 
@@ -74,7 +74,7 @@ DIN AVS->DIN Router/Proxy: Update with DIN Endpoints
 DIN App->DIN Provider: Confirm node registration and testing status
 ```
 
-### DIN Provider Reputation Explorer
+### DIN provider reputation explorer
 
 The Provider identities are available on the AVS as a publicly accessible explorer. Some metadata might include:
 
@@ -105,7 +105,7 @@ DIN Payment Module->DIN App: Return payment and staking history
 DIN App->User: Display Provider reputation and live updates
 ```
 
-### DIN Network/Node Health Explorer
+### DIN network/node health explorer
 
 The Networks and Node identities are viewable on the AVS as a publicly accessible explorer. Some metadata for the Network chain may include:
 - Network/Chain
@@ -144,7 +144,7 @@ DIN Payment Module->DIN App: Return payment and staking history
 DIN App->User: Display Network and Node health with live updates and historical data
 ```
 
-### DIN Provider Notifications and Challenges
+### DIN provider notifications and challenges
 
 DIN Providers are notified of any challenges to their performance. The notifications should be automated and would be an important part for collaborating with multiple providers.
 
@@ -165,9 +165,9 @@ DIN AVS->DIN App: Confirm resolution or invoke slashing
 DIN App->DIN Provider: Update on resolution status or penalty invoked
 ```
 
-## DIN Watcher Interactions
+## DIN watcher interactions
 
-### DIN Watchers join DIN AVS 
+### DIN watchers join DIN AVS 
 
 DIN Watchers need to join the DIN AVS as an Operator. This requires the deleted staking to run the shared explorer and onboarding functionality. The process of being added as an Operator is handled by the EigenLayer components.
 
@@ -185,7 +185,7 @@ DIN AVS->DIN App: Confirm successful registration
 DIN App->DIN Watcher: Notify onboarding completion and Operator status
 ```
 
-### DIN Watchers earn for performing Operator Functionality
+### DIN watchers earn for performing operator functionality
 
 DIN Watchers are rewarded within the EigenLayer ecosystem for running as an Operator with rewards. The DIN Watchers separately can earn for completing tests on fulfilling bounties for onboarding DIN nodes.
 
