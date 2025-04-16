@@ -1,5 +1,6 @@
 .cardSection {
-    background: var(--ifm-background-color) !important;
+    background: var(--ifm-background-color);
+    padding: 2rem 0;
   }
   
   .row {
@@ -13,7 +14,6 @@
     padding-right: 0;
     max-width: 80%;
     transition: max-width 0.3s ease;
-    background-color: var(--ifm-background-color);
   }
   
   @media (max-width: 1200px) {
@@ -123,12 +123,14 @@
   html[data-theme='dark'] .card_glow {
     background-color: #0f1128;
     border: 1px solid #1D3857;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   }
 
   html[data-theme='dark'] .cardContainer {
-    background-color: #0A0B1E;
+    padding: 20px;
+    border-radius: 8px;
   }
 
   html[data-theme='dark'] .cardSection {
-    background-color: #0A0B1E !important;
+    background-color: #0f1128;
   }

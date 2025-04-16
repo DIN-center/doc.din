@@ -160,7 +160,7 @@ export default function HomepageCards(): JSX.Element {
   }, []);
 
   return (
-    <section className={clsx("margin-top--lg", "margin-bottom--lg")}>
+    <section className={clsx("margin-top--lg", "margin-bottom--lg", styles.cardSection)}>
       <div className={clsx("container", styles.cardContainer)}>
         <br />
         <Heading as="h1" className={styles.heading}>
