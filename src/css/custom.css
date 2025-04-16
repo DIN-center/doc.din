@@ -34,11 +34,11 @@
   --ifm-color-primary-darker: #CC5800;
   --ifm-color-primary-darkest: #B34E00;
   --ifm-navbar-background-color: #0A0B1E;
-  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-color: #fff;
   --ifm-navbar-link-hover-color: #FF9040;
   --ifm-footer-background-color: #0A0B1E;
-  --ifm-footer-color: #ffffff;
-  --ifm-footer-link-color: #ffffff;
+  --ifm-footer-color: #fff;
+  --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #FF9040;
 }
 
@@ -74,14 +74,14 @@
 /* Card-like styling for boxes similar to Infura's UI */
 .card {
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   transition: all 0.3s ease;
   border: 1px solid #e4e4e7;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
 }
 
 [data-theme="dark"] .card {

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import CardIcon1 from "../../../static/img/icon_account.svg";
 import CardIcon2 from "../../../static/img/icon_networks.svg";
@@ -88,7 +89,7 @@ function Card({
               <Icon style={{ width: "50px", height: "50px" }} />
             </div>
             <div className={styles.cardTitle}>
-              <h3>{title}</h3>
+              <Heading as="h3">{title}</Heading>
             </div>
           </div>
           <div
@@ -162,9 +163,9 @@ export default function HomepageCards(): JSX.Element {
     <section className={clsx("margin-top--lg", "margin-bottom--lg")}>
       <div className={clsx("container", styles.cardContainer)}>
         <br />
-        <h1 className={styles.heading}>
+        <Heading as="h1" className={styles.heading}>
           Quick links <RightArrowIcon className={styles.headerArrow} />
-        </h1>
+        </Heading>
         <br />
         <div className="row" ref={rowRef} style={{ paddingBottom: "3rem" }}>
           {CardList.map((props, idx) => (

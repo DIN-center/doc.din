@@ -4,6 +4,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageCards from "@site/src/components/HomepageCards";
 import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 
@@ -13,9 +14,9 @@ function HomepageHeader() {
       className={clsx(styles.introductionBlock)}
       style={{ position: "relative" }}>
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <h1 className={clsx("hero__title", styles.forceColor, styles.title)}>
+        <Heading as="h1" className={clsx("hero__title", styles.forceColor, styles.title)}>
           Decentralized Infrastructure<br></br>Network
-        </h1>
+        </Heading>
         <p
           className={clsx(
             "hero__subtitle",
