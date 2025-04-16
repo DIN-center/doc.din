@@ -42,24 +42,6 @@ const config = {
           routeBasePath: "/",
           path: "./docs",
           includeCurrentVersion: true,
-          // lastVersion: "23.x",
-          // versions: {
-          //   //defaults to the ./docs folder
-          //   // using 'development' instead of 'next' as path
-          //   current: {
-          //     label: "development",
-          //     path: "development",
-          //   },
-          //   //the last stable release in the versioned_docs/version-stable
-          //   "23.x": {
-          //     label: "stable (23.x)",
-          //   },
-          //   "22.x": {
-          //     label: "22.x",
-          //   },
-          // },
-          // @ts-ignore
-          // eslint-disable-next-line global-require
           include: ["**/*.md", "**/*.mdx"],
           exclude: [
             "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -76,6 +58,10 @@ const config = {
       },
     ],
   ],
+
+  future: {
+    experimental_faster: true,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

@@ -1,6 +1,6 @@
 {
-  "name": "docs-template",
-  "version": "1.19.0",
+  "name": "doc.din",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.7.0",
+    "@docusaurus/faster": "^3.7.0",
     "@docusaurus/plugin-client-redirects": "^3.7.0",
     "@docusaurus/plugin-google-gtag": "^3.7.0",
     "@docusaurus/plugin-google-tag-manager": "^3.7.0",
