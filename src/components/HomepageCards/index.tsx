@@ -163,9 +163,12 @@ export default function HomepageCards(): JSX.Element {
     <section className={clsx("margin-top--lg", "margin-bottom--lg", styles.cardSection)}>
       <div className={clsx("container", styles.cardContainer)}>
         <br />
-        <Heading as="h1" className={styles.heading}>
-          Quick links <RightArrowIcon className={styles.headerArrow} />
-        </Heading>
+        <div className={styles.headerWithLogo}>
+          <Heading as="h1" className={styles.heading}>
+            Quick links <RightArrowIcon className={styles.headerArrow} />
+          </Heading>
+          <img className={styles.headerIcon} alt="DIN Symbol" />
+        </div>
         <br />
         <div className="row" ref={rowRef} style={{ paddingBottom: "3rem" }}>
           {CardList.map((props, idx) => (

@@ -53,6 +53,23 @@
     font-weight: 300;
   }
   
+  .headerWithLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  
+  .headerIcon {
+    content: url('/img/logos/DIN Symbol On Light.svg');
+    width: 40px;
+    height: 40px;
+  }
+  
+  html[data-theme="dark"] .headerIcon {
+    content: url('/img/logos/DIN Symbol On Dark.svg');
+  }
+  
   .heading {
     text-align: left;
     padding-top: 20px;

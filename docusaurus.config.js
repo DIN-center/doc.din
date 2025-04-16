@@ -13,7 +13,7 @@ const config = {
   baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicons/favicon.svg",
   trailingSlash: false,
 
   // GitHub pages deployment config.
@@ -82,6 +82,12 @@ const config = {
       navbar: {
         title: "DIN Documentation",
         style: "dark",
+        logo: {
+          alt: 'DIN Logo',
+          src: 'img/logos/DIN Symbol On Light.svg', // Used in light mode
+          srcDark: 'img/logos/DIN Symbol On Dark.svg', // Used in dark mode
+          height: 32,
+        },
         items: [
           {
             type: "doc",

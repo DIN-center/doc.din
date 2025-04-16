@@ -3,9 +3,17 @@
  * and scoped locally.
  */
 
- .buttons {
+ .logoWrapper {
+    margin-bottom: 3rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 2rem;
   }
   
@@ -13,7 +21,7 @@
     /* background: var(--ifm-color-primary); */
     background: linear-gradient(45deg, #0A0B1E, #1A1E32);
     padding: 6rem;
-    text-align: left;
+    text-align: center;
     width: 100%;
     min-height: 50vh;
   }
@@ -52,10 +60,20 @@
     font-weight: 700;
     color: #fff;
     transition: font-size 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   @media (max-width: 996px) {
     .subtitle {
       font-size: 1.2rem;
     }
+  }
+
+  .dinLogo {
+    content: url('/img/logos/DIN Logo On Light.svg');
+  }
+
+  html[data-theme="dark"] .dinLogo {
+    content: url('/img/logos/DIN Logo On Dark.svg');
   }

@@ -13,7 +13,15 @@ function HomepageHeader() {
     <header
       className={clsx(styles.introductionBlock)}
       style={{ position: "relative" }}>
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+      <div className="container" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
+        <div className={styles.logoWrapper}>
+          <img 
+            src="/img/logos/DIN Logo On Dark.svg" 
+            alt="DIN Logo"
+            className={styles.dinLogo}
+            width={400}
+          />
+        </div>
         <Heading as="h1" className={clsx("hero__title", styles.forceColor, styles.title)}>
           Decentralized Infrastructure<br></br>Network
         </Heading>
