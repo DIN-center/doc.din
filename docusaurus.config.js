@@ -1,4 +1,4 @@
-const {themes} = require("prism-react-renderer");
+const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
@@ -8,8 +8,7 @@ const baseUrl = isDev ? "/" : "/";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "DIN docs",
-  tagline:
-    "Documentation for the Decentralized Infrastrucure Network (DIN).",
+  tagline: "Documentation for the Decentralized Infrastrucure Network (DIN).",
   url: "https://docs-template.consensys.io",
   baseUrl,
   onBrokenLinks: "throw",
@@ -82,31 +81,31 @@ const config = {
       },
       navbar: {
         title: "DIN Documentation",
-        style: 'dark',
+        style: "dark",
         items: [
           {
             type: "doc",
             position: "left",
             docId: "introduction",
-            label: "Get started"
+            label: "Get started",
           },
           {
             type: "doc",
             position: "left",
             docId: "gateways/overview",
-            label: "Gateways"
+            label: "Gateways",
           },
           {
             type: "doc",
             position: "left",
             docId: "avs/concepts",
-            label: "DIN as an AVS"
+            label: "DIN as an AVS",
           },
           {
             type: "doc",
             position: "left",
             docId: "architecture-overview",
-            label: "Architecture"
+            label: "Architecture",
           },
           {
             href: "https://github.com/Consensys/docs-template",
