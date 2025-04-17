@@ -126,7 +126,7 @@ function Card({
   );
 }
 
-export default function HomepageCards(): JSX.Element {
+const HomepageCards: React.FC = () => {
   // Specify the ref type as HTMLDivElement
   const rowRef = useRef<HTMLDivElement>(null);
 
@@ -178,4 +178,6 @@ export default function HomepageCards(): JSX.Element {
       </div>
     </section>
   );
-}
+};
+
+export default HomepageCards;
