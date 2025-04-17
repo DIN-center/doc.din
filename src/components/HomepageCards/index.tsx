@@ -12,7 +12,7 @@ import RightArrowIcon from "@site/static/img/icon_rightarrow.svg";
 type CardItem = {
   title: string;
   link: string;
-  description: JSX.Element;
+  description: React.ReactNode;
   buttonName: string;
   buttonType:
     | "primary"
@@ -79,7 +79,7 @@ function Card({
   buttonName,
   buttonType,
   icon: Icon,
-}: CardItem) {
+}: CardItem): React.ReactElement {
   return (
     <div className={clsx("col", "col--6")}>
       <div className={clsx("card-demo", styles.cardDemo)}>
