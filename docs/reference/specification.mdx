@@ -1,0 +1,62 @@
+---
+title: Specification
+---
+
+# DIN protocol specification
+
+## Node registry contract
+
+The Node Registry Contract functions as DIN's public directory, where Node Operators register their supported protocols, services, and capabilities. By staking tokens and listing their services, Node Operators make themselves available for API requests from DIN users and Web3 Gateways. This registry provides transparency into each operator's credentials, performance history, and service reliability, ensuring users can make informed choices.
+
+Node operators must submit their capabilities to an on-chain registry contract which includes:
+
+- **Supported Networks**: A list of cryptocurrency networks supported by the operator.
+- **JSON RPC Commands**: The API supported by the operator for each blockchain network. It can include custom commands.
+- **Additional Metadata**: The protocol has taken into account some metadata that might be sensitive to be shared on public ledger. Information such as the IP addresses of customers or specific location of nodes for each network may be useful in the routing algorithm, but leak too much information about the Infrastructure Provider's strategies.
+
+## Gateway contract
+
+The Gateway Contract collects and manages payments from users and allocates resources across the network based on user preferences and SLAs. By holding a treasury of DIN tokens, the contract distributes rewards to Node Operators and Watchers proportionally to their service contributions. It also handles user entitlements, such as balances and request prioritization, which are monitored and enforced according to real-time SLA data from Network Watchers.
+
+This gateway contract has two responsibilities:
+
+- **Split reward**: It should issue a portion of the treasury as a subsidy and split the fees amongst agents who run the network.
+- **Resource control**: It specifies the quantity of computational units alongside an expiry time such that a node operator can verify a user's entitlement on the network.
+
+## Watcher staking and onboarding
+
+Watchers join DIN as AVS Operators by staking via EigenLayer restaking (or DIN token registration through the staking contract). Their stake serves as collateral, with penalties enforced through EigenLayer's slashing protocols for any lapses in performance or accuracy. The watcher set is open-membership such that anyone can join given their economic staking and report on the DIN network's reliability. The quantity of required stake is adjusted by the DAO.
+
+## Node operator registration and licenses
+
+Node Operators must acquire a license to participate in DIN, which is obtained by joining the DIN AVS through EigenLayer restaking (or staking tokens in the staking contract). Upon registration, operators declare the blockchain protocols they support, such as Ethereum, Layer 2 networks, or additional Layer 1s, and detail their API capabilities in the Node Registry. Node Operators are then available to service requests from users, governed by SLA requirements and monitored by Watchers.
+
+Note that the identity registration of the Infrastructure Providers (entity) and Node operators (nodes) for specific blockchain protocol services are separate. The completed registration of an Infrastructure Provider adds its identity for the application and set of tools via EigenLayer, while the individual set of nodes fulfilling the blockchain protocol requirements are separately tested and audited by the Node Watchers. In other words, an Infrastructure Provider may have an overall reputation that is impacted by their combination of nodes operating across networks. This allows specific nodes to be removed without necessarily removing the infrastructure provider entity.
+
+## Authentication
+
+[Full DIN Authentication specs](/gateways/authentication)
+
+To ensure secure and efficient access to DIN Provider endpoints, the Decentralized Infrastructure Network (DIN) employs an authentication protocol that enables a handshake between DIN Routers and DIN Providers. This protocol ensures that only authorized DIN Routers can access provider endpoints, even though these endpoints are not designed to be kept secret and are publicly accessible. The authentication mechanism is based on Ethereum's EIP-4361 standard ("Sign-In with Ethereum") and is designed to be compatible with future upgrades, including potential payment integrations.
+
+## Load balancing
+
+To achieve decentralized scalability, DIN distributes the computational load across multiple Node Operators, enhancing reliability, reducing latency, and maintaining high service levels even during peak demand periods. This load-sharing mechanism allows DIN to balance requests dynamically, preventing any single operator from becoming a bottleneck or point of failure.
+
+### Load-balancing mechanism
+
+- **Distributed Routing**: Requests are routed through Web3 Gateways to available Node Operators based on network conditions, SLA requirements, and real-time performance metrics. This distribution ensures that requests are handled by the most capable and responsive operators, reducing latency and improving overall network performance.
+
+- **Dynamic Reallocation**: As demand fluctuates or if certain Node Operators experience downtime, requests can be rerouted in real time to maintain uninterrupted service. Watchers continuously monitor operator performance, and the system automatically reallocates requests to ensure consistency.
+
+### Preventing resource overload
+
+- **Session Token Expiration and Usage Limits**: To prevent unauthorized or excessive request loads, session tokens are configured with usage limits or expiration timestamps, managed by each DIN Provider. These tokens control the number of requests each authorized DIN Router can make, preventing overloading of any single provider.
+
+- **SLA-Based Throttling**: Requests that exceed a user's CU allocation or violate SLA terms may be deprioritized or rejected, ensuring equitable distribution of network resources. Throttling ensures that network load remains balanced, supporting stable performance across all users.
+
+### Role of network watchers
+
+- **Real-Time Monitoring**: Network Watchers play a vital role in the load-sharing process by continuously tracking and validating operator response times, accuracy, and SLA compliance. This monitoring data is published to the public bulletin board, allowing the DAO and users to assess operator reliability and request routing.
+
+- **Load Redistribution**: If a Node Operator underperforms or faces connectivity issues, Watchers flag the issue, and requests are automatically rerouted to maintain service continuity. EigenLayer's AVS integration supports slashing penalties for operators that fail to meet performance benchmarks, encouraging operators to maintain consistent and reliable service.

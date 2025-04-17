@@ -1,0 +1,14 @@
+---
+title: Lessons learned from Infura
+---
+
+# Lessons learned from Infura
+
+Infura has been in the web3 infrastructure business for almost as long as Ethereum. We have mostly focused on the optimization and technical expertise of our EVM networks. The following architecture is a high level view of the components and configurations we've used to run a consistent set of services.
+
+## Best practices
+
+Within Consensys, Infura created a Looker dashboard to show networks integrated through Infura's reverse proxy. This has been a useful tool and highly recommended for integration.
+
+QA Testing is heavily integrated with each component of the internal router and reverse proxy, ensuring high availability and consistent performance.
+

@@ -1,0 +1,79 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ .logoWrapper {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .introductionBlock {
+    /* background: var(--ifm-color-primary); */
+    background: linear-gradient(45deg, #0A0B1E, #1A1E32);
+    padding: 6rem;
+    text-align: center;
+    width: 100%;
+    min-height: 50vh;
+  }
+  
+  @media only screen and (max-width: 996px) {
+    .introductionBlock {
+      padding: 5rem 0;
+      word-wrap: normal;
+    }
+  }
+  
+  .forceColor {
+    /* color: var(--ifm-color-content-inverse); */
+    color: #fff;
+  }
+  
+  html[data-theme="dark"] .forceColor {
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 4.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+    transition: font-size 0.3s ease;
+  }
+  
+  @media (max-width: 996px) {
+    .title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    transition: font-size 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 996px) {
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .dinLogo {
+    content: url('/img/logos/DIN Logo On Light.svg');
+  }
+
+  html[data-theme="dark"] .dinLogo {
+    content: url('/img/logos/DIN Logo On Dark.svg');
+  }

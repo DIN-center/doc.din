@@ -1,0 +1,211 @@
+---
+title: Interactions and flows
+---
+
+# DIN AVS interactions and flows
+
+To be more explicit, Figure 5 shows the screens and actions the DIN as an AVS performs between the DIN Application and the set of DIN backend components (e.g. Router, Payments, Allowlists).
+
+> Note: All sequence diagrams generated from websequencediagrams.com
+
+## DIN provider interactions
+
+### DIN App - Provider onboarding form (with Operator Sets)
+
+The DIN App Provider Onboarding form allows DIN Providers to get onboarded into the AVS as an operator in the proper Operator Set. Step-by-step, this looks like:
+
+1. DIN Provider uses the EigenLayer Application to become an Operator
+2. DIN AVS is notified of applying DIN Provider to an Operator Set
+3. DIN Provider is reviewed by Watchers to be added to identity
+4. DIN App is updated with a status for DIN Provider from the DIN AVS process
+
+```
+title DIN Provider Onboarding into AVS as Operator
+
+DIN Provider->EigenLayer App: Apply to become an Operator
+EigenLayer App->DIN AVS: Notify of new DIN Provider application for Operator Set
+DIN AVS->Network Watchers: Request review of DIN Provider identity
+Network Watchers->DIN AVS: Submit review results (approved/rejected)
+DIN AVS->DIN App: Update Provider onboarding status
+DIN App->DIN Provider: Display onboarding status (e.g., Approved, Pending, or Rejected)
+```
+
+### DIN App - Provider onboarding form (with Token Deposit Contract)
+
+The DIN App Provider Onboarding form allows DIN Providers to get onboarded via the DIN Token Deposit Contract and AVS. Step-by-step, this looks like:
+
+1. DIN Provider connects wallet and uses SIWE EOA identity for staking
+2. Interface for staking X amount to DIN Token Deposit
+3. DIN AVS is notified of the new DIN Provider identity to initialize Watcher confirmation and approval
+4. DIN App is updated with a status for DIN Provider
+
+```
+title DIN Provider Onboarding Sequence
+
+DIN Provider->DIN App: Connect Wallet (SIWE for EOA Identity)
+note right of DIN App: SIWE (Sign-In with Ethereum) confirms EOA identity
+DIN App->DIN Token Deposit Contract: Stake X amount
+DIN Token Deposit Contract->DIN AVS: Notify of new DIN Provider
+DIN AVS->Network Watchers: Initialize confirmation and approval
+Network Watchers->DIN AVS: Send confirmation response
+DIN AVS->DIN App: Notify onboarding status
+DIN App->DIN Provider: Update onboarding status
+```
+
+### DIN App - Provider new node form
+
+The DIN App - Provider New Node form allows Providers to register their node metadata and endpoints to initialize testing with DIN Watchers. Step-by-step looks like this:
+
+1. Watchers informed on newly added DIN Endpoints
+2. Watchers perform endpoint testing
+3. Watchers update testing data to AVS and Node explorer metadata
+4. DIN Router / Proxy updated with DIN Endpoints
+
+```
+title DIN Provider New Node Registration Sequence
+
+DIN Provider->DIN App: Submit Node Metadata and Endpoints
+DIN App->Network Watchers: Notify of new DIN Endpoints
+Network Watchers->DIN Endpoints: Perform endpoint testing
+DIN Endpoints->Network Watchers: Return test results
+Network Watchers->DIN AVS: Update testing data
+Network Watchers->Node Explorer: Update metadata
+DIN AVS->DIN Router/Proxy: Update with DIN Endpoints
+DIN App->DIN Provider: Confirm node registration and testing status
+```
+
+### DIN provider reputation explorer
+
+The Provider identities are available on the AVS as a publicly accessible explorer. Some metadata might include:
+
+- Provider identity
+- Provider address (public key)
+- Total rewards
+- Number of active services
+- Total Staked
+
+To pull this information:
+1. Watchers ping nodes to live update node health
+2. DIN Router stores reputation on successfully completed relays
+3. DIN Payment module updated on relays
+
+```
+title DIN Provider Reputation Explorer Sequence
+
+User->DIN App: Request Provider Reputation Data
+DIN App->DIN AVS: Query for Provider Metadata
+DIN AVS->DIN App: Return metadata (identity, address, rewards, services, staked amount)
+note right of DIN App: Provider metadata is displayed to the user
+DIN App->Network Watchers: Ping nodes for live health updates
+Network Watchers->DIN AVS: Update node health status
+DIN App->DIN Router: Query relay reputation data
+DIN Router->DIN App: Return relay success rates
+DIN App->DIN Payment Module: Query rewards and staking updates
+DIN Payment Module->DIN App: Return payment and staking history
+DIN App->User: Display Provider reputation and live updates
+```
+
+### DIN network/node health explorer
+
+The Networks and Node identities are viewable on the AVS as a publicly accessible explorer. Some metadata for the Network chain may include:
+- Network/Chain
+- Network/Chain Name
+- Total Relays
+- 30 Day of Relays
+
+Within each DIN Network/Chain, some metadata may include:
+- Provider Count
+- Total Relays
+- Provider (name)
+- Node & Endpoint Status
+- Geolocation (Global, Europe, US-West, US-Center, US-East, Asia)
+- 30 Day Relays
+- 90 Day Relays
+- Provider Stakes
+
+In order to pull this data:
+1. Watchers ping nodes to live update node health
+2. DIN Router stores reputation on successfully completed relays
+3. DIN Payment module updated on relays
+
+```
+title DIN Network/Node Health Explorer Sequence
+
+User->DIN App: Request Network/Node Health Data
+DIN App->DIN AVS: Query for Network/Chain Metadata
+DIN AVS->DIN App: Return network/chain data (e.g., chain name, total relays, 30-day relays)
+note right of DIN App: Network/chain-level metadata is displayed to the user
+DIN App->Network Watchers: Ping nodes for live health updates
+Network Watchers->DIN AVS: Update node and endpoint health status
+DIN App->DIN Router: Query relay reputation and success rates
+DIN Router->DIN App: Return relay statistics (e.g., provider counts, endpoint status, geolocations)
+DIN App->DIN Payment Module: Query rewards and staking data
+DIN Payment Module->DIN App: Return payment and staking history
+DIN App->User: Display Network and Node health with live updates and historical data
+```
+
+### DIN provider notifications and challenges
+
+DIN Providers are notified of any challenges to their performance. The notifications should be automated and would be an important part for collaborating with multiple providers.
+
+1. DIN AVS checks DIN Provider reputation for threshold
+2. Warnings and slashing is invoked by DIN AVS
+
+```
+title DIN Provider Notifications and Challenges Sequence
+
+DIN AVS->DIN Provider: Check reputation and performance thresholds
+note right of DIN AVS: Evaluate metrics like uptime, relays completed, and validation scores
+DIN AVS->DIN App: Notify DIN Provider of performance status
+note right of DIN App: Automated notifications are sent for warnings or issues
+DIN App->DIN Provider: Send challenge notification (e.g., warning or penalty details)
+DIN Provider->DIN App: Acknowledge notification and submit response (if applicable)
+DIN App->DIN AVS: Forward Provider response for review
+DIN AVS->DIN App: Confirm resolution or invoke slashing
+DIN App->DIN Provider: Update on resolution status or penalty invoked
+```
+
+## DIN watcher interactions
+
+### DIN watchers join DIN AVS 
+
+DIN Watchers need to join the DIN AVS as an Operator. This requires the deleted staking to run the shared explorer and onboarding functionality. The process of being added as an Operator is handled by the EigenLayer components.
+
+```
+title DIN Watchers Joining DIN AVS as Operators Sequence
+
+DIN Watcher->DIN App: Initiate Operator Onboarding
+DIN App->EigenLayer Components: Request staking process initiation
+EigenLayer Components->DIN App: Confirm staking requirements
+DIN App->DIN Watcher: Display staking requirements and onboarding steps
+DIN Watcher->DIN App: Submit stake and operator metadata
+DIN App->EigenLayer Components: Process staked tokens
+EigenLayer Components->DIN AVS: Register DIN Watcher as Operator
+DIN AVS->DIN App: Confirm successful registration
+DIN App->DIN Watcher: Notify onboarding completion and Operator status
+```
+
+### DIN watchers earn for performing operator functionality
+
+DIN Watchers are rewarded within the EigenLayer ecosystem for running as an Operator with rewards. The DIN Watchers separately can earn for completing tests on fulfilling bounties for onboarding DIN nodes.
+
+```
+title DIN Watchers Earning Rewards for Operator Functionality
+
+DIN AVS->DIN Watchers: Assign operator tasks (e.g., validation, node testing)
+DIN Watchers->DIN Nodes: Perform validation and endpoint testing
+DIN Nodes->DIN Watchers: Return test results
+DIN Watchers->DIN AVS: Submit validation and testing outcomes
+DIN AVS->EigenLayer Components: Record successful operator functionality
+EigenLayer Components->DIN Watchers: Issue rewards for operator tasks
+DIN Watchers->DIN App: Accept bounties for onboarding new DIN Nodes
+DIN App->DIN Watchers: Assign onboarding tests
+DIN Watchers->DIN Nodes: Complete onboarding tests
+DIN Nodes->DIN Watchers: Return test outcomes
+DIN Watchers->DIN App: Submit completed onboarding results
+DIN App->DIN Payment Module: Process bounty rewards
+DIN Payment Module->DIN Watchers: Issue rewards for onboarding bounties
+```
+
+
+

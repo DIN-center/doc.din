@@ -1,4 +1,4 @@
-const {themes} = require("prism-react-renderer");
+const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
@@ -7,20 +7,19 @@ const baseUrl = isDev ? "/" : "/";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Consensys docs guide",
-  tagline:
-    "A template documentation site repository and contribution guidelines.",
+  title: "DIN docs",
+  tagline: "Documentation for the Decentralized Infrastrucure Network (DIN).",
   url: "https://docs-template.consensys.io",
   baseUrl,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicons/favicon.svg",
   trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Consensys", // Usually your GitHub org/user name.
-  projectName: "docs-template", // Usually your repo name.
+  projectName: "doc.din", // Usually your repo name.
   deploymentBranch: "gh-pages", // Github Pages deploying branch
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -42,24 +41,6 @@ const config = {
           routeBasePath: "/",
           path: "./docs",
           includeCurrentVersion: true,
-          // lastVersion: "23.x",
-          // versions: {
-          //   //defaults to the ./docs folder
-          //   // using 'development' instead of 'next' as path
-          //   current: {
-          //     label: "development",
-          //     path: "development",
-          //   },
-          //   //the last stable release in the versioned_docs/version-stable
-          //   "23.x": {
-          //     label: "stable (23.x)",
-          //   },
-          //   "22.x": {
-          //     label: "22.x",
-          //   },
-          // },
-          // @ts-ignore
-          // eslint-disable-next-line global-require
           include: ["**/*.md", "**/*.mdx"],
           exclude: [
             "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -77,32 +58,13 @@ const config = {
     ],
   ],
 
+  future: {
+    experimental_faster: true,
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: "NSRFPEJ4NC",
-
-      //   // Public API key: it is safe to commit it
-      //   apiKey: "cea41b975ad6c9a01408dfda6e0061d3",
-
-      //   indexName: "docs-template", // Ping #documentation on Slack for your index name
-
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
-
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   externalUrlRegex: "external\\.com|domain\\.com",
-
-      //   // Optional: Algolia search parameters
-      //   searchParameters: {},
-
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: "search",
-
-      //   // ... other Algolia params
-      // },
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
@@ -118,23 +80,28 @@ const config = {
         },
       },
       navbar: {
-        title: "Consensys docs guide",
+        style: "dark",
         logo: {
-          alt: "Consensys logo",
-          src: "img/logo.svg",
-          srcDark: "img/logo_dark.svg",
-          width: 32,
-          height: 32,
+          alt: 'DIN Logo',
+          src: 'img/logos/DIN Symbol On Light.svg', // Used in light mode
+          srcDark: 'img/logos/DIN Symbol On Dark.svg', // Used in dark mode
+          height: 48,
         },
         items: [
           {
-            href: "https://github.com/Consensys/docs-template",
-            className: "header-github-link",
-            position: "right",
+            type: "doc",
+            position: "left",
+            docId: "introduction",
+            label: "Documentation",
           },
           {
-            href: "https://discord.com/invite/consensys",
-            className: "header-discord-link",
+            href: "https://din.build",
+            position: "left",
+            label: "DIN Home",
+          },
+          {
+            href: "https://github.com/Consensys/doc.din",
+            className: "header-github-link",
             position: "right",
           },
         ],
@@ -143,44 +110,44 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Consensys developer docs",
+            title: "DIN Documentation",
             items: [
               {
-                label: "Overview",
-                to: "/",
+                label: "Get Started",
+                to: "/introduction",
               },
               {
-                label: "Contribute to the docs",
-                to: "/contribute",
+                label: "Gateways",
+                to: "/gateways/overview",
               },
               {
-                label: "Create a new doc site",
-                to: "/create",
+                label: "DIN as an AVS",
+                to: "/avs/concepts",
               },
               {
-                label: "Configure advanced features",
-                to: "/configure",
+                label: "Architecture",
+                to: "/architecture-overview",
               },
             ],
           },
           {
-            title: "Consensys doc sites",
+            title: "Explore",
             items: [
               {
-                label: "Teku",
-                href: "https://docs.teku.consensys.net/",
+                label: "DIN Home",
+                href: "https://www.infura.io/solutions/decentralized-infrastructure-service",
               },
               {
-                label: "MetaMask",
-                href: "https://docs.metamask.io/",
+                label: "White paper",
+                href: "https://drive.google.com/file/d/1hCHmcXMN6YpmGQkdxSTuZb6Ne_EaehJt/view",
               },
               {
                 label: "Infura",
-                href: "https://docs.infura.io/",
+                href: "https://www.infura.io/",
               },
               {
-                label: "See full list",
-                to: "/#list-of-documentation-sites",
+                label: "Consensys home",
+                href: "https://consensys.net/",
               },
             ],
           },
@@ -188,20 +155,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Consensys documentation GitHub",
+                label: "GitHub",
                 href: "https://github.com/Consensys/docs-template",
               },
               {
-                label: "Consensys Discord",
+                label: "Discord",
                 href: "https://discord.com/invite/consensys",
-              },
-              {
-                label: "Consensys Twitter",
-                href: "https://twitter.com/consensys",
-              },
-              {
-                label: "Consensys home",
-                href: "https://consensys.net/",
               },
             ],
           },
@@ -249,31 +208,6 @@ const config = {
         containerId: "GTM-",
       },
     ],
-    // This is how redirects are done
-    // [
-    //   "@docusaurus/plugin-client-redirects",
-    //   {
-    //     redirects: [
-    //       {
-    //         from: "/HowTo/Get-Started/Installation-Options/Install-Binaries",
-    //         to: "/get-started/install/install-binaries",
-    //       },
-    //     ],
-    //     // its quite odd here in that its back to front - replace(to, from)
-    //     createRedirects(existingPath) {
-    //       if (existingPath.includes("/development")) {
-    //         return [
-    //           existingPath.replace("/development", "/en/latest"),
-    //           existingPath.replace("/development", "/latest"),
-    //         ];
-    //       }
-    //       if (existingPath.includes("/")) {
-    //         return [existingPath.replace("/", "/stable")];
-    //       }
-    //       return undefined; // Return a falsy value: no redirect created
-    //     },
-    //   },
-    // ],
   ],
   themes: [
     [
