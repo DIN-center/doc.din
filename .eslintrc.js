@@ -48,7 +48,6 @@ module.exports = {
       },
       "parserOptions": {
         "ecmaVersion": 2020,
-        "sourceType": "commonjs",
         "ecmaFeatures": {
           "jsx": true
         }

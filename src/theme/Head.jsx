@@ -2,15 +2,15 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import PropTypes from 'prop-types';
 
 export default function CustomHead(props) {
   const {siteConfig} = useDocusaurusContext();
-  const {title, description, image, keywords, permalink, locale} = props;
+  const {title, description, image, permalink} = props;
 
   const metaTitle = title || siteConfig.title;
   const metaDescription = description || siteConfig.tagline;
   const metaImage = image || useBaseUrl('/img/logos/DIN Logo On Light.svg', {absolute: true});
-  const metaKeywords = keywords || siteConfig.customFields?.keywords || [];
   const metaUrl = permalink || siteConfig.url;
 
   return (
@@ -37,4 +37,11 @@ export default function CustomHead(props) {
       </Head>
     </>
   );
-} 
+}
+
+CustomHead.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  permalink: PropTypes.string,
+}; 

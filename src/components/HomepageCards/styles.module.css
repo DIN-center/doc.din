@@ -140,7 +140,7 @@
   html[data-theme='dark'] .card_glow {
     background-color: #0f1128;
     border: 1px solid #1D3857;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
   }
 
   html[data-theme='dark'] .cardContainer {
