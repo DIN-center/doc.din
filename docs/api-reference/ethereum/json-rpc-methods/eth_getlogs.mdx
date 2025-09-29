@@ -1,0 +1,149 @@
+---
+title: Ethereum eth_getLogs
+sidebar_label: eth_getLogs
+description: Returns filtered logs on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_getlogs`
+
+
+Returns an array of all the logs matching the given filter object. See also the below [Constraints](#constraints) section. 
+
+## Parameters
+
+A filter object containing the following:
+
+- `address`: [_optional_] Contract address (20 bytes) or a list of addresses from which logs should originate.
+- `fromBlock`: _[optional, default is "latest"]_ A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `toBlock`: _[optional, default is "latest"]_ A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `topics`: _[optional]_ Array of 32 bytes DATA topics. Topics are order-dependent.
+- `blockhash`: _[optional]_ Restricts the logs returned to the single block referenced in the 32-byte hash `blockHash`. Using `blockHash` is equivalent to setting `fromBlock` and `toBlock` to the block number referenced in the `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+
+## Returns
+
+`log objects`: An array of log objects, or an empty array if nothing has changed since the last poll. Log objects contain the following keys and their values:
+
+- `removed`: (boolean) `true` when the log was removed, due to a chain reorganization. `false` if it's a valid log.
+- `logIndex`: Hexadecimal of the log index position in the block. `Null` when it is a pending log.
+- `transactionIndex`: Hexadecimal of the transactions index position from which the log created. `Null` when it is a pending log.
+- `transactionHash`: 32 bytes. Hash of the transactions from which this log was created. `Null` when it is a pending log.
+- `blockHash`: 32 bytes. Hash of the block where this log was in. `Null` when it is a pending log.
+- `blockNumber`: Block number where this log was in. `Null` when it is a pending log.
+- `address`: 20 bytes. Address from which this log originated.
+- `data`: Contains one or more 32-bytes non-indexed arguments of the log.
+- `topics`: An array of 0 to 4 indexed log arguments, each 32 bytes. In solidity the first topic is the hash of the signature of the event (for example, `Deposit(address,bytes32,uint256)`), except when you declared the event with the anonymous specifier.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_getLogs", "params": [{"blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70", "topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getLogs", "params": [{"blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70", "topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}], "id":1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": [
+    {
+      "address": "0x1a94fce7ef36bc90959e206ba569a12afbc91ca1",
+      "blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
+      "blockNumber": "0x5c29fb",
+      "data": "0x0000000000000000000000003e3310720058c51f0de456e273c626cdd35065700000000000000000000000000000000000000000000000000000000000003185000000000000000000000000000000000000000000000000000000000000318200000000000000000000000000000000000000000000000000000000005c2a23",
+      "logIndex": "0x1d",
+      "removed": false,
+      "topics": [
+        "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
+      ],
+      "transactionHash": "0x3dc91b98249fa9f2c5c37486a2427a3a7825be240c1c84961dfb3063d9c04d50",
+      "transactionIndex": "0x1d"
+    },
+    {
+      "address": "0x06012c8cf97bead5deae237070f9587f8e7a266d",
+      "blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
+      "blockNumber": "0x5c29fb",
+      "data": "0x00000000000000000000000077ea137625739598666ded665953d26b3d8e374400000000000000000000000000000000000000000000000000000000000749ff00000000000000000000000000000000000000000000000000000000000a749d00000000000000000000000000000000000000000000000000000000005c2a0f",
+      "logIndex": "0x57",
+      "removed": false,
+      "topics": [
+        "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
+      ],
+      "transactionHash": "0x788b1442414cb9c9a36dba2abe250763161a6f6395788a2e808f1b34e92beec1",
+      "transactionIndex": "0x54"
+    }
+  ]
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Constraints
+
+The following constraints apply:
+
+To prevent queries from consuming too many resources, `eth_getLogs` requests are currently limited by three constraints:
+
+- A maximum of 5,000 parameters in a single request
+- A maximum of 10,000 results can be returned by a single query
+- Query duration must not exceed 10 seconds
+
+If a query returns too many results or exceeds the max query duration, one of the following errors is returned:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": {
+    "code": -32005,
+    "message": "query returned more than 10000 results"
+  }
+}
+```
+
+or
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": {
+    "code": -32005,
+    "message": "query timeout exceeded"
+  }
+}
+```
+
+If this happens:
+
+- Limit your query to a smaller number of blocks using `fromBlock` and `toBlock`.
+- If querying for commonly used `topics`, consider limiting to a single smart contract `address`.

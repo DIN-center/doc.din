@@ -1,0 +1,66 @@
+---
+title: Ethereum eth_chainId
+sidebar_label: eth_chainId
+description: Returns the Ethereum chain ID.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_chainid`
+
+
+Returns the currently configured chain ID, a value used in replay-protected transaction signing as introduced
+by [EIP-155](https://eips.ethereum.org/EIPS/eip-155). 
+
+## Parameters
+
+None.
+
+## Returns
+
+A hexadecimal of the current chain ID.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_chainId", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_chainId", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```js
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x1"
+}
+```
+
+  </TabItem>
+</Tabs>

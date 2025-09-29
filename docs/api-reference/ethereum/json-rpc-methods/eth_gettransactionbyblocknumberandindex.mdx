@@ -1,0 +1,103 @@
+---
+title: Ethereum eth_getTransactionByBlockNumberAndIndex
+sidebar_label: eth_getTransactionByBlockNumberAndIndex
+description: Gets a transaction by block number on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_gettransactionbyblocknumberandindex`
+
+
+Returns information about a transaction given block number and transaction index position. 
+
+## Parameters
+
+- `block parameter`: [_Required_] A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `transaction index position`: [_Required_] A hexadecimal of the integer representing the position in the block.
+
+## Returns
+
+A transaction object, or null when no transaction was found. The transaction object will consist of the following keys and their values:
+
+- `accessList`: [_optional_] A list of addresses and storage keys accessed by the transaction.
+- `blockHash`: 32 bytes. A hash of the block including this transaction. `null` when it's pending.
+- `blockNumber`: The number of the block including this transaction. `null` when it's pending.
+- `chainID`: [_optional_] chain ID specifying the network. Returned only for [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+- `from`: 20 bytes. The address of the sender.
+- `gas`: Gas provided by the sender.
+- `gasPrice`: Gas price provided by the sender in wei.
+- `hash`: 32 bytes. The hash of the transaction.
+- `input`: The data sent along with the transaction.
+- `maxPriorityFeePerGas`: [_optional_] Maximum fee, in wei, the sender is willing to pay per gas above the base fee. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+- `maxFeePerGas`: [_optional_] Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+- `nonce`: The number of transactions made by the sender prior to this one.
+- `r`: 32 bytes. The ECDSA signature `r`.
+- `s`: 32 bytes. The ECDSA signature `s`.
+- `to`: 20 bytes. The address of the receiver. `null` when it's a contract creation transaction.
+- `transactionIndex`: The transaction's index position in the block, in hexadecimal. `null` when it's pending.
+- `type`: The transaction type.
+- `v`: The ECDSA recovery ID.
+- `value`: The value transferred in wei.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockNumberAndIndex", "params": ["0x5BAD55", "0x0"], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockNumberAndIndex", "params": ["0x5BAD55", "0x0"], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "blockHash": "0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35",
+    "blockNumber": "0x5bad55",
+    "chainId": "0x1",
+    "from": "0xfbb1b73c4f0bda4f67dca266ce6ef42f520fbb98",
+    "gas": "0x249f0",
+    "gasPrice": "0x174876e800",
+    "hash": "0x8784d99762bccd03b2086eabccee0d77f14d05463281e121a62abfebcf0d2d5f",
+    "input": "0x6ea056a9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bd8d7fa6f8cc00",
+    "nonce": "0x5e4724",
+    "r": "0xd1556332df97e3bd911068651cfad6f975a30381f4ff3a55df7ab3512c78b9ec",
+    "s": "0x66b51cbb10cd1b2a09aaff137d9f6d4255bf73cb7702b666ebd5af502ffa4410",
+    "to": "0x4b9c25ca0224aef6a7522cabdbc3b2e125b7ca50",
+    "transactionIndex": "0x0",
+    "type": "0x0",
+    "v": "0x25",
+    "value": "0x0"
+  }
+}
+```
+
+  </TabItem>
+</Tabs>

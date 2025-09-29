@@ -1,0 +1,65 @@
+---
+title: Ethereum eth_maxPriorityFeePerGas
+sidebar_label: eth_maxPriorityFeePerGas
+description: Estimates max priority fee on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_maxpriorityfeepergas`
+
+
+Returns an estimate of how much priority fee, in wei, you need to be included in a block. 
+
+## Parameters
+
+None.
+
+## Returns
+
+`result`: A hexadecimal value of the priority fee, in wei, needed to be included in a block.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_maxPriorityFeePerGas", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/d23391e03c6d40738530a1b4b679e66e -x '{"jsonrpc": "2.0", "method": "eth_maxPriorityFeePerGas", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x55d4a80"
+}
+```
+
+  </TabItem>
+</Tabs>

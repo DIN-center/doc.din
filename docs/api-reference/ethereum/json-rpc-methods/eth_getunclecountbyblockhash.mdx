@@ -1,0 +1,65 @@
+---
+title: Ethereum eth_getUncleCountByBlockHash
+sidebar_label: eth_getUncleCountByBlockHash
+description: Gets uncle count by block hash on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_getunclecountbyblockhash`
+
+
+Returns the number of uncles in a block from a block matching the given block hash. 
+
+## Parameters
+
+`block hash`: [_Required_] A string representing the hash (32 bytes) of a block.
+
+## Returns
+
+`block uncle count`: A hexadecimal equivalent of the integer representing the number of uncles in the block.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_getUncleCountByBlockHash", "params": ["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35"], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getUncleCountByBlockHash", "params": ["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35"], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x1"
+}
+```
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,65 @@
+---
+title: Ethereum web3_clientVersion
+sidebar_label: web3_clientVersion
+description: Returns client version on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `web3_clientversion`
+
+
+Returns the current client version. 
+
+## Parameters
+
+None.
+
+## Returns
+
+A string representing the current client version.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "web3_clientVersion", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "web3_clientVersion", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "Geth/v1.11.6-omnibus-f83e1598/linux-.mdx64/go1.20.3"
+}
+```
+
+  </TabItem>
+</Tabs>

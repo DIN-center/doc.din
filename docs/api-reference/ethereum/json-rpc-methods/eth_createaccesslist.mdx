@@ -1,0 +1,96 @@
+---
+title: Ethereum eth_createAccessList
+sidebar_label: eth_createAccessList
+description: Creates an access list to include in a Ethereum transaction.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_createaccesslist`
+
+
+Creates an [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) access list that you can include in a
+transaction.
+
+Use this method to optimize your smart contract interactions. Access lists are a part of Ethereum's
+EIP-2930, which aims to improve the network's scalability and reduce gas costs by specifying an explicit
+list of addresses and storage keys that a transaction intends to access.
+
+:::tip Optimizing Ethereum Transactions
+
+See the Infura article [Optimizing Ethereum Transactions with eth_createAccessList](https://blog.infura.io/post/optimizing-ethereum-transactions-with-eth_createaccesslist) that describes how `eth_createAccessList` can help optimize gas costs, reduce out-of-gas errors, and verify clients for infrastructure access.
+
+:::
+
+## Parameters
+
+- `Transaction call object`: _[Required]_
+  - `from`: _[optional]_ 20 bytes. The address of the sender.
+  - `to`: 20 bytes. Address the transaction is directed to.
+  - `gas`: _[optional]_ Hexadecimal value of the gas provided for the transaction execution.
+  - `gasPrice`: _[optional]_ Hexadecimal value gas price, in wei, provided by the sender. The default is `0`. Used only in non-EIP-1559 transactions.
+  - `maxPriorityFeePerGas`: _[optional]_ Maximum fee, in wei, the sender is willing to pay per gas above the base fee. See [EIP-1559 transactions](https://eips.ethereum.org/EIPS/eip-1559). If used, must specify `maxFeePerGas`.
+  - `maxFeePerGas`: _[optional]_ Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559). If used, must specify `maxPriorityFeePerGas`.
+  - `value`: _[optional]_ Hexadecimal of the value transferred, in wei.
+  - `data`: _[optional]_ Hash of the method signature and encoded parameters. See [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `block number` or `block hash`: _[required]_ A string representing a block number, block hash, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+
+## Returns
+
+Access list object with the following fields:
+
+- `accessList`: A list of objects with the following fields:
+  - `address`: Addresses to be accessed by the transaction.
+  - `storageKeys`: Storage keys to be accessed by the transaction.
+- `gasUsed`: A hexadecimal string representing the approximate gas cost for the transaction if the access list is included.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"method": "eth_createAccessList", "params": [{"from": "0xaeA8F8f781326bfE6A7683C2BD48Dd6AA4d3Ba63", "data": "0x608060806080608155"}, "pending"], "id": 1, "jsonrpc": "2.0"}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"method": "eth_createAccessList", "params": [{"from": "0xaeA8F8f781326bfE6A7683C2BD48Dd6AA4d3Ba63", "data": "0x608060806080608155"}, "pending"], "id": 1, "jsonrpc": "2.0"}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "accessList": [
+    {
+      "address": "0xa02457e5dfd32bda5fc7e1f1b008aa5979568150",
+      "storageKeys": [
+        "0x0000000000000000000000000000000000000000000000000000000000000081",
+      ]
+    }
+  ]
+  "gasUsed": "0x125f8"
+}
+```
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,69 @@
+---
+title: Ethereum eth_hashrate
+sidebar_label: eth_hashrate
+description: Return hashes per second on Ethereum.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_hashrate`
+
+
+Returns the number of hashes per second that the node is mining with. Only applicable when the node is mining. 
+
+## Parameters
+
+None.
+
+## Returns
+
+`hashrate`: A hexadecimal equivalent of an integer representing the number of hashes per second.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_hashrate", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_hashrate", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+:::note
+Infura will always return a `0x0` mining hash rate.
+:::
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x0"
+}
+```
+
+  </TabItem>
+</Tabs>

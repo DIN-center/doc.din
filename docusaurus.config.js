@@ -36,7 +36,6 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Set a base path separate from default /docs
           editUrl: "https://github.com/Consensys/docs-template/tree/main/",
           routeBasePath: "/",
           path: "./docs",
@@ -57,6 +56,7 @@ const config = {
       },
     ],
   ],
+
 
   future: {
     experimental_faster: true,
@@ -89,15 +89,18 @@ const config = {
         },
         items: [
           {
-            type: "doc",
+            type: "docSidebar",
+            sidebarId: "docSidebar",
+            docId: "din/overview/introduction",
             position: "left",
-            docId: "introduction",
             label: "Documentation",
           },
           {
-            href: "https://din.build",
+            type: "docSidebar",
+            sidebarId: "apiSidebar",
+            docId: "api-reference/supported-networks",
             position: "left",
-            label: "DIN Home",
+            label: "API reference",
           },
           {
             href: "https://github.com/Consensys/doc.din",

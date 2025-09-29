@@ -1,0 +1,65 @@
+---
+title: Ethereum eth_blobBaseFee
+sidebar_label: eth_blobBaseFee
+description: Returns the expected blob base fee for the next Ethereum block.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_blobbasefee`
+
+
+Returns the expected base fee for blobs in the next block. 
+
+## Parameters
+
+None.
+
+## Returns
+
+The expected base fee in wei, represented as a hexadecimal.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_blobBaseFee", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_blobBaseFee", "params": [], "id":1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```js
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x1"
+}
+```
+
+  </TabItem>
+</Tabs>

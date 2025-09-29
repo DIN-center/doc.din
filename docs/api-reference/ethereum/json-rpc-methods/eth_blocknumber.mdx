@@ -1,0 +1,70 @@
+---
+title: Ethereum eth_blockNumber
+sidebar_label: eth_blockNumber
+description: Returns the latest Ethereum block number.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_blocknumber`
+
+
+Returns the current latest block number. 
+
+## Parameters
+
+None
+
+## Returns
+
+A hexadecimal of an integer representing the current block number the client is on.
+
+## Example
+
+Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+
+### Request
+
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_blockNumber", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_blockNumber", "params": [], "id": 1}'
+```
+
+  </TabItem>
+
+</Tabs>
+
+### Response
+
+
+<Tabs>
+  <TabItem value="JSON">
+
+```js
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x65a8db"
+}
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip Convert hexadecimal to integer
+On macOS, you can use `printf "%d\n" 0x65a8db` to convert the above hexadecimal number into an integer number.
+:::
