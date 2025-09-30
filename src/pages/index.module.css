@@ -71,9 +71,9 @@
   }
 
   .dinLogo {
-    content: url('/img/logos/DIN Logo On Light.svg');
+    content: url('/img/logos/logo-dark.svg');
   }
 
   html[data-theme="dark"] .dinLogo {
-    content: url('/img/logos/DIN Logo On Dark.svg');
+    content: url('/img/logos/logo-dark.svg');
   }

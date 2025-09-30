@@ -83,9 +83,8 @@ const config = {
         style: "dark",
         logo: {
           alt: 'DIN Logo',
-          src: 'img/logos/DIN Symbol On Light.svg', // Used in light mode
-          srcDark: 'img/logos/DIN Symbol On Dark.svg', // Used in dark mode
-          height: 48,
+          src: 'img/logos/logo-orange.svg', // Used in light mode
+          srcDark: 'img/logos/logo-orange.svg', // Used in dark mode
         },
         items: [
           {
