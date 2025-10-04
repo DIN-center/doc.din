@@ -12,7 +12,6 @@ const config = {
   url: "https://docs-template.consensys.io",
   baseUrl,
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicons/favicon.svg",
   trailingSlash: false,
 
@@ -30,13 +29,20 @@ const config = {
     locales: ["en"],
   },
 
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
+
   presets: [
     [
       "classic",
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/Consensys/docs-template/tree/main/",
+          editUrl: "https://github.com/DIN-center/doc.din/tree/main/",
           routeBasePath: "/",
           path: "./docs",
           includeCurrentVersion: true,
@@ -60,6 +66,7 @@ const config = {
 
   future: {
     experimental_faster: true,
+    v4: true,
   },
 
   themeConfig:
@@ -90,7 +97,7 @@ const config = {
           {
             type: "docSidebar",
             sidebarId: "docSidebar",
-            docId: "din/overview/introduction",
+            docId: "index",
             position: "left",
             label: "Documentation",
           },
@@ -102,7 +109,7 @@ const config = {
             label: "API reference",
           },
           {
-            href: "https://github.com/Consensys/doc.din",
+            href: "https://github.com/DIN-center/doc.din",
             className: "header-github-link",
             position: "right",
           },
@@ -112,23 +119,31 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "DIN Documentation",
+            title: "DIN documentation",
             items: [
               {
-                label: "Get Started",
-                to: "/introduction",
+                label: "Introduction",
+                to: "/",
+              },
+              {
+                label: "Din as an AVS",
+                to: "/avs",
+              },
+              {
+                label: "Node providers",
+                to: "/node-providers",
+              },
+              {
+                label: "Watchers",
+                to: "/watchers",
               },
               {
                 label: "Gateways",
-                to: "/gateways/overview",
+                to: "/web3-gateways",
               },
               {
-                label: "DIN as an AVS",
-                to: "/avs/concepts",
-              },
-              {
-                label: "Architecture",
-                to: "/architecture-overview",
+                label: "API reference",
+                to: "/api-reference/supported-networks",
               },
             ],
           },
@@ -136,11 +151,11 @@ const config = {
             title: "Explore",
             items: [
               {
-                label: "DIN Home",
+                label: "DIN home",
                 href: "https://www.infura.io/solutions/decentralized-infrastructure-service",
               },
               {
-                label: "White paper",
+                label: "Whitepaper",
                 href: "https://drive.google.com/file/d/1hCHmcXMN6YpmGQkdxSTuZb6Ne_EaehJt/view",
               },
               {
@@ -158,7 +173,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/Consensys/docs-template",
+                href: "https://github.com/DIN-center/doc.din",
               },
               {
                 label: "Discord",
@@ -195,6 +210,22 @@ const config = {
           logoClass: "nodejs",
         },
       ],
+      mermaid: {
+        options: {
+          fontFamily: 'arial, verdana, sans-serif;',
+          wrap: true,
+          fontSize: 20,
+          securityLevel: 'loose',
+          sequence: {
+            diagramMarginX: 25,
+            diagramMarginY: 25,
+          },
+          flowchart: {
+            diagramPadding: 5,
+            nodeSpacing: 50,
+          },
+        },
+      },
     }),
   plugins: [
     [
@@ -220,6 +251,7 @@ const config = {
         indexBlog: false,
       },
     ],
+    '@docusaurus/theme-mermaid',
   ],
 };
 
