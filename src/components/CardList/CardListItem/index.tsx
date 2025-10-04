@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 
 export interface CardItem {
   title?: ReactNode;
@@ -17,12 +18,12 @@ export default function CardListItem({ item }: CardListItemProps): JSX.Element {
   const cardContent = (
     <>
       {item.title && (
-        <h2 className="cardTitle">
+        <Heading as="h2" className="cardTitle">
           {item.icon && (
             <img src={item.icon} className="cardIcon" />
           )}
           <span>{item.title}</span>
-        </h2>
+        </Heading>
       )}
       {item.description && (
         <p>

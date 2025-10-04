@@ -139,7 +139,7 @@ const config = {
               },
               {
                 label: "Gateways",
-                to: "/gateways",
+                to: "/web3-gateways",
               },
               {
                 label: "API reference",
