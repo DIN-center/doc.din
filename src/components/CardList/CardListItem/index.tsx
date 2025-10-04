@@ -14,7 +14,7 @@ interface CardListItemProps {
   item: CardItem;
 }
 
-export default function CardListItem({ item }: CardListItemProps): JSX.Element {
+export default function CardListItem({ item }: CardListItemProps): React.JSX.Element {
   const cardContent = (
     <>
       {item.title && (
