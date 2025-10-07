@@ -1,9 +1,9 @@
 ---
-title: Plain text documentation
+title: LLM markdown txt files
 description: Download LLM-friendly documentation in text format
 ---
 
-# Plain text documentation
+# LLM markdown txt files
 
 Plain text versions of all documentation, optimized for LLM consumption.
 
