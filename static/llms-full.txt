@@ -9944,7 +9944,7 @@ The DIN Veto Committee has a process to review slashing scenarios with shared op
 
 ---
 
-## LLM documentation
+## Documentation for LLMs
 
 
 Plain text versions of all documentation, optimized for LLM consumption.
