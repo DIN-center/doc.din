@@ -74,6 +74,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'under_development',
+        content:
+          '⚠️ <strong>This site is under active development. Content may be outdated or inaccurate and is being updated frequently.</strong> ⚠️',
+        backgroundColor: '#FF7209',
+        textColor: '#ffffff',
+        isCloseable: false,
+      },
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
