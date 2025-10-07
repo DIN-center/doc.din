@@ -83,7 +83,7 @@ export const NETWORK_LINKS = [
   },
   {
     name: 'Solana',
-    href: '/services/reference/solana',
+    href: '/api-reference/solana',
     logo: `${LOGO_PATH}/logo-solana.svg`,
   },
   {
