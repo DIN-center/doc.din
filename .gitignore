@@ -4,10 +4,6 @@
 # Production
 /build
 
-# Generated LLM files (generated during build by docusaurus-plugin-llms)
-/static/llms.txt
-/static/llms-full.txt
-
 # Generated files
 .docusaurus
 .cache-loader
