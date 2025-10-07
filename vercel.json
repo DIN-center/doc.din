@@ -33,22 +33,6 @@
       ]
     }
   ],
-  "routes": [
-    {
-      "src": "/llms.txt",
-      "dest": "/llms.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    },
-    {
-      "src": "/llms-full.txt",
-      "dest": "/llms-full.txt",
-      "headers": {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    }
-  ],
   "redirects": [
     { "source": "/en/latest", "destination": "/", "permanent": true },
     { "source": "/en/latest/", "destination": "/", "permanent": true },
