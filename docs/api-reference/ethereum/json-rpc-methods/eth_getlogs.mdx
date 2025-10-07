@@ -14,27 +14,26 @@ Returns an array of all the logs matching the given filter object. See also the 
 
 ## Parameters
 
-A filter object containing the following:
-
-- `address`: [_optional_] Contract address (20 bytes) or a list of addresses from which logs should originate.
-- `fromBlock`: _[optional, default is "latest"]_ A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
-- `toBlock`: _[optional, default is "latest"]_ A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
-- `topics`: _[optional]_ Array of 32 bytes DATA topics. Topics are order-dependent.
-- `blockhash`: _[optional]_ Restricts the logs returned to the single block referenced in the 32-byte hash `blockHash`. Using `blockHash` is equivalent to setting `fromBlock` and `toBlock` to the block number referenced in the `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `filter object`: (object) _[required]_ - A filter object containing the following:
+  - `address`: (string or array) _[optional]_ - Contract address (20 bytes) or a list of addresses from which logs should originate.
+  - `fromBlock`: (string) _[optional, default is "latest"]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+  - `toBlock`: (string) _[optional, default is "latest"]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+  - `topics`: (array) _[optional]_ - Array of 32 bytes DATA topics. Topics are order-dependent.
+  - `blockhash`: (string) _[optional]_ - Restricts the logs returned to the single block referenced in the 32-byte hash `blockHash`. Using `blockHash` is equivalent to setting `fromBlock` and `toBlock` to the block number referenced in the `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ## Returns
 
-`log objects`: An array of log objects, or an empty array if nothing has changed since the last poll. Log objects contain the following keys and their values:
+An array of log objects, or an empty array if nothing has changed since the last poll. Log objects contain the following keys and their values:
 
-- `removed`: (boolean) `true` when the log was removed, due to a chain reorganization. `false` if it's a valid log.
-- `logIndex`: Hexadecimal of the log index position in the block. `Null` when it is a pending log.
-- `transactionIndex`: Hexadecimal of the transactions index position from which the log created. `Null` when it is a pending log.
-- `transactionHash`: 32 bytes. Hash of the transactions from which this log was created. `Null` when it is a pending log.
-- `blockHash`: 32 bytes. Hash of the block where this log was in. `Null` when it is a pending log.
-- `blockNumber`: Block number where this log was in. `Null` when it is a pending log.
-- `address`: 20 bytes. Address from which this log originated.
-- `data`: Contains one or more 32-bytes non-indexed arguments of the log.
-- `topics`: An array of 0 to 4 indexed log arguments, each 32 bytes. In solidity the first topic is the hash of the signature of the event (for example, `Deposit(address,bytes32,uint256)`), except when you declared the event with the anonymous specifier.
+- `removed` - `true` when the log was removed, due to a chain reorganization. `false` if it's a valid log.
+- `logIndex` - Hexadecimal of the log index position in the block. `Null` when it is a pending log.
+- `transactionIndex` - Hexadecimal of the transactions index position from which the log created. `Null` when it is a pending log.
+- `transactionHash` - Hash of the transactions from which this log was created (32 bytes). `Null` when it is a pending log.
+- `blockHash` - Hash of the block where this log was in (32 bytes). `Null` when it is a pending log.
+- `blockNumber` - Block number where this log was in. `Null` when it is a pending log.
+- `address` - Address from which this log originated (20 bytes).
+- `data` - Contains one or more 32-bytes non-indexed arguments of the log.
+- `topics` - An array of 0 to 4 indexed log arguments, each 32 bytes. In solidity the first topic is the hash of the signature of the event (for example, `Deposit(address,bytes32,uint256)`), except when you declared the event with the anonymous specifier.
 
 ## Example
 

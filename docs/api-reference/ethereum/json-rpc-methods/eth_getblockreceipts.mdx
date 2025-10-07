@@ -14,13 +14,12 @@ Returns all transaction receipts for a given block, the amount of gas used, and 
 might have been produced by a smart contract during the transaction. 
 ## Parameters
 
-`blockNumber`: [_Required_] Hexadecimal or decimal integer representing a block number, or one of
- the string tags:
- - `latest`
- - `earliest`
- - `pending`
- - `finalized`
- - `safe`
+- `blockNumber`: (string) _[required]_ - Hexadecimal or decimal integer representing a block number, or one of the string tags:
+  - `latest`
+  - `earliest`
+  - `pending`
+  - `finalized`
+  - `safe`
 
  :::note
  `pending` returns the same data as `latest`.
@@ -28,7 +27,7 @@ might have been produced by a smart contract during the transaction.
 
 ## Returns
 
-`result`: _object_ Block object or `null` when there is no corresponding block.
+- `result` - Block object or `null` when there is no corresponding block.
 ## Example
 
 Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).

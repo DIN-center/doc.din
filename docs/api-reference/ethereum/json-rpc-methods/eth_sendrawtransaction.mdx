@@ -14,13 +14,11 @@ Submits a pre-signed transaction for broadcast to the Ethereum network.
 
 ## Parameters
 
-`transaction data`: [_Required_] The signed transaction data.
+- `transaction data`: (string) _[required]_ - The signed transaction data.
 
 ## Returns
 
-`transaction hash`: 32 bytes. The transaction hash, or the zero hash if the transaction is not yet available.
-    Use [`eth_getTransactionReceipt`](./eth_gettransactionreceipt.mdx) to get the contract address, after
-    the transaction was mined, when you created a contract.
+The transaction hash (32 bytes), or the zero hash if the transaction is not yet available. Use [`eth_getTransactionReceipt`](./eth_gettransactionreceipt.mdx) to get the contract address, after the transaction was mined, when you created a contract.
 
 ## Example
 

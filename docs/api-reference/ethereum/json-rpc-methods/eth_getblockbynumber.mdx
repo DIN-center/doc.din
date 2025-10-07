@@ -14,32 +14,32 @@ Returns information about a block given its block number.
 
 ## Parameters
 
-- `block parameter`: [_Required_] A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
-- `show transaction details flag`: [_Required_] If set to `true`, returns the full transaction objects. If `false` returns only the hashes of the transactions.
+- `block parameter`: (string) _[required]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `show transaction details flag`: (boolean) _[required]_ - If set to `true`, returns the full transaction objects. If `false` returns only the hashes of the transactions.
 
 ## Returns
 
 A block object, or null when no block was found. The returned block object contains the following keys and their values:
 
-- `difficulty`: A hexadecimal of the difficulty for this block.
-- `extraData`: The "extra data" field of this block.
-- `gasLimit`: Maximum gas allowed in this block.
-- `gasUsed`: Total used gas by all transactions in this block.
-- `hash`: 32 bytes. Hash of the block. `Null` when the returned block is the pending block.
-- `logsBloom`: 256 bytes. The bloom filter for the logs of the block. `Null` when the returned block is the pending block.
-- `miner`: 20 bytes. Address of the beneficiary to whom the mining rewards were given.
-- `nonce`: 8 bytes. Hash of the generated proof-of-work. `Null` when the returned block is the pending block.
-- `number`: Block number. `Null` when the returned block is the pending block.
-- `parentHash`: 32 bytes. Hash of the parent block.
-- `receiptsRoot`: 32 bytes. The root of the receipts trie of the block. Also see [Tries in Ethereum](https://ethereum.org/en/developers/docs/data-structures-and-encoding/patricia-merkle-trie/#tries-in-ethereum).
-- `sha3Uncles`: 32 bytes. The SHA3 of the uncles data in the block.
-- `size`: A hexadecimal of the size of this block in bytes.
-- `stateRoot`: 32 bytes. The root of the final state trie of the block.
-- `timestamp`: The unix timestamp for when the block was collated.
-- `totalDifficulty`: A hexadecimal of the total difficulty of the chain until this block.
-- `transactions`: [Array] An array of transaction objects, or 32 bytes transaction hashes depending on the last given parameter.
-- `transactionsRoot`: 32 bytes. The root of the transaction trie of the block.
-- `uncles`: [Array] An array of uncle hashes.
+- `difficulty` - A hexadecimal of the difficulty for this block.
+- `extraData` - The "extra data" field of this block.
+- `gasLimit` - Maximum gas allowed in this block.
+- `gasUsed` - Total used gas by all transactions in this block.
+- `hash` - Hash of the block (32 bytes). `Null` when the returned block is the pending block.
+- `logsBloom` - The bloom filter for the logs of the block (256 bytes). `Null` when the returned block is the pending block.
+- `miner` - Address of the beneficiary to whom the mining rewards were given (20 bytes).
+- `nonce` - Hash of the generated proof-of-work (8 bytes). `Null` when the returned block is the pending block.
+- `number` - Block number. `Null` when the returned block is the pending block.
+- `parentHash` - Hash of the parent block (32 bytes).
+- `receiptsRoot` - The root of the receipts trie of the block (32 bytes). Also see [Tries in Ethereum](https://ethereum.org/en/developers/docs/data-structures-and-encoding/patricia-merkle-trie/#tries-in-ethereum).
+- `sha3Uncles` - The SHA3 of the uncles data in the block (32 bytes).
+- `size` - A hexadecimal of the size of this block in bytes.
+- `stateRoot` - The root of the final state trie of the block (32 bytes).
+- `timestamp` - The unix timestamp for when the block was collated.
+- `totalDifficulty` - A hexadecimal of the total difficulty of the chain until this block.
+- `transactions` - An array of transaction objects, or 32 bytes transaction hashes depending on the last given parameter.
+- `transactionsRoot` - The root of the transaction trie of the block (32 bytes).
+- `uncles` - An array of uncle hashes.
 
 ## Example
 

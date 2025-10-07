@@ -23,22 +23,16 @@ To prevent abuse of the API, the `gas` parameter in this `eth_estimateGas` metho
 
 ## Parameters
 
-- `TRANSACTION CALL OBJECT` _\[required]_
-  - `from`: _\[optional]_ 20 Bytes - The address the transaction is sent from.
-  - `to`: 20 Bytes - The address the transaction is directed to.
-  - `gas`: _\[optional]_ Hexadecimal value of the gas provided for the transaction execution. `eth_estimateGas` consumes
-    zero gas, but this parameter may be needed by some executions.
-  - `gasPrice`: _\[optional]_ Hexadecimal value of the gas price used for each paid gas.
-  - `maxPriorityFeePerGas`: _\[optional]_ Maximum fee, in wei, the sender is willing to pay per gas above the base fee.
-    See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
-  - `maxFeePerGas`: _\[optional]_ Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas.
-    See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
-  - `value`: _\[optional]_ Hexadecimal value of the value sent with this transaction.
-  - `data`: _\[optional]_ Hash of the method signature and encoded parameters. See the
-    [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
-  - `block number`: _[required]_ A string representing a block number, or one of the string tags
-    `latest`, `earliest`, `pending`, `safe`, or `finalized`.
-    See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `transaction call object`: (object) _[required]_ - The transaction call object containing:
+  - `from`: (string) _[optional]_ - The address the transaction is sent from (20 bytes).
+  - `to`: (string) _[optional]_ - The address the transaction is directed to (20 bytes).
+  - `gas`: (string) _[optional]_ - Hexadecimal value of the gas provided for the transaction execution. `eth_estimateGas` consumes zero gas, but this parameter may be needed by some executions.
+  - `gasPrice`: (string) _[optional]_ - Hexadecimal value of the gas price used for each paid gas.
+  - `maxPriorityFeePerGas`: (string) _[optional]_ - Maximum fee, in wei, the sender is willing to pay per gas above the base fee. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+  - `maxFeePerGas`: (string) _[optional]_ - Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+  - `value`: (string) _[optional]_ - Hexadecimal value of the value sent with this transaction.
+  - `data`: (string) _[optional]_ - Hash of the method signature and encoded parameters. See the [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `block number`: (string) _[optional]_ - A string representing a block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
 
 If no gas limit is specified, geth uses the block gas limit from the pending block as an upper bound. As a result the
 returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending
@@ -46,7 +40,7 @@ block gas limit.
 
 ## Returns
 
-A hexadecimal of the estimate of the gas for the given transaction.
+- `gasEstimate` - A hexadecimal of the estimate of the gas for the given transaction.
 
 If this call causes the EVM to execute a `REVERT` operation, an error response of the following form is returned, with the revert reason pre-decoded as a string:
 

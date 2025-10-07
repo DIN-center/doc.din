@@ -21,16 +21,21 @@ this [`eth_call`](./eth_call.mdx) method is capped at 10x (1000%) the current bl
 
 ## Parameters
 
-- TRANSACTION CALL OBJECT [_Required_]
-  - `from`: 20 bytes [_Required_] Address the transaction is sent from.
-  - `to`: 20 bytes - Address the transaction is directed to.
-  - `gas`: Hexadecimal value of the gas provided for the transaction execution. `eth_call` consumes zero gas, but this parameter may be needed by some executions.
-  - `gasPrice`: Hexadecimal value of the `gasPrice` used for each paid gas.
-  - `maxPriorityFeePerGas`: Maximum fee, in wei, the sender is willing to pay per gas above the base fee. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
-  - `maxFeePerGas`: Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
-  - `value`: Hexadecimal of the value sent with this transaction.
-  - `data`: Hash of the method signature and encoded parameters. See [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
-- `block parameter`: [_Required_] A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `transaction call object`: (object) _[required]_ - The transaction call object containing:
+  - `from`: (string) _[required]_ - Address the transaction is sent from (20 bytes).
+  - `to`: (string) _[optional]_ - Address the transaction is directed to (20 bytes).
+  - `gas`: (string) _[optional]_ - Hexadecimal value of the gas provided for the transaction execution.
+      `eth_call` consumes zero gas, but this parameter may be needed by some executions.
+  - `gasPrice`: (string) _[optional]_ - Hexadecimal value of the `gasPrice` used for each paid gas.
+  - `maxPriorityFeePerGas`: (string) _[optional]_ - Maximum fee, in wei, the sender is willing to pay
+      per gas above the base fee. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+  - `maxFeePerGas`: (string) _[optional]_ - Maximum total fee (base fee + priority fee), in wei, the
+      sender is willing to pay per gas. See [EIP-1559 transactions](http://eips.ethereum.org/EIPS/eip-1559).
+  - `value`: (string) _[optional]_ - Hexadecimal of the value sent with this transaction.
+  - `data`: (string) _[optional]_ - Hash of the method signature and encoded parameters.
+      See [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `block parameter`: (string) _[required]_ - A hexadecimal block number, or one of the string tags
+    `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
 
 ## Returns
 

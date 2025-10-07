@@ -69,6 +69,7 @@ const sidebars = {
         {
           type: "category", 
           label: "Ethereum",
+          link: { type: "doc", id: "api-reference/ethereum/index" },
           collapsed: true,
           items: [
             {
