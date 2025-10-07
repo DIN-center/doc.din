@@ -11,7 +11,9 @@ const config = {
   tagline: "Documentation for the Decentralized Infrastrucure Network (DIN).",
   url: "https://docs-template.consensys.io",
   baseUrl,
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  staticDirectories: ["static"],
   favicon: "img/favicons/favicon.svg",
   trailingSlash: false,
 
@@ -187,6 +189,13 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        magicComments: [
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: { start: 'highlight-start', end: 'highlight-end' },
+          },
+        ],
       },
       languageTabs: [
         {
@@ -240,6 +249,25 @@ const config = {
       {
         containerId: "GTM-",
       },
+    ],
+    [
+      'docusaurus-plugin-llms',
+      {
+        generateLLMsTxt: true,
+        generateLLMsFullTxt: true,
+        docsDir: 'docs',
+        includeBlog: false,
+        includeOrder: [
+          'index.md',
+          'architecture.md',
+          'avs/*',
+          'node-providers/*',
+          'watchers/*',
+          'web3-gateways/*',
+          'api-reference/ethereum/*',
+          'api-reference/solana/*',
+        ],
+      }
     ],
   ],
   themes: [

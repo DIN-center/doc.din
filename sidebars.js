@@ -11,7 +11,8 @@ const sidebars = {
       items: [
         "architecture",
         "roadmap",
-        "x402-payments"
+        "x402-payments",
+        "llms-txt"
       ]
     },
     {

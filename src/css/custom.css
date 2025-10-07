@@ -410,3 +410,33 @@ img, iframe {
   color: var(--ifm-color-secondary-contrast-foreground);
   border-color: var(--ifm-color-secondary-dark);
 }
+
+/* Code block copy button styling */
+.clean-btn {
+  transition: opacity 0.2s ease;
+}
+
+.clean-btn:hover {
+  opacity: 0.8;
+}
+
+.theme-code-block-highlighted-line {
+  background-color: var(--docusaurus-highlighted-code-line-bg);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* Enhanced copy button visibility */
+div[class*='codeBlockContainer'] button[class*='copyButton'] {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+div[class*='codeBlockContainer']:hover button[class*='copyButton'] {
+  opacity: 1;
+}
+
+div[class*='codeBlockContainer'] button[class*='copyButton']:hover {
+  background-color: var(--ifm-color-primary);
+}
