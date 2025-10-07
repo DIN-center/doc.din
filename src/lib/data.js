@@ -2,115 +2,117 @@ const LOGO_PATH = '/img/logos'
 
 export const NETWORK_LINKS = [
   {
-    name: 'Arbitrum',
-    href: '/services/reference/arbitrum',
-    logo: `${LOGO_PATH}/logo-arbitrum.svg`,
-  },
-  {
-    name: 'Avalanche',
-    href: '/services/reference/avalanche-c-chain',
-    logo: `${LOGO_PATH}/logo-avalanche.svg`,
-  },
-  {
-    name: 'Base',
-    href: '/services/reference/base',
-    logo: `${LOGO_PATH}/logo-base.svg`,
-  },
-  {
-    name: 'Blast',
-    href: '/services/reference/blast',
-    logo: `${LOGO_PATH}/logo-blast.svg`,
-  },
-  {
-    name: 'BNB Smart Chain',
-    href: '/services/reference/bnb-smart-chain',
-    logo: `${LOGO_PATH}/logo-bnb.svg`,
-  },
-  {
-    name: 'Celo',
-    href: '/services/reference/celo',
-    logo: `${LOGO_PATH}/logo-celo.svg`,
-  },
-  {
-    name: 'IPFS',
-    href: '/services/reference/ipfs',
-    logo: `${LOGO_PATH}/logo-ipfs.svg`,
-  },
-  {
     name: 'Ethereum',
     href: '/api-reference/ethereum',
     logo: `${LOGO_PATH}/logo-eth.svg`,
-  },
-  {
-    name: 'Hemi',
-    href: '/services/reference/hemi',
-    logo: `${LOGO_PATH}/logo-hemi.svg`,
-  },
-  {
-    name: 'Linea',
-    href: '/services/reference/linea',
-    logo: `${LOGO_PATH}/logo-linea.svg`,
-  },
-  {
-    name: 'Mantle',
-    href: '/services/reference/mantle',
-    logo: `${LOGO_PATH}/logo-mantle.svg`,
-  },
-  {
-    name: 'opBNB',
-    href: '/services/reference/opbnb',
-    logo: `${LOGO_PATH}/logo-bnb.svg`,
-  },
-  {
-    name: 'Optimism',
-    href: '/services/reference/optimism',
-    logo: `${LOGO_PATH}/logo-opt.svg`,
-  },
-  {
-    name: 'Palm',
-    href: '/services/reference/palm',
-    logo: `${LOGO_PATH}/logo-palm.svg`,
-  },
-  {
-    name: 'Polygon',
-    href: '/services/reference/polygon-pos',
-    logo: `${LOGO_PATH}/logo-polygon.svg`,
-  },
-  {
-    name: 'Scroll',
-    href: '/services/reference/scroll',
-    logo: `${LOGO_PATH}/logo-scroll.svg`,
   },
   {
     name: 'Solana',
     href: '/api-reference/solana',
     logo: `${LOGO_PATH}/logo-solana.svg`,
   },
-  {
-    name: 'Sei',
-    href: '/services/reference/sei',
-    logo: `${LOGO_PATH}/logo-sei.svg`,
-  },
-  {
-    name: 'Starknet',
-    href: '/services/reference/starknet',
-    logo: `${LOGO_PATH}/logo-starknet.svg`,
-  },
-  {
-    name: 'Swellchain',
-    href: '/services/reference/swellchain',
-    logo: `${LOGO_PATH}/logo-swellchain.png`,
-  },
-  {
-    name: 'Unichain',
-    href: '/services/reference/unichain',
-    logo: `${LOGO_PATH}/logo-unichain.svg`,
-  },
-  {
-    name: 'ZKsync Era',
-    href: '/services/reference/zksync',
-    logo: `${LOGO_PATH}/logo-zksync.svg`,
-  },
+  // Networks below are supported but documentation pages are not yet available
+  // Uncomment and update hrefs when documentation pages are created
+  // {
+  //   name: 'Arbitrum',
+  //   href: '/services/reference/arbitrum',
+  //   logo: `${LOGO_PATH}/logo-arbitrum.svg`,
+  // },
+  // {
+  //   name: 'Avalanche',
+  //   href: '/services/reference/avalanche-c-chain',
+  //   logo: `${LOGO_PATH}/logo-avalanche.svg`,
+  // },
+  // {
+  //   name: 'Base',
+  //   href: '/services/reference/base',
+  //   logo: `${LOGO_PATH}/logo-base.svg`,
+  // },
+  // {
+  //   name: 'Blast',
+  //   href: '/services/reference/blast',
+  //   logo: `${LOGO_PATH}/logo-blast.svg`,
+  // },
+  // {
+  //   name: 'BNB Smart Chain',
+  //   href: '/services/reference/bnb-smart-chain',
+  //   logo: `${LOGO_PATH}/logo-bnb.svg`,
+  // },
+  // {
+  //   name: 'Celo',
+  //   href: '/services/reference/celo',
+  //   logo: `${LOGO_PATH}/logo-celo.svg`,
+  // },
+  // {
+  //   name: 'IPFS',
+  //   href: '/services/reference/ipfs',
+  //   logo: `${LOGO_PATH}/logo-ipfs.svg`,
+  // },
+  // {
+  //   name: 'Hemi',
+  //   href: '/services/reference/hemi',
+  //   logo: `${LOGO_PATH}/logo-hemi.svg`,
+  // },
+  // {
+  //   name: 'Linea',
+  //   href: '/services/reference/linea',
+  //   logo: `${LOGO_PATH}/logo-linea.svg`,
+  // },
+  // {
+  //   name: 'Mantle',
+  //   href: '/services/reference/mantle',
+  //   logo: `${LOGO_PATH}/logo-mantle.svg`,
+  // },
+  // {
+  //   name: 'opBNB',
+  //   href: '/services/reference/opbnb',
+  //   logo: `${LOGO_PATH}/logo-bnb.svg`,
+  // },
+  // {
+  //   name: 'Optimism',
+  //   href: '/services/reference/optimism',
+  //   logo: `${LOGO_PATH}/logo-opt.svg`,
+  // },
+  // {
+  //   name: 'Palm',
+  //   href: '/services/reference/palm',
+  //   logo: `${LOGO_PATH}/logo-palm.svg`,
+  // },
+  // {
+  //   name: 'Polygon',
+  //   href: '/services/reference/polygon-pos',
+  //   logo: `${LOGO_PATH}/logo-polygon.svg`,
+  // },
+  // {
+  //   name: 'Scroll',
+  //   href: '/services/reference/scroll',
+  //   logo: `${LOGO_PATH}/logo-scroll.svg`,
+  // },
+  // {
+  //   name: 'Sei',
+  //   href: '/services/reference/sei',
+  //   logo: `${LOGO_PATH}/logo-sei.svg`,
+  // },
+  // {
+  //   name: 'Starknet',
+  //   href: '/services/reference/starknet',
+  //   logo: `${LOGO_PATH}/logo-starknet.svg`,
+  // },
+  // {
+  //   name: 'Swellchain',
+  //   href: '/services/reference/swellchain',
+  //   logo: `${LOGO_PATH}/logo-swellchain.png`,
+  // },
+  // {
+  //   name: 'Unichain',
+  //   href: '/services/reference/unichain',
+  //   logo: `${LOGO_PATH}/logo-unichain.svg`,
+  // },
+  // {
+  //   name: 'ZKsync Era',
+  //   href: '/services/reference/zksync',
+  //   logo: `${LOGO_PATH}/logo-zksync.svg`,
+  // },
 ]
 
 export const API_COSTS = {

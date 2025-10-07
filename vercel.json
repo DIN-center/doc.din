@@ -1,5 +1,10 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": "docusaurus",
+  "installCommand": "npm install",
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/en/latest", "destination": "/", "permanent": true },
     { "source": "/en/latest/", "destination": "/", "permanent": true },
