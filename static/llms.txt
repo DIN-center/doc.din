@@ -1,0 +1,138 @@
+# DIN docs
+
+> Documentation for the Decentralized Infrastrucure Network (DIN).
+
+This file contains links to documentation sections following the llmstxt.org standard.
+
+## Table of Contents
+
+- [Digital Asset Standard (DAS) API](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard): The DAS API provides an interface for interacting with digital assets such as fungible tokens, regular
+- [JSON-RPC methods](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods): Supported methods on the Solana network.
+- [DIN as an AVS](https://docs-template.consensys.io/docs/avs): DIN leverages [EigenLayer](https://app.eigenlayer.xyz/)'s AVS model to establish a robust framework of economic security, performance accountabilit...
+- [DIN documentation](https://docs-template.consensys.io/docs/): import CardList from "@site/src/components/CardList"
+- [Node providers](https://docs-template.consensys.io/docs/node-providers): Overview of node providers
+- [Watchers](https://docs-template.consensys.io/docs/watchers): Watchers have the following responsibilities:
+- [Web3 gateways](https://docs-template.consensys.io/docs/web3-gateways): TO DO: Add more information about web3 gateways and routers.
+- [Architecture](https://docs-template.consensys.io/docs/architecture): ![DIN participants](/img/participants.png)
+- [Ethereum](https://docs-template.consensys.io/docs/api-reference/ethereum): Ethereum API reference section.
+- [Ethereum eth_accounts](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_accounts): Returns a list of Ethereum accounts.
+- [Ethereum eth_blobBaseFee](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_blobbasefee): Returns the expected blob base fee for the next Ethereum block.
+- [Ethereum eth_blockNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_blocknumber): Returns the latest Ethereum block number.
+- [Ethereum eth_call](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_call): Executes a Ethereum call without creating a transaction.
+- [Ethereum eth_chainId](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_chainid): Returns the Ethereum chain ID.
+- [Ethereum eth_createAccessList](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_createaccesslist): Creates an access list to include in a Ethereum transaction.
+- [Ethereum eth_estimateGas](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_estimategas): Estimates gas required for a Ethereum transaction.
+- [Ethereum eth_feeHistory](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_feehistory): Returns historical Ethereum gas information.
+- [Ethereum eth_gasPrice](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gasprice): Returns the current Ethereum gas price.
+- [Ethereum eth_getBalance](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getbalance): Returns the balance of a Ethereum address.
+- [Ethereum eth_getBlockByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbyhash): Returns Ethereum block information by hash.
+- [Ethereum eth_getBlockByNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbynumber): Returns Ethereum block information by number.
+- [Ethereum eth_getBlockReceipts](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockreceipts): Returns receipts for a block on Ethereum.
+- [Ethereum eth_getBlockTransactionCountByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbyhash): Returns transaction count by block hash on Ethereum.
+- [Ethereum eth_getBlockTransactionCountByNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbynumber): Returns transaction count by block number on Ethereum.
+- [Ethereum eth_getCode](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getcode): Returns byte code of a smart contract on Ethereum.
+- [Ethereum eth_getLogs](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getlogs): Returns filtered logs on Ethereum.
+- [Ethereum eth_getProof](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getproof): Returns account and storage proofs on Ethereum.
+- [Ethereum eth_getStorageAt](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getstorageat): Gets storage value for an address on Ethereum.
+- [Ethereum eth_getTransactionByBlockHashAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblockhashandindex): Gets a transaction by block hash on Ethereum.
+- [Ethereum eth_getTransactionByBlockNumberAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblocknumberandindex): Gets a transaction by block number on Ethereum.
+- [Ethereum eth_getTransactionByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyhash): Gets a transaction by hash on Ethereum.
+- [Ethereum eth_getTransactionCount](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactioncount): Gets transaction count for an address on Ethereum.
+- [Ethereum eth_getTransactionReceipt](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionreceipt): Gets transaction receipt by transaction hash on Ethereum.
+- [Ethereum eth_getUncleByBlockHashAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblockhashandindex): Gets uncle by block hash on Ethereum.
+- [Ethereum eth_getUncleByBlockNumberAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblocknumberandindex): Gets uncle by block number on Ethereum.
+- [Ethereum eth_getUncleCountByBlockHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblockhash): Gets uncle count by block hash on Ethereum.
+- [Ethereum eth_getUncleCountByBlockNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblocknumber): Gets uncle count by block number on Ethereum.
+- [Ethereum eth_getWork](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getwork): Return current block and seed hash on Ethereum.
+- [Ethereum eth_hashrate](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_hashrate): Return hashes per second on Ethereum.
+- [Ethereum eth_maxPriorityFeePerGas](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas): Estimates max priority fee on Ethereum.
+- [Ethereum eth_mining](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_mining): Indicates whether client is mining on Ethereum.
+- [Ethereum eth_protocolVersion](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_protocolversion): Returns protocol version on Ethereum.
+- [Ethereum eth_sendRawTransaction](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_sendrawtransaction): Submits pre-signed transaction on Ethereum.
+- [Ethereum eth_simulateV1](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_simulatev1): Simulate transactions across multiple blocks on Ethereum.
+- [Ethereum eth_submitWork](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_submitwork): Submits PoW solution on Ethereum.
+- [Ethereum eth_syncing](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_syncing): Indicates whether client is syncing on Ethereum.
+- [Ethereum net_listening](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_listening): Indicates whether client listening for network connections on Ethereum.
+- [Ethereum net_peerCount](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_peercount): Returns peer count on Ethereum.
+- [Ethereum net_version](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_version): Returns network ID on Ethereum.
+- [Ethereum web3_clientVersion](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/web3_clientversion): Returns client version on Ethereum.
+- [Solana](https://docs-template.consensys.io/docs/api-reference/solana): Solana API reference section.
+- [getAsset](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getasset): import Tabs from '@theme/Tabs';
+- [getAssetProof](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproof): import Tabs from '@theme/Tabs';
+- [getAssetProofBatch](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproofbatch): import Tabs from '@theme/Tabs';
+- [getAssets](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassets): import Tabs from '@theme/Tabs';
+- [getAssetsByAuthority](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyauthority): import Tabs from '@theme/Tabs';
+- [getAssetsByCreator](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbycreator): import Tabs from '@theme/Tabs';
+- [getAssetsByGroup](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbygroup): import Tabs from '@theme/Tabs';
+- [getAssetsByOwner](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyowner): import Tabs from '@theme/Tabs';
+- [getAssetSignatures](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsignatures): import Tabs from '@theme/Tabs';
+- [getNftEditions](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getnfteditions): import Tabs from '@theme/Tabs';
+- [getTokenAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/gettokenaccounts): import Tabs from '@theme/Tabs';
+- [searchAssets](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/searchassets): import Tabs from '@theme/Tabs';
+- [getAccountInfo](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getaccountinfo): import Tabs from '@theme/Tabs';
+- [getBalance](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getbalance): import Tabs from '@theme/Tabs';
+- [getBlock](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblock): import Tabs from '@theme/Tabs';
+- [getBlockCommitment](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockcommitment): import Tabs from '@theme/Tabs';
+- [getBlockHeight](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockheight): import Tabs from '@theme/Tabs';
+- [getBlockProduction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockproduction): import Tabs from '@theme/Tabs';
+- [getBlocks](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblocks): import Tabs from '@theme/Tabs';
+- [getBlocksWithLimit](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockswithlimit): import Tabs from '@theme/Tabs';
+- [getClusterNodes](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getclusternodes): import Tabs from '@theme/Tabs';
+- [getEpochInfo](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getepochinfo): import Tabs from '@theme/Tabs';
+- [getEpochSchedule](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getepochschedule): import Tabs from '@theme/Tabs';
+- [getFeeForMessage](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getfeeformessage): import Tabs from '@theme/Tabs';
+- [getFirstAvailableBlock](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getfirstavailableblock): import Tabs from '@theme/Tabs';
+- [getGenesisHash](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getgenesishash): import Tabs from '@theme/Tabs';
+- [getHealth](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gethealth): import Tabs from '@theme/Tabs';
+- [getHighestSnapshotSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gethighestsnapshotslot): import Tabs from '@theme/Tabs';
+- [getIdentity](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getidentity): import Tabs from '@theme/Tabs';
+- [getInflationGovernor](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationgovernor): import Tabs from '@theme/Tabs';
+- [getInflationRate](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationrate): import Tabs from '@theme/Tabs';
+- [getInflationReward](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationreward): import Tabs from '@theme/Tabs';
+- [getLargestAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getlargestaccounts): import Tabs from '@theme/Tabs';
+- [getLatestBlockhash](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getlatestblockhash): import Tabs from '@theme/Tabs';
+- [getLeaderSchedule](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getleaderschedule): import Tabs from '@theme/Tabs';
+- [getMaxRetransmitSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmaxretransmitslot): import Tabs from '@theme/Tabs';
+- [getMaxShredInsertSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmaxshredinsertslot): import Tabs from '@theme/Tabs';
+- [getMinimumBalanceForRentExemption](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getminimumbalanceforrentexemption): import Tabs from '@theme/Tabs';
+- [getMultipleAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmultipleaccounts): import Tabs from '@theme/Tabs';
+- [getProgramAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getprogramaccounts): import Tabs from '@theme/Tabs';
+- [getRecentPerformanceSamples](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getrecentperformancesamples): import Tabs from '@theme/Tabs';
+- [getRecentPrioritizationFees](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getrecentprioritizationfees): import Tabs from '@theme/Tabs';
+- [getSignaturesForAddress](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsignaturesforaddress): import Tabs from '@theme/Tabs';
+- [getSignatureStatuses](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsignaturestatuses): import Tabs from '@theme/Tabs';
+- [getSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslot): import Tabs from '@theme/Tabs';
+- [getSlotLeader](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslotleader): import Tabs from '@theme/Tabs';
+- [getSlotLeaders](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslotleaders): import Tabs from '@theme/Tabs';
+- [getStakeMinimumDelegation](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getstakeminimumdelegation): import Tabs from '@theme/Tabs';
+- [getSupply](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsupply): import Tabs from '@theme/Tabs';
+- [getTokenAccountBalance](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountbalance): import Tabs from '@theme/Tabs';
+- [getTokenAccountsByDelegate](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbydelegate): import Tabs from '@theme/Tabs';
+- [getTokenAccountsByOwner](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbyowner): import Tabs from '@theme/Tabs';
+- [getTokenLargestAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenlargestaccounts): import Tabs from '@theme/Tabs';
+- [getTokenSupply](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokensupply): import Tabs from '@theme/Tabs';
+- [getTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettransaction): import Tabs from '@theme/Tabs';
+- [getTransactionCount](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettransactioncount): import Tabs from '@theme/Tabs';
+- [getVersion](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getversion): import Tabs from '@theme/Tabs';
+- [getVoteAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getvoteaccounts): import Tabs from '@theme/Tabs';
+- [isBlockhashValid](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/isblockhashvalid): import Tabs from '@theme/Tabs';
+- [minimumLedgerSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/minimumledgerslot): import Tabs from '@theme/Tabs';
+- [requestAirdrop](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/requestairdrop): import Tabs from '@theme/Tabs';
+- [sendTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/sendtransaction): import Tabs from '@theme/Tabs';
+- [simulateTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/simulatetransaction): import Tabs from '@theme/Tabs';
+- [Supported Networks](https://docs-template.consensys.io/docs/api-reference/supported-networks): Networks supported by DIN API services
+- [Onboard as an AVS operator](https://docs-template.consensys.io/docs/avs/onboard): TO DO: Add onboarding information for AVS operators. Need to clarify difference between AVS operators and node providers/operators, and AVS operato...
+- [Operator sets](https://docs-template.consensys.io/docs/avs/operator-sets): EigenLayer operator sets have been discussed and designed at length to create more granular roles and permissions for EigenLayer operators and AVS ...
+- [Slashing and rewards](https://docs-template.consensys.io/docs/avs/slashing-and-rewards): The AVS model within DIN provides structured incentives that reward high-performing node providers and watchers while penalizing those who fail to ...
+- [Veto Committee](https://docs-template.consensys.io/docs/avs/veto-committee): The DIN Veto Committee is comprised of the seven highest performing node providers over a 14.5 day period (an epoch).
+- [Plain text documentation](https://docs-template.consensys.io/docs/llms-txt): Download LLM-friendly documentation in text format
+- [Onboard as a node provider](https://docs-template.consensys.io/docs/node-providers/onboard): Node providers must acquire a license to participate in DIN, which is obtained by joining the DIN AVS through EigenLayer restaking (or staking toke...
+- [Roadmap](https://docs-template.consensys.io/docs/roadmap): DIN is progressing through a carefully structured roadmap that gradually enhances its decentralization, scalability, and governance capabilities.
+- [Make API requests](https://docs-template.consensys.io/docs/watchers/make-api-requests): TO DO: Add more information here.
+- [Monitor health](https://docs-template.consensys.io/docs/watchers/monitor-health): TO DO: Add more information here.
+- [Onboard as a watcher](https://docs-template.consensys.io/docs/watchers/onboard): Watchers need to join the DIN AVS as an operator.
+- [Manage payments](https://docs-template.consensys.io/docs/web3-gateways/manage-payments): The Ingress Operators pay DIN Providers via DIN Payments for their processed requests/relays through the DIN Router.
+- [Monitor usage](https://docs-template.consensys.io/docs/web3-gateways/monitor-usage): The DIN Watcher function consists of a variety of monitoring tools, including an OpenTelemetry Collector that can be used for your own SRE review.
+- [Onboard as a web3 gateway](https://docs-template.consensys.io/docs/web3-gateways/onboard): TO DO: Clarify what content is needed here.
+- [View API pricing](https://docs-template.consensys.io/docs/web3-gateways/view-api-pricing): TO DO: Add information here.
+- [x402 payments](https://docs-template.consensys.io/docs/x402-payments): DIN implements [x402](https://www.coinbase.com/developer-platform/products/x402), which is an internet-native payment protocol that was developed b...
