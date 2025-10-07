@@ -1,9 +1,9 @@
 ---
-title: Documentation for LLMs
+title: Plain text documentation
 description: Download LLM-friendly documentation in text format
 ---
 
-# Documentation for LLMs
+# Plain text documentation
 
 Plain text versions of all documentation, optimized for LLM consumption.
 
