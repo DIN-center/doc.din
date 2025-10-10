@@ -23,3 +23,17 @@ The service level agreements (SLAs) for each network are agreed upon between the
   - How can I withdraw funds from this module or network?
 
 - Do these payments get distributed directly to the node providers?
+
+<p align="center">
+
+```mermaid
+flowchart TD
+  u["**User**"] -->|Pay fees for access| dsp["**DIN service provider**"]
+  dsp -->|Stake or restake to list| dp["**DIN protocol**"]
+  dp -->|Reward from the network to augment fees and bootstrap service supply| dsp
+  dp -->|Reward from the network to augment fees and boostrap service supply| w["**Watcher**"]
+  dp -->|Reward from the network to augment fees and boostrap service supply| c@{ shape: processes, label: "**Covalent**" }
+  u -->|Pay fees for Covalent APIs| c
+```
+
+</p>

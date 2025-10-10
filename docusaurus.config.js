@@ -12,7 +12,6 @@ const config = {
   url: "https://docs-template.consensys.io",
   baseUrl,
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
   staticDirectories: ["static"],
   favicon: "img/favicons/favicon.svg",
   trailingSlash: false,
