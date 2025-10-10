@@ -9,7 +9,19 @@ The telemetry collector:
 
 It is up to the Web3 gateway to determine what they want to do with the Open Telemetry Data (e.g. follow our tooling to show into Signoz dashboard).
 
-![Proxy observability](/img/proxy-observability.png)
+<p align="center">
+
+```mermaid
+flowchart LR
+  dr["**DIN Router
+  2019/metrics**"] -->|OTLP trace forwarding| ot["**OpenTelemetry
+  Collector**"]
+  ot -->|"Prometheus metrics scrape/pull"| dr
+  ot --> cloud["**Grafana Cloud or
+  Signoz Cloud**"]
+```
+
+</p>
 
 - What dashboards can we expect to see on the performance of DIN Providers or the DIN Router? Completed relays?
   - **Answer:** DIN Router data is added to the Open Telemetry collector and processed into a Signoz Cloud dashboard.

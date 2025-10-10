@@ -29,11 +29,6 @@ See the following documentation to onboard and participate as various DIN roles:
 <CardList
   items={[
     {
-      href: "avs",
-      title: "AVS operators",
-      description: "AVS operators partner with node providers to earn restaking rewards.",
-    },
-    {
       href: "node-providers",
       title: "Node providers",
       description: "Node providers provide services to the network (and access to the nodes).",

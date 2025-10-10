@@ -21,7 +21,6 @@ const sidebars = {
       link: { type: "doc", id: "avs/index" },
       collapsed: true,
       items: [
-        "avs/onboard",
         "avs/slashing-and-rewards",
         "avs/operator-sets",
         "avs/veto-committee"

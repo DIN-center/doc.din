@@ -10,7 +10,38 @@ This section describes how a gateway would be added as an Ingress Operator for t
 We have mainly done this manually (as Infura was our only ingress operator in scope), but we are expanding the authentication protocol to include the additional handshake.
 The alpha testing for security purposes will likely remain manual (in collaboration with our dev team).
 
-![Gateway authentication](/img/gateway-authentication.png)
+<p align="center">
+
+```mermaid
+---
+config:
+  layout: elk
+---
+flowchart TD
+  subgraph c["**Client**"]
+  c1[Client-side session SDK]
+  end
+  c -.->|"DIN RPC
+  request"| r
+  c -.->|"Direct
+  provider RPC
+  request"| p
+  c1 <-->|din-caddy-plugins| r1
+  c1 <-->|Auth request| p1
+  subgraph r["**Router**"]
+  r1[Session manager]
+  end
+  r -.->|"Provider RPC
+  request"| p
+  r1 <-->|"Auth request
+  for session
+  token"| p1
+  subgraph p["**Provider**"]
+  p1[Auth app]
+  end
+```
+
+</p>
 
 - Is this a registered IP Address or domain that can ping the DIN Router? 
   - **Answer:** Yes, this is a DNS (registered IP address).
@@ -116,7 +147,29 @@ In the initial implementation of the authentication protocol, the bare minimum c
 
 This section answers questions on how we manually add the Web3 Gateway / Ingress Operator with your appropriate permissions. A Caddy Proxy router set of configurations is used to make the connection between the user and the provider.
 
-![Proxy request roadmap](/img/proxy-request-roadmap.png)
+<p align="center">
+
+```mermaid
+---
+config:
+  layout: elk
+---
+flowchart LR
+  subgraph Caddy ["**Caddy Proxy Router**"]
+    direction TB
+    c1{{Determine service by path}}
+    subgraph c2 [Determine available providers]
+      direction TB
+      c2a{{Allow only providers from the appropriate priority level}} -.-> c2b{{Allow only healthy providers to be selected}}
+    end
+    c1 --> c2
+    c2 --> c3{{Select provider based on Caddy server dynamic load balancing algorithm}}
+  end
+  u["**User**"] -->|Send request| Caddy
+  Caddy -->|Send request to selected provider| p["**Provider**"]
+```
+
+</p>
 
 - What are the security requirements for this?
   - **Answer:** Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new gateway is using to access the DIN Router.

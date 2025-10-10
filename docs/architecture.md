@@ -1,7 +1,5 @@
 # Architecture
 
-![DIN participants](/img/participants.png)
-
 DIN uses a decentralized structure composed of multiple actors:
 
 - [**Node providers**](node-providers/index.md) - Node providers for different networks serve traffic via the DIN router.
@@ -14,10 +12,31 @@ DIN uses a decentralized structure composed of multiple actors:
 
 ## Key components
 
-![DIN architecture](/img/architecture.png)
+<p align="center">
 
-- **DIN router** - Consists of multiple components, but effectively has a service registry that routes traffic properly between consumers and providers.
-- **DIN payments** - Mechanisms for paying from provider-to-provider related to the successfully processed transactions and APIs.
+```mermaid
+---
+config:
+  layout: elk
+---
+flowchart TD
+  d["**Dapps/developers**"] --> wg["**Web3 gateways**
+  (Infura, others)"]
+  wg -->|"Pay for network usage"| dp["**DIN Payments**"]
+  wg <-->|"Send API requests"| dr["**DIN Router**"]
+  pn@{ shape: processes, label: "**Provider nodes**" }
+  dp -->|"Pay providers
+  for served
+  requests & txns"| pn
+  dr <-->|Process requests| pn
+  dw["**Watchers**"] -->|"Monitor network
+  traffic"| pn
+```
+
+</p>
+
+- **DIN Router** - Consists of multiple components, but effectively has a service registry that routes traffic properly between consumers and providers.
+- **DIN Payments** - Mechanisms for paying from provider-to-provider related to the successfully processed transactions and APIs.
 - **Staking contracts** - Enforce economic accountability.
 - **Performance Monitoring Systems** - Ensure SLA compliance.
 - **Smart Contracts** - Manage node registration, network mapping, payment, and governance.
