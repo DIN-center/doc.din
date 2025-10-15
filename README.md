@@ -12,6 +12,7 @@ This repository contains the documentation for the Decentralized Infrastructure 
 
 You will need to have Node.js installed to run the live previews of the docs locally.
 
+
 It is highly recommended that you use a tool like [`nvm`](https://github.com/nvm-sh/nvm#installing-and-updating)
 to manage Node.js versions on your machine.
 
