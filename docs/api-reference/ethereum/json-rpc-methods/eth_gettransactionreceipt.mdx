@@ -7,7 +7,7 @@ description: Gets transaction receipt by transaction hash on Ethereum.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_gettransactionreceipt`
+# `eth_getTransactionReceipt`
 
 
 Returns the receipt of a transaction given transaction hash. Note that the receipt is not available for pending transactions. 
@@ -39,7 +39,7 @@ A transaction receipt object, or null when no receipt was found. The transaction
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -48,7 +48,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_getTransactionReceipt", "params": ["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"], "id": 1}'
@@ -58,7 +58,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getTransactionReceipt", "params": ["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getTransactionReceipt", "params": ["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"], "id": 1}'
 ```
 
   </TabItem>

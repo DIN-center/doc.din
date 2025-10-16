@@ -7,7 +7,7 @@ description: Return current block and seed hash on Ethereum.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_getwork`
+# `eth_getWork`
 
 
 Returns the hash of the current block, the seed hash, and the boundary condition to be met ("target"). 
@@ -26,7 +26,7 @@ An array with the following properties:
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -35,7 +35,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_getWork", "params": [], "id": 1}'
@@ -45,7 +45,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getWork", "params": [], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getWork", "params": [], "id": 1}'
 ```
 
   </TabItem>
@@ -54,7 +54,7 @@ wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "me
 ### Response
 
 :::note
-While Infura will allow this method, `eth_getWork` will not actually return mining work.
+While gateways will allow this method, `eth_getWork` will not actually return mining work.
 :::
 
 
