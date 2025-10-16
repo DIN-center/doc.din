@@ -1,0 +1,75 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_newFilter`
+
+Creates a filter object based on the given filter options, to notify when the state changes (logs). To check if the state has changed, call `eth_getFilterChanges`.
+
+:::warning Expires after 15 minutes of inactivity
+Filters that are not polled using `eth_getFilterChanges` automatically expires after 15 minutes of inactivity.
+Filter IDs can be polled by any connection using the same API key.
+:::
+
+## Parameters
+
+- `filter object`: (object) _[required]_ - A filter object with the following keys and their values:
+  - `address`: (string or array) _[optional]_ - A contract address or a list of addresses from which logs should originate.
+  - `fromBlock`: (string) _[optional, default: latest]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+  - `toBlock`: (string) _[optional, default: latest]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+  - `topics`: (array) _[optional]_ - An array of 32 bytes data topics. Topics are order-dependent.
+
+### Specifying topic filters
+
+Topics are order-dependent. A transaction with a log with topics `[A, B]` will be matched by the following topic filters:
+
+- `[]`: Anything.
+- `[A]`: `A` in the first position, and anything after.
+- `[null, B]`: Anything in first position AND `B` in second position, and anything after.
+- `[A, B]`: `A` in the first position AND `B` in second position, and anything after.
+- `[[A, B], [A, B]]`: `(A OR B)` in first position AND `(A OR B)` in second position, and anything after.
+
+## Returns
+
+`filter ID`: A hexadecimal denoting the newly created filter ID.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_newFilter", "params": [{"topics": ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"]}], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_newFilter", "params": [{"topics": ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"]}], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x10ff114de54f0bfdbd7855f8a1dd7317e6500495a24f"
+}
+```
+
+  </TabItem>
+</Tabs>

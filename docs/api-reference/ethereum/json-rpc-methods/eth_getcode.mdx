@@ -2,65 +2,9 @@
 title: Ethereum eth_getCode
 sidebar_label: eth_getCode
 description: Returns byte code of a smart contract on Ethereum.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_getcode.mdx"
 
-# `eth_getCode`
-
-
-Returns the compiled byte code of a smart contract, if any, at a given address. 
-
-## Parameters
-
-- `address`: (string) _[required]_ - A string representing the address (20 bytes) of the smart contract, from which the compiled byte code will be obtained.
-- `block number`: (string) _[required]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
-
-## Returns
-
-The compiled byte code of the smart contract at the given address.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_getCode", "params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d", "0x65a8db"], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getCode", "params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d", "0x65a8db"], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0x60606040..."
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />
