@@ -7,7 +7,7 @@ description: Gets a transaction by block hash on Ethereum.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_gettransactionbyblockhashandindex`
+# `eth_getTransactionByBlockHashAndIndex`
 
 
 Returns information about a transaction given block hash and transaction index position. 
@@ -43,7 +43,7 @@ A transaction object, or null when no transaction was found. The transaction obj
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -52,7 +52,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockHashAndIndex", "params": ["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35", "0x0"], "id": 1}'
@@ -62,7 +62,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockHashAndIndex", "params": ["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35", "0x0"], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getTransactionByBlockHashAndIndex", "params": ["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35", "0x0"], "id": 1}'
 ```
 
   </TabItem>

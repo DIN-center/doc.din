@@ -9,7 +9,6 @@ import TabItem from "@theme/TabItem";
 
 # `eth_accounts`
 
-
 Returns a list of addresses owned by the client.
 
 ## Parameters
@@ -20,13 +19,13 @@ None
 
 An array of hexadecimals as strings representing the addresses owned by the client.
 
-:::caution Infura will not return any accounts
-While this JSON-RPC method is supported by Infura, it will _not_ return any accounts as Infura does not support "unlocking" accounts. Instead, users should send pre-signed raw transactions using [`eth_sendRawTransaction`](./eth_sendrawtransaction.mdx).
+:::caution will not return any accounts
+While this JSON-RPC method is supported, it will _not_ return any accounts.
 :::
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -35,7 +34,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_accounts", "params": [], "id": 1}'
@@ -45,7 +44,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_accounts", "params": [], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_accounts", "params": [], "id": 1}'
 ```
 
   </TabItem>

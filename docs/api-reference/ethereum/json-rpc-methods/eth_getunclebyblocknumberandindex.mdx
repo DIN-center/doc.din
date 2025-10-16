@@ -7,7 +7,7 @@ description: Gets uncle by block number on Ethereum.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_getunclebyblocknumberandindex`
+# `eth_getUncleByBlockNumberAndIndex`
 
 
 Returns information about an uncle of a block given the block number and the uncle index position. 
@@ -45,7 +45,7 @@ An uncle doesn't contain individual transactions.
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -54,7 +54,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_getUncleByBlockNumberAndIndex", "params": ["0x29c", "0x0"], "id": 1}'
@@ -64,7 +64,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getUncleByBlockNumberAndIndex", "params": ["0x29c", "0x0"], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getUncleByBlockNumberAndIndex", "params": ["0x29c", "0x0"], "id": 1}'
 ```
 
   </TabItem>

@@ -7,19 +7,13 @@ description: Estimates gas required for a Ethereum transaction.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_estimategas`
+# `eth_estimateGas`
 
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete.
 The transaction will not be added to the blockchain. Note that the estimate may be significantly more
 than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics
 and node performance. 
-
-:::warning Gas parameter is capped
-
-To prevent abuse of the API, the `gas` parameter in this `eth_estimateGas` method and in
-[`eth_call`](./eth_call.mdx) is capped at 10x (1000%) the current block gas limit. You can recreate this behavior in your local test environment (Besu, geth, or other client) using the [`rpc.gascap`](https://geth.ethereum.org/docs/fundamentals/command-line-options#commands) command line option.
-:::
 
 ## Parameters
 
@@ -58,7 +52,7 @@ If this call causes the EVM to execute a `REVERT` operation, an error response o
 
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 
 ### Request
 
@@ -67,7 +61,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
   <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_estimateGas", "params": [{"from": "0x9cE564c7d09f88E7d8233Cdd3A4d7AC42aBFf3aC", "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", "value": "0x9184e72a"}], "id": 1}'
@@ -77,7 +71,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
   <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_estimateGas", "params": [{"from": "0x9cE564c7d09f88E7d8233Cdd3A4d7AC42aBFf3aC", "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", "value": "0x9184e72a"}], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_estimateGas", "params": [{"from": "0x9cE564c7d09f88E7d8233Cdd3A4d7AC42aBFf3aC", "to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567", "value": "0x9184e72a"}], "id": 1}'
 ```
 
   </TabItem>

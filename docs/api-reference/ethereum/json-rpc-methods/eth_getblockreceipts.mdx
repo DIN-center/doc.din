@@ -7,7 +7,7 @@ description: Returns receipts for a block on Ethereum.
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# `eth_getblockreceipts`
+# `eth_getBlockReceipts`
 
 
 Returns all transaction receipts for a given block, the amount of gas used, and any event logs that
@@ -30,7 +30,7 @@ might have been produced by a smart contract during the transaction.
 - `result` - Block object or `null` when there is no corresponding block.
 ## Example
 
-Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard](https://developer.metamask.io/).
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
 ### Request
 
  import TabItem from "@theme/TabItem";
@@ -39,7 +39,7 @@ Replace `<YOUR-API-KEY>` with an API key from your [MetaMask Developer dashboard
    <TabItem value="curl">
 
 ```bash
-curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
+curl <ENDPOINT> \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "eth_getBlockReceipts", "params": ["latest"], "id": 1}'
@@ -49,7 +49,7 @@ curl https://mainnet.infura.io/v3/<YOUR-API-KEY> \
    <TabItem value="WSS">
 
 ```bash
-wscat -c wss://mainnet.infura.io/ws/v3/<YOUR-API-KEY> -x '{"jsonrpc": "2.0", "method": "eth_getBlockReceipts", "params": ["latest"], "id": 1}'
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getBlockReceipts", "params": ["latest"], "id": 1}'
 ```
 
    </TabItem>
