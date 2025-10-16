@@ -16,7 +16,10 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@site/*": ["./*"]
+      "@site/*": ["./*"],
+      "@theme/*": ["node_modules/@docusaurus/theme-classic/lib/theme/*"],
+      "@theme-original/*": ["node_modules/@docusaurus/theme-classic/lib/theme/*"],
+      "@theme-init/*": ["node_modules/@docusaurus/theme-classic/lib/theme/*"]
     }
   },
   "include": [
