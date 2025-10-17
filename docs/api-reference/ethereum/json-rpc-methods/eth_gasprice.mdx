@@ -2,64 +2,9 @@
 title: Ethereum eth_gasPrice
 sidebar_label: eth_gasPrice
 description: Returns the current Ethereum gas price.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_gasprice.mdx"
 
-# `eth_gasPrice`
-
-
-Returns the current gas price in wei. 
-
-## Parameters
-
-None.
-
-## Returns
-
-A hexadecimal equivalent of an integer representing the current gas price in wei.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_gasPrice", "params": [], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_gasPrice", "params": [], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0x6bcc886e7"
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />

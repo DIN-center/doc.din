@@ -2,75 +2,9 @@
 title: Ethereum eth_getWork
 sidebar_label: eth_getWork
 description: Return current block and seed hash on Ethereum.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_getwork.mdx"
 
-# `eth_getWork`
-
-
-Returns the hash of the current block, the seed hash, and the boundary condition to be met ("target"). 
-
-## Parameters
-
-None.
-
-## Returns
-
-An array with the following properties:
-
-- Current block header PoW-hash (32 bytes).
-- The seed hash used for the DAG (32 bytes).
-- The boundary condition ("target") (32 bytes), 2^256 / difficulty.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_getWork", "params": [], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_getWork", "params": [], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-:::note
-While gateways will allow this method, `eth_getWork` will not actually return mining work.
-:::
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "error": {
-    "code": -32000,
-    "message": "no mining work available yet"
-  }
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />

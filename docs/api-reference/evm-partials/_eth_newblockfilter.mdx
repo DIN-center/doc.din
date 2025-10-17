@@ -1,0 +1,61 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_newBlockFilter`
+
+Creates a filter in the node, to notify when a new block arrives. To check if the state has changed, call `eth_getFilterChanges`.
+
+:::warning Expires after 15 minutes of inactivity
+Filters that are not polled using `eth_getFilterChanges` automatically expires after 15 minutes of inactivity.
+Filter IDs can be polled by any connection using the same API key.
+:::
+
+## Parameters
+
+None
+
+## Returns
+
+`filter ID`: A hexadecimal denoting the newly created filter ID.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "eth_newBlockFilter", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_newBlockFilter", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x8144114ddff0b3be57ad6a848ee4fe4a44cdda667055"
+}
+```
+
+  </TabItem>
+</Tabs>

@@ -2,65 +2,9 @@
 title: Ethereum eth_chainId
 sidebar_label: eth_chainId
 description: Returns the Ethereum chain ID.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_chainid.mdx"
 
-# `eth_chainId`
-
-
-Returns the currently configured chain ID, a value used in replay-protected transaction signing as introduced
-by [EIP-155](https://eips.ethereum.org/EIPS/eip-155). 
-
-## Parameters
-
-None.
-
-## Returns
-
-- `chainId` - A hexadecimal of the current chain ID.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_chainId", "params": [], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_chainId", "params": [], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```js
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0x1"
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />

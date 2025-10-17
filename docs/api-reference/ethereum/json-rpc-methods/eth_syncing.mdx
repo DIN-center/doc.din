@@ -2,69 +2,9 @@
 title: Ethereum eth_syncing
 sidebar_label: eth_syncing
 description: Indicates whether client is syncing on Ethereum.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_syncing.mdx"
 
-# `eth_syncing`
-
-
-Returns an object with data about the sync status or `false`. 
-
-## Parameters
-
-None.
-
-## Returns
-
-- `sync status`: (boolean) Returns `false` only when not syncing.
-- `sync blocks`:
-  - `startingBlock`: A hexadecimal equivalent the integer indicating the block at which the import started (will only be reset after the sync reaches the head).
-  - `currentBlock`: A hexadecimal equivalent the integer indicating the current block, same as
-      [`eth_blockNumber`](./eth_blocknumber.mdx).
-  - `highestBlock`: A hexadecimal equivalent the integer indicating the highest block.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_syncing", "params": [], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_syncing", "params": [], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": false
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />
