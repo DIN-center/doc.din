@@ -7,4 +7,4 @@ If a provider is slashed during the prior epoch, they are still eligible to be p
 
 [Hats protocol](https://www.hatsprotocol.xyz/) is used to assign the role of a Veto Committee member, to timebox membership, and to revoke the role in the event of non-participation.
 
-The DIN Veto Committee has a process to review slashing scenarios with shared opinions within **#din-general** slack channel.
+The DIN Veto Committee has a process to review slashing scenarios with shared opinions in the **#din-general** Slack channel.

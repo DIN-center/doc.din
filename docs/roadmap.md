@@ -5,8 +5,8 @@ This roadmap is divided into key phases, each designed to build on the last, ens
 
 | Phase | Milestones | Description |
 | ----- | ---------- | ----------- |
-| Federated Phase (2024) | Joining DIN, processing transactions | Alpha customers (Infura, MetaMask) route API traffic and seed developer calls; Providers meet performance thresholds and handle transactions, with payments managed through traditional invoicing. |
-| Progressive Decentralization (2024-2025) | DIN as an AVS, decentralized transaction processing, DIN payments Layer 3, DIN Foundation and DAO, incentivized testnet | Early stage integration of economic security and staking/slashing through DIN as an AVS; Providers gain routing flexibility beyond Infura; payments move to Layer 3 on-chain protocol; DIN Foundation oversees shared services and governance transitions to DAO-driven decision-making. |
+| Federated Phase (2024) | Joining DIN, processing transactions | Alpha customers (Infura, MetaMask) route API traffic and seed developer calls; providers meet performance thresholds and handle transactions, with payments managed through traditional invoicing. |
+| Progressive Decentralization (2024-2025) | DIN as an AVS, decentralized transaction processing, DIN Payments Layer 3, DIN Foundation and DAO, incentivized testnet | Early stage integration of economic security and staking/slashing through DIN as an AVS; providers gain routing flexibility beyond Infura; payments move to Layer 3 on-chain protocol; DIN Foundation oversees shared services and governance transitions to DAO-driven decision-making. |
 | Full Decentralization (2025-2026) | Permissionless onboarding, advanced payments, and DAO-managed innovation fund | DIN becomes fully permissionless, enabling automated SLA enforcement, dynamic pricing, cross-protocol staking, and DAO-led growth initiatives, establishing DIN as a decentralized, community-driven infrastructure for web3. |
 
 ## Federated Phase
@@ -38,28 +38,28 @@ With inspiration, the Cosmos Hub introduced a modular approach to interoperabili
 
 ### DIN as an AVS
 
-The practical implementation of the network watcher has explored usage of DIN launching as an Autonomous Verifiable Services (AVS) on EigenLayer.
+The practical implementation of the network watcher has explored usage of DIN launching as an Autonomous Verifiable Service (AVS) on EigenLayer.
 EigenLayer's AVS model provides a robust framework for economic alignment and real-time performance enforcement.
 DIN has integrated new functionalities that streamline agent onboarding, improve oversight via a watchtower, and establish a structured accountability model without launching a token that may have floating value.
 
-- **Onboarding components** - Ability for Providers to stake and add their wallet identities to join the DIN Router Registry contracts
+- **Onboarding components** - Ability for providers to stake and add their wallet identities to join the DIN Router Registry contracts
 
-- **Economic security SLAs** - Watcher and AVS Operator capabilities for staking, slashing, and challenging the onboarded node performance and reputation of entities in DIN.
+- **Economic security SLAs** - Watcher and AVS operator capabilities for staking, slashing, and challenging the onboarded node performance and reputation of entities in DIN.
 
-The DIN AVS system aims to deploy Watchers with a dedicated "Watcher node kit," which operates as both a monitoring tool and a user-friendly interface to the DIN network backend.
-Through the AVS interface, Watchers access essential modules for onboarding DIN Providers, viewing onboarding notes, tracking network status, and enforcing slashing protocols.
+The DIN AVS system aims to deploy watchers with a dedicated "watcher node kit," which operates as both a monitoring tool and a user-friendly interface to the DIN network backend.
+Through the AVS interface, watchers access essential modules for onboarding DIN providers, viewing onboarding notes, tracking network status, and enforcing slashing protocols.
 
-Acting as operators on EigenLayer, DIN Watchers not only monitor service accuracy and reliability but also uphold AVS-based slashing and staking rules for performance infractions.
-Watchers gather and analyze response data by running simulated requests to ensure adherence to service-level agreements (SLAs). 
+Acting as operators on EigenLayer, DIN watchers not only monitor service accuracy and reliability but also uphold AVS-based slashing and staking rules for performance infractions.
+Watchers gather and analyze response data by running simulated requests to ensure adherence to SLAs. 
 Their results are then published on a public event stream, providing transparency and informing DIN's crypto-economic incentives.
 By aligning with EigenLayer's AVS structure, DIN strengthens its validation processes, ensuring real-time accountability and economic security for all network participants.
 
 ### Decentralized traffic processing
 
-- **Provider-driven routing capabilities** - Providers in the DIN network will gain the ability to route service traffic through various Web3 Gateways, not limited to Infura.
-  This expanded functionality decentralizes the routing process, creating an open network where multiple Web3 Gateways can interact with DIN Providers.
+- **Provider-driven routing capabilities** - Providers in the DIN network will gain the ability to route service traffic through various web3 gateways, not limited to Infura.
+  This expanded functionality decentralizes the routing process, creating an open network where multiple web3 gateways can interact with DIN providers.
 
-- **DIN payments Layer 3 network** - DIN will implement an onchain payments layer on Linea as a Layer 3 to facilitate real-time, decentralized payments among DIN Providers and Web3 Gateways.
+- **DIN Payments Layer 3 network** - DIN will implement an onchain payments layer on Linea as a Layer 3 to facilitate real-time, decentralized payments among DIN providers and web3 gateways.
   This payments layer will allow for seamless, automated transactions, eliminating the need for traditional invoicing and streamlining economic interactions within DIN.
   Operators will be compensated based on their service contributions, with payment records transparently available onchain.
 
@@ -89,7 +89,7 @@ The testnet enables DIN to fine-tune its staking, slashing, reward, and governan
 
 #### Participant onboarding and reputation building
 
-- **Early access to economic mechanisms** - Node Providers, Watchers, and Web3 Gateways gain early access to DIN's staking, slashing, and reward systems through the testnet.
+- **Early access to economic mechanisms** - Node providers, watchers, and web3 gateways gain early access to DIN's staking, slashing, and reward systems through the testnet.
   This experience allows them to adapt to DIN's operational standards and fine-tune their infrastructure, reducing the learning curve for mainnet.
 
 - **Reputation establishment** - Participants who perform well on the incentivized testnet build a reputation that can carry over to the mainnet, giving them a competitive edge in request routing and access to higher-tier rewards.
@@ -109,10 +109,10 @@ In the final phase, DIN will operate as a fully decentralized, community-governe
 
 ### Open network access and permissionless onboarding
 
-- **Permissionless onboarding of operators** - The DIN onboarding process will become permissionless, enabling anyone who meets the staking and SLA requirements to join as a Node Operator or Network Watcher.
+- **Permissionless onboarding of operators** - The DIN onboarding process will become permissionless, enabling anyone who meets the staking and SLA requirements to join as a node provider or watcher.
   This open access expands DIN's capacity to accommodate growing demand and diversifies the operator base, enhancing network resilience.
 
-- **Automated SLA compliance and enforcement** - Through further integration with EigenLayer's Autonomous Verifiable Services (AVS) model, DIN will implement automated SLA compliance checks and penalty enforcement.
+- **Automated SLA compliance and enforcement** - Through further integration with EigenLayer's AVS model, DIN will implement automated SLA compliance checks and penalty enforcement.
   This ensures that performance standards are consistently maintained without manual intervention, supporting a fully autonomous infrastructure.
 
 ### Advanced payment and reward structures
