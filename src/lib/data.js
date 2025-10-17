@@ -11,6 +11,11 @@ export const NETWORK_LINKS = [
     href: '/api-reference/solana',
     logo: `${LOGO_PATH}/logo-solana.svg`,
   },
+  {
+    name: 'BNB Smart Chain',
+    href: '/api-reference/bnb-smart-chain',
+    logo: `${LOGO_PATH}/logo-bnb.svg`,
+  },
   // Networks below are supported but documentation pages are not yet available
   // Uncomment and update hrefs when documentation pages are created
   // {
@@ -32,11 +37,6 @@ export const NETWORK_LINKS = [
   //   name: 'Blast',
   //   href: '/services/reference/blast',
   //   logo: `${LOGO_PATH}/logo-blast.svg`,
-  // },
-  // {
-  //   name: 'BNB Smart Chain',
-  //   href: '/services/reference/bnb-smart-chain',
-  //   logo: `${LOGO_PATH}/logo-bnb.svg`,
   // },
   // {
   //   name: 'Celo',
