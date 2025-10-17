@@ -2,7 +2,7 @@
 
 DIN uses a decentralized structure composed of multiple actors:
 
-- [**Node providers**](node-providers/index.md) - Node providers for different networks serve traffic via the DIN router.
+- [**Node providers**](node-providers/index.md) - Node providers for different networks serve traffic via the DIN Router.
   These providers are compensated for their fulfilled traffic.
 - [**Watchers**](watchers/index.md) - Watchers monitor the health of the network traffic.
   The DIN dashboard is the source of truth for the processed requests by node providers.
@@ -35,11 +35,11 @@ flowchart TD
 
 </p>
 
-- **DIN Router** - Consists of multiple components, but effectively has a service registry that routes traffic properly between consumers and providers.
-- **DIN Payments** - Mechanisms for paying from provider-to-provider related to the successfully processed transactions and APIs.
-- **Staking contracts** - Enforce economic accountability.
-- **Performance Monitoring Systems** - Ensure SLA compliance.
-- **Smart Contracts** - Manage node registration, network mapping, payment, and governance.
+- **DIN Router** - A service registry that routes traffic properly between consumers and providers.
+- **DIN Payments** - Mechanisms for paying from provider to provider, for successfully processed transactions and APIs.
+- **Staking contracts** - Contracts that enforce economic accountability.
+- **Performance monitoring systems** - Systems that ensure service level agreement (SLA) compliance.
+- **Smart contracts** - Contracts that manage node registration, network mapping, payment, and governance.
 
 ## How DIN works
 
@@ -48,19 +48,19 @@ The core layers include:
 
 **1. Request routing layer:**
 
-    - Web3 gateway API requests are routed through the DIN router, which dynamically selects an optimal node provider based on performance, load balancing, reputation, and network proximity.
-    - The DIN router prioritizes responses from node providers with high uptime and low latency, ensuring an efficient service experience.
+    - [Web3 gateway](web3-gateways/index.md) API requests are routed through the DIN Router, which dynamically selects an optimal node provider based on performance, load balancing, reputation, and network proximity.
+    - The DIN Router prioritizes responses from node providers with high uptime and low latency, ensuring an efficient service experience.
 
 **2. Infrastructure and validation layer:**
 
-    - Node providers provide the fundamental infrastructure by running blockchain nodes and handling API requests based on the provided technical specifications.
-    - Watchers independently listen to open telemetry data from the DIN router and validate responses, checking for correctness, latency, and uptime.
+    - [Node providers](node-providers/index.md) provide the fundamental infrastructure by running blockchain nodes and handling API requests based on the provided technical specifications.
+    - [Watchers](watchers/index.md) independently listen to open telemetry data from the DIN Router and validate responses, checking for correctness, latency, and uptime.
     - Performance metrics are continuously recorded and used for staking rewards and penalties managed through the AVS.
 
-**3. Economic security and staking layer - [DIN as an AVS](avs/index.md):**
+**3. Economic security and staking layer (AVS):**
 
     - Staking contracts manage the economic incentives of DIN, requiring node providers and watchers to stake assets to participate.
-    We leverage the AVS deployment to cover the staking rewards and penalties.
+    [DIN as an AVS](avs/index.md) handles the staking rewards and penalties.
     - The EigenLayer integration ensures that nodes with poor performance are economically penalized via slashing mechanisms, while high-performing nodes receive greater rewards.
     - Slashing conditions: If an operator repeatedly fails to meet SLA standards, a portion of their staked tokens is slashed.
 
