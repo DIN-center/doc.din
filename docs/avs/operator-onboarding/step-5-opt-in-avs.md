@@ -26,6 +26,7 @@ Step 5 requires coordination with the DIN team to configure a custom operator im
    Allocation Complete: Yes
    Infrastructure Ready: Yes
    ```
+
 3. Wait for custom image configuration
 4. Receive specific instructions
 
@@ -78,7 +79,7 @@ When successful:
 
 ## Contract Addresses
 
-**Testnet (Sepolia V3)**
+### Testnet (Sepolia V3)
 
 ```text
 AVS Service Manager: 0x42583067658071247ec8ce0a516a58f682002d07
@@ -86,7 +87,9 @@ Registry Coordinator: 0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6
 Chain ID: 11155111
 ```
 
-**Mainnet**: Addresses will be provided before launch
+### Mainnet
+
+Addresses will be provided before launch
 
 ## Monitoring Your Operator
 
@@ -106,13 +109,16 @@ Maintain SLAs:
 ## Common Issues
 
 **Custom Image Not Ready?**
+
 - Contact DIN team in Slack
 
 **BLS Key Generation Failed?**
+
 - Restart runbook
 - Clear browser cache
 
 **Registration Failed?**
+
 - Check allocation delay expired
 - Verify network selection
 - Increase gas

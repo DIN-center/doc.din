@@ -67,13 +67,16 @@ Save this file for your records.
 ## Common Issues
 
 **Already Registered?**
+
 - Skip to [Step 2](./step-2-stake-tokens.md)
 
 **Transaction Failed?**
+
 - Increase gas limit
 - Check ETH balance
 
 **TXTX Not Loading?**
+
 - Allow pop-ups for app.din.build
 - Try different browser
 

@@ -24,6 +24,7 @@ Your wallet MUST be dedicated exclusively to DIN AVS. Using a wallet associated 
 - [ ] Stake amounts will be calculated during Step 2 based on your operator sets
 
 **Current Strategies:**
+
 - stETH (Lido Staked ETH)
 - WETH (Wrapped ETH)
 
@@ -45,6 +46,7 @@ Your wallet MUST be dedicated exclusively to DIN AVS. Using a wallet associated 
 ## ✅ Understanding Requirements
 
 Before proceeding, understand:
+
 - [ ] [Operator Sets](../operator-sets.md) you'll be serving
 - [ ] [Slashing conditions](../slashing-and-rewards.md) for the AVS
 - [ ] Performance requirements (Greater than 99.9% uptime)

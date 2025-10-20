@@ -3,7 +3,9 @@
 :::danger URGENT - Time Sensitive
 **DIN AVS Mainnet Launch: November 14th, 2025**
 
-Your wallet must have existed for at least 17 days to access EigenLayer on mainnet. You must begin onboarding **IMMEDIATELY** to be ready for launch. Starting after October 27th means missing the mainnet launch.
+Your wallet must have existed for at least 17 days to access EigenLayer on mainnet.
+You must begin onboarding **IMMEDIATELY** to be ready for launch.
+Starting after October 27th means missing the mainnet launch.
 :::
 
 ## Critical Timeline
@@ -57,12 +59,14 @@ RECOMMENDATION: START TODAY
 
 :::danger Critical Requirement
 Your mainnet operator wallet must be:
+
 - **Brand new** - Never used before
 - **Dedicated** - Only for DIN AVS
 - **Isolated** - No other AVS associations
 - **Permanent** - Cannot be changed later
 
 Using a wallet associated with other AVSs will cause operational failures.
+
 :::
 
 ## Wallet Setup Options
@@ -94,6 +98,7 @@ Specific stake amounts will be calculated during Step 2.
 ## Infrastructure Preparation
 
 While completing onboarding:
+
 - Set up RPC nodes for chosen networks
 - Configure high availability
 - Implement monitoring
@@ -102,7 +107,8 @@ While completing onboarding:
 ### Operator Set Selection
 
 :::info Initial Period Guidance
-For the first period of the DIN AVS, the DIN admins will guide you on which operator sets to participate in based on your DIN router traffic history. This ensures optimal network coverage and performance based on proven traffic patterns.
+For the first period of the DIN AVS, the DIN admins will guide you on which operator sets to participate in based on your DIN router traffic history.
+This ensures optimal network coverage and performance based on proven traffic patterns.
 :::
 
 ## Mainnet vs Testnet Differences
@@ -135,20 +141,24 @@ For the first period of the DIN AVS, the DIN admins will guide you on which oper
 ## Getting Help
 
 **For Immediate Issues:**
+
 - DIN Slack: #din-general
 
 **For Technical Questions:**
+
 - DIN documentation (you're here!)
 - Video tutorials (linked in each step)
 
 ## Final Reminders
 
 :::warning Critical Success Factors
+
 1. **Start TODAY** - Every day counts
 2. **New wallet only** - No exceptions
 3. **17-day requirement** - For wallet age, not allocation delay
 4. **November 14 launch** - Fixed date
 5. **No second chances** - Get it right first time
+
 :::
 
 ## Ready to Start?

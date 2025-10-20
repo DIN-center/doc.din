@@ -3,8 +3,10 @@
 Deposit tokens into EigenLayer strategies to back your operator with economic security.
 
 :::info Video Tutorials
+
 - [Allowlisting & Allocations](https://www.loom.com/share/39a6e731504749eca9b5dff11db9a038?sid=b0b0942c-e3ee-4635-87cf-61f785a9933f)
 - [Staking Process](https://www.loom.com/share/871e1f969e664f73ae64f033d434ffce?sid=09ba1cf4-726b-4a44-8fd0-49f064edb364)
+
 :::
 
 ## Prerequisites
@@ -72,7 +74,6 @@ DIN admins will guide you on which operator sets to participate in based on your
 
 Based on your approved allocations, convert ETH to:
 
-
 - **WETH**: Use any DEX or wrap directly
 - **stETH**: Use Lido for mainnet, test contracts for testnet
 
@@ -120,13 +121,16 @@ Your output contains deposit details for each strategy:
 ## Common Issues
 
 **Not Allowlisted?**
+
 - Check request status
 - Contact #din-general if waiting over 24 hours
 
 **Insufficient Tokens?**
+
 - Acquire needed amounts before proceeding
 
 **Transaction Failed?**
+
 - Check gas settings
 - Ensure sufficient ETH for gas
 
