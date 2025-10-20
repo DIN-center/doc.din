@@ -5,6 +5,10 @@ By implementing DIN as an AVS, the network aligns incentives among node provider
 
 Through AVS, DIN enforces rigorous standards for service level agreements (SLAs), incentivizes consistent performance, and incorporates real-time slashing and staking mechanisms, providing a reliable and economically secure infrastructure for Web3 applications.
 
+:::warning Mainnet Launch - November 14th, 2025
+DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately** due to the 17-day allocation delay period. See our [Operator Onboarding Guide](./operator-onboarding/index.md) to get started.
+:::
+
 ## Role of AVS in DIN
 
 Throughout 2024, DIN has operated in the federated model with Consensys as a core intermediary for business development, operational testing, network onboarding, and payments distribution.
