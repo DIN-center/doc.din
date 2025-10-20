@@ -140,4 +140,4 @@ Continue to [Step 3: Set Allocation Delay](./step-3-allocation-delay.md)
 
 ---
 
-*Need help? Join #din-general on Slack*
+Need help? Join #din-general on Slack

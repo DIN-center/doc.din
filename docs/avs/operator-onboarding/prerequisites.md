@@ -70,4 +70,4 @@ If all prerequisites are checked:
 
 ---
 
-*Need help? Join #din-general on Slack*
+Need help? Join #din-general on Slack

@@ -86,4 +86,4 @@ Continue to [Step 2: Stake Tokens](./step-2-stake-tokens.md)
 
 ---
 
-*Need help? Join #din-general on Slack*
+Need help? Join #din-general on Slack

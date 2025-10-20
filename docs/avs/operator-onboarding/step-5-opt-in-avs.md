@@ -137,4 +137,4 @@ You're now an active DIN AVS operator. Welcome to the network!
 
 ---
 
-*Questions? Join #din-general Slack*
+Questions? Join #din-general Slack

@@ -108,4 +108,4 @@ Ready to begin? Start with our [Prerequisites Guide](./prerequisites.md) to ensu
 
 ---
 
-*Last updated: October 2024 | Mainnet launch: November 14th, 2025*
+Last updated: October 2024 | Mainnet launch: November 14th, 2025
