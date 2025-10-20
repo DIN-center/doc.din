@@ -14,7 +14,7 @@ The DIN AVS (Actively Validated Service) leverages EigenLayer's restaking infras
 
 - **Onboarding Portal**: [app.din.build](https://app.din.build)
 - **Video Tutorials**: Available for each step of the process
-- **Support**: Join our [#din-general Slack channel](#)
+- **Support**: Join our #din-general Slack channel
 
 ## Onboarding Process
 

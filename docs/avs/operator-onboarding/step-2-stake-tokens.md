@@ -71,6 +71,8 @@ DIN admins will guide you on which operator sets to participate in based on your
 ### Part B: Prepare Tokens
 
 Based on your approved allocations, convert ETH to:
+
+
 - **WETH**: Use any DEX or wrap directly
 - **stETH**: Use Lido for mainnet, test contracts for testnet
 
@@ -91,6 +93,7 @@ The dashboard shows exact amounts needed.
 ### 4. Complete
 
 When successful:
+
 - All strategies show "Complete"
 - Download output file
 - Step 2 shows ✓
@@ -98,6 +101,7 @@ When successful:
 ## Output File
 
 Your output contains deposit details for each strategy:
+
 ```json
 {
   "WETH Stable Token": {

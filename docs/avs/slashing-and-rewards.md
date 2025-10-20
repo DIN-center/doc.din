@@ -43,7 +43,7 @@ If you're ready to become a DIN operator and start earning rewards, see our comp
 
 ### Reward Formula
 
-```
+```text
 Operator Rewards = (Base Rate × Request Volume × Performance Score) / Total Network Stake
 ```
 
@@ -67,12 +67,14 @@ Operator Rewards = (Base Rate × Request Volume × Performance Score) / Total Ne
 ## Reward Distribution
 
 ### Payment Schedule
+
 - **Frequency**: Monthly distributions
 - **Method**: Direct to operator address
 - **Currency**: ETH and potentially DIN tokens
 - **Timing**: First week of each month
 
 ### Tracking Your Rewards
+
 1. Monitor dashboard at [app.din.build](https://app.din.build)
 2. View per-operator-set breakdown
 3. Export reports for accounting
@@ -81,6 +83,7 @@ Operator Rewards = (Base Rate × Request Volume × Performance Score) / Total Ne
 ## Veto Committee Protection
 
 The [Veto Committee](./veto-committee.md) can review and potentially reverse slashing events in cases of:
+
 - Network-wide issues
 - Unfair slashing conditions
 - Technical failures beyond operator control

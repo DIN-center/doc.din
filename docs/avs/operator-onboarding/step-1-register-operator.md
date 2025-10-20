@@ -29,6 +29,7 @@ For mainnet, your wallet must have existed for at least 17 days to access EigenL
 ### 2. Check Registration Status
 
 In TXTX:
+
 1. Connect your wallet
 2. Click **"Check if registered"**
 3. If already registered → Skip to Step 2
@@ -43,6 +44,7 @@ In TXTX:
 ### 4. Complete
 
 When successful:
+
 - Transaction confirmed on-chain
 - Download output file for records
 - Return to app.din.build
@@ -51,6 +53,7 @@ When successful:
 ## Output File
 
 Your output file contains:
+
 ```json
 {
   "registered_operator_address": "0x...",

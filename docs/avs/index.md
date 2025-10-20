@@ -1,17 +1,25 @@
 # DIN as an AVS
 
-DIN leverages [EigenLayer](https://app.eigenlayer.xyz/)'s AVS model to establish a robust framework of economic security, performance accountability, and dynamic governance.
-By implementing DIN as an AVS, the network aligns incentives among node providers, watchers, and other participants, ensuring high standards of service quality, resilience, and transparency across all operations.
+DIN leverages [EigenLayer](https://app.eigenlayer.xyz/)'s AVS model to establish a robust framework
+of economic security, performance accountability, and dynamic governance.
+By implementing DIN as an AVS, the network aligns incentives among node providers, watchers,
+and other participants, ensuring high standards of service quality, resilience, and transparency
+across all operations.
 
-Through AVS, DIN enforces rigorous standards for service level agreements (SLAs), incentivizes consistent performance, and incorporates real-time slashing and staking mechanisms, providing a reliable and economically secure infrastructure for Web3 applications.
+Through AVS, DIN enforces rigorous standards for service level agreements (SLAs),
+incentivizes consistent performance, and incorporates real-time slashing and staking mechanisms,
+providing a reliable and economically secure infrastructure for Web3 applications.
 
 :::warning Mainnet Launch - November 14th, 2025
-DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately** due to the 17-day allocation delay period. See our [Operator Onboarding Guide](./operator-onboarding/index.md) to get started.
+DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately** due to the
+17-day allocation delay period. See our [Operator Onboarding Guide](./operator-onboarding/index.md)
+to get started.
 :::
 
 ## Role of AVS in DIN
 
-Throughout 2024, DIN has operated in the federated model with Consensys as a core intermediary for business development, operational testing, network onboarding, and payments distribution.
+Throughout 2024, DIN has operated in the federated model with Consensys as a core intermediary
+for business development, operational testing, network onboarding, and payments distribution.
 A subset of the Infura team that represents DIN has been building these components and collaborating with the 50+ signed DIN providers to test a decentralized RPC/API marketplace model.
 
 The web3 infrastructure business is profitable in the short term, but in the long term becomes a commodity.
@@ -24,7 +32,9 @@ To align our Token Generation Event (TGE) with the Linea Association ($LINEA ann
 ## DIN as an AVS architecture
 
 The EigenLayer AVS implementation is designed as a DIN watcher application that helps onboard DIN identities, DIN provider nodes, and adds SLAs to running each network within the DIN ecosystem.
-The available economic security in collaboration with the broader blockchain development ecosystem includes security measures with staking, jailing, and slashing conditions—all without the risk of immediately launching a floating token.
+The available economic security in collaboration with the broader blockchain development ecosystem
+includes security measures with staking, jailing, and slashing conditions—all without the risk
+of immediately launching a floating token.
 
 The AVS set of components act as the third party decentralized set of explorers that allow for the eventual decentralization of the roles played by Consensys.
 

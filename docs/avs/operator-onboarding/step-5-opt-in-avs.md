@@ -19,7 +19,8 @@ Step 5 requires coordination with the DIN team to configure a custom operator im
 
 1. Join #din-general Slack
 2. Provide:
-   ```
+
+   ```text
    Operator Address: 0x...
    Operator Sets: [10, 20, 30]
    Allocation Complete: Yes
@@ -44,6 +45,7 @@ Specific details will be provided by the DIN team when your custom image is read
 ### 2. BLS Key Registration
 
 The runbook will:
+
 - Generate BLS key pair
 - Register public key
 - Store private key securely
@@ -51,6 +53,7 @@ The runbook will:
 ### 3. AVS Contract Registration
 
 Execute registration with:
+
 - AVS Service Manager
 - Operator set IDs
 - Socket configuration
@@ -58,6 +61,7 @@ Execute registration with:
 ### 4. Operator Set Activation
 
 For each selected set:
+
 - Register with set
 - Verify activation
 - Begin serving requests
@@ -65,6 +69,7 @@ For each selected set:
 ### 5. Complete
 
 When successful:
+
 - BLS key registered ✓
 - AVS registration confirmed ✓
 - All operator sets active ✓
@@ -74,7 +79,8 @@ When successful:
 ## Contract Addresses
 
 **Testnet (Sepolia V3)**
-```
+
+```text
 AVS Service Manager: 0x42583067658071247ec8ce0a516a58f682002d07
 Registry Coordinator: 0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6
 Chain ID: 11155111
@@ -85,12 +91,14 @@ Chain ID: 11155111
 ## Monitoring Your Operator
 
 Monitor these KPIs:
+
 - Request volume
 - Response time
 - Success rate
 - Uptime percentage
 
 Maintain SLAs:
+
 - **Uptime**: Greater than 99.9%
 - **Latency**: Less than 100ms p50
 - **Accuracy**: 100%

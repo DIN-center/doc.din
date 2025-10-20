@@ -30,6 +30,7 @@ This is different from the 17-day wallet age requirement for mainnet. The alloca
 ### 2. Set Delay Value
 
 In TXTX:
+
 1. Connect wallet
 2. Review pre-filled delay value (default: 0)
 3. Customize if desired
@@ -48,6 +49,7 @@ Once set, the allocation delay is permanent for your operator address.
 ### 4. Complete
 
 When successful:
+
 - Transaction confirmed
 - Download output file
 - Step 3 shows ✓
@@ -55,6 +57,7 @@ When successful:
 ## Output File
 
 Your output contains:
+
 ```json
 {
   "allocation_delay_out": 0,
@@ -66,12 +69,15 @@ Your output contains:
 ## Common Questions
 
 **Q: What delay should I set?**
+
 Most operators use 0 (immediate) for flexibility.
 
 **Q: Can I change it later?**
+
 No, it's permanent once set.
 
 **Q: Is this the 17-day requirement?**
+
 No, that's for wallet age on mainnet EigenLayer access.
 
 ## Next Step

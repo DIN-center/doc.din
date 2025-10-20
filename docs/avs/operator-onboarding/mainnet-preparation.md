@@ -16,7 +16,7 @@ Your wallet must have existed for at least 17 days to access EigenLayer on mainn
 
 ### Why October 27th?
 
-```
+```text
 November 14 (Launch)
     ↑
 17 days wallet age requirement
@@ -68,16 +68,19 @@ Using a wallet associated with other AVSs will cause operational failures.
 ## Wallet Setup Options
 
 ### Option 1: Hardware Wallet (Recommended)
+
 - Use Ledger or Trezor
 - Create new derivation path
 - Document recovery phrase securely
 
 ### Option 2: Fireblocks MPC (Enterprise)
+
 - Superior security for institutions
 - Multi-party computation
 - No single point of failure
 
 ### Option 3: Software Wallet (Not Recommended)
+
 - Higher risk profile
 - Use only if hardware unavailable
 
@@ -116,12 +119,14 @@ For the first period of the DIN AVS, the DIN admins will guide you on which oper
 ## Common Mainnet Pitfalls
 
 ### Fatal Mistakes
+
 ❌ Using wallet from another AVS
 ❌ Starting after October 27th
 ❌ Insufficient ETH for gas
 ❌ Wrong network configuration
 
 ### Costly Errors
+
 ⚠️ Not using hardware wallet
 ⚠️ Delayed Fireblocks setup
 ⚠️ Underestimating gas costs

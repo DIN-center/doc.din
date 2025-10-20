@@ -9,6 +9,7 @@ Each operator set will need to represent a specific service—for example, the w
 ## Understanding Operator Sets
 
 Operator sets in DIN represent different blockchain networks that operators can serve. Each set has its own:
+
 - Staking requirements
 - Performance metrics
 - Slashing conditions
@@ -75,6 +76,7 @@ For detailed instructions, see our [Operator Onboarding Guide](./operator-onboar
 When joining operator sets, you'll allocate your stake across different strategies:
 
 ### Available Strategies
+
 - **stETH** (Lido Staked ETH): Earns staking rewards
 - **WETH** (Wrapped ETH): Provides liquidity flexibility
 - **cbETH** (Coinbase Staked ETH): Alternative staking option (mainnet)
@@ -83,14 +85,17 @@ When joining operator sets, you'll allocate your stake across different strategi
 ### Allocation Examples
 
 **Conservative Approach (Focus on Yield)**
+
 - 75% stETH
 - 25% WETH
 
 **Balanced Approach**
+
 - 50% stETH
 - 50% WETH
 
 **Flexible Approach (Focus on Liquidity)**
+
 - 25% stETH
 - 75% WETH
 
@@ -99,13 +104,16 @@ When joining operator sets, you'll allocate your stake across different strategi
 Each operator set has specific SLA requirements:
 
 ### General Standards
+
 - **Uptime**: Greater than 99.9%
 - **Response Time**: Less than 100ms p50
 - **Availability**: 24/7
 - **Data Freshness**: Real-time
 
 ### Network-Specific Requirements
+
 Different networks may have additional requirements:
+
 - **Ethereum**: Archive node access
 - **L2s**: Sequencer connectivity
 - **Alt-L1s**: Native token holdings
@@ -113,6 +121,7 @@ Different networks may have additional requirements:
 ## Rewards Distribution
 
 Rewards are calculated per operator set based on:
+
 1. **Request Volume**: Number of RPC requests served
 2. **Performance Metrics**: SLA compliance
 3. **Stake Weight**: Your stake relative to total
@@ -121,6 +130,7 @@ Rewards are calculated per operator set based on:
 ## Slashing Conditions
 
 Each operator set can have specific slashing conditions:
+
 - **Downtime**: Extended unavailability
 - **Latency**: Consistent slow responses
 - **Invalid Data**: Serving incorrect information
@@ -131,12 +141,14 @@ See [Slashing and Rewards](./slashing-and-rewards.md) for detailed information.
 ## Managing Multiple Sets
 
 ### Best Practices
+
 1. **Start Small**: Begin with 1-2 sets you know well
 2. **Monitor Performance**: Ensure SLAs before adding more
 3. **Scale Gradually**: Add sets as infrastructure allows
 4. **Maintain Balance**: Don't overextend resources
 
 ### Infrastructure Considerations
+
 - **Dedicated Nodes**: Run separate nodes per network
 - **Monitoring**: Track each set independently
 - **Redundancy**: Backup systems per network
@@ -145,12 +157,14 @@ See [Slashing and Rewards](./slashing-and-rewards.md) for detailed information.
 ## Future Developments
 
 ### Upcoming Features
+
 - Dynamic stake reallocation
 - Cross-set performance bonuses
 - Set-specific governance rights
 - Advanced slashing parameters
 
 ### Planned Operator Sets
+
 - Additional L2 solutions
 - Cosmos ecosystem chains
 - Solana and other alt-L1s

@@ -5,12 +5,14 @@ Quick solutions to common issues during DIN AVS onboarding.
 ## Login Issues
 
 ### Turnkey Code Not Received
+
 - Wait 2-3 minutes
 - Check spam folder
 - Request code resend
 - Try different browser
 
 ### Dashboard Won't Load
+
 - Disable ad blockers
 - Allow pop-ups for app.din.build
 - Try incognito mode
@@ -18,11 +20,13 @@ Quick solutions to common issues during DIN AVS onboarding.
 ## Wallet Issues
 
 ### MetaMask Won't Connect
+
 - Unlock MetaMask first
 - Check correct network
 - Clear MetaMask activity data
 
 ### Wrong Network
+
 - Testnet: Switch to Sepolia (Chain ID: 11155111)
 - Mainnet: Switch to Ethereum Mainnet
 
@@ -31,10 +35,12 @@ Quick solutions to common issues during DIN AVS onboarding.
 ### Step 1: Registration
 
 **Already Registered Error**
+
 - Use "Check if registered" first
 - If registered, skip to Step 2
 
 **TXTX Won't Load**
+
 - Allow pop-ups
 - Disable extensions
 - Clear cache
@@ -42,15 +48,18 @@ Quick solutions to common issues during DIN AVS onboarding.
 ### Step 2: Staking
 
 **Not Allowlisted**
+
 - Check request status
 - Contact #din-general if waiting over 24 hours
 
 **Token Conversion Failed**
+
 - Check gas fees included
 - Try smaller amounts
 - Verify contract addresses
 
 **Approval Stuck**
+
 - Check on Etherscan
 - Speed up with higher gas
 - Cancel and retry if needed
@@ -58,26 +67,31 @@ Quick solutions to common issues during DIN AVS onboarding.
 ### Step 3: Allocation Delay
 
 **Wrong Delay Set**
+
 :::danger Critical
 Cannot be changed once set! Must use new operator address if incorrect.
 :::
 
 **Contract Not Found**
+
 - Verify correct network
 - Sepolia: `0x42583067658071247ec8ce0a516a58f682002d07`
 
 ### Step 5: Allocate Stake
 
 **Custom Image Not Ready**
+
 - Contact DIN team in Slack
 - Provide operator address and readiness confirmation
 
 **BLS Key Failed**
+
 - Restart runbook
 - Clear browser cache
 - Try different browser
 
 **Registration Failed**
+
 - Check allocation delay expired
 - Verify gas sufficient
 - Confirm previous steps complete
@@ -85,12 +99,14 @@ Cannot be changed once set! Must use new operator address if incorrect.
 ## Transaction Issues
 
 ### General Transaction Failures
+
 - Increase gas limit
 - Check ETH balance
 - Wait for lower gas prices
 - Verify network selection
 
 ### Session Timeout
+
 - Click "Extend +30" before expiry
 - If expired, restart the step
 - Complete in one sitting
@@ -98,6 +114,7 @@ Cannot be changed once set! Must use new operator address if incorrect.
 ## Post-Onboarding
 
 ### Not Receiving Traffic
+
 - Verify all steps completed
 - Check allocation delay expired
 - Test infrastructure connectivity
@@ -108,6 +125,7 @@ Cannot be changed once set! Must use new operator address if incorrect.
 ### When Contacting Support
 
 Always provide:
+
 1. Operator address
 2. Step where issue occurred
 3. Error messages (exact text)
@@ -115,24 +133,30 @@ Always provide:
 5. Screenshots if applicable
 
 ### Support Channels
+
 - **Primary**: #din-general on Slack
 - **Documentation**: doc.din.app
 
 ## FAQ
 
 **Can I change my operator address?**
+
 No, must start over with new address.
 
 **Can I modify allocation delay?**
+
 No, permanent once set.
 
 **Can I add operator sets later?**
+
 Yes, additional sets can be added.
 
 **What if I miss mainnet launch?**
+
 Can still join after launch but will miss initial traffic.
 
 **Can I withdraw my stake?**
+
 Yes, but subject to withdrawal delays.
 
 ---

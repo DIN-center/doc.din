@@ -5,11 +5,13 @@ Before starting the onboarding process, ensure you have the following ready:
 ## ✅ Wallet Requirements
 
 ### For Mainnet
+
 - [ ] **Brand new EOA wallet** - Never used with any other AVS
 - [ ] **Wallet age** - Must exist for 17 days before EigenLayer mainnet access
 - [ ] **Dedicated to DIN only** - Cannot be shared with other AVS operations
 
 ### For Testnet
+
 - [ ] Any wallet works for testing
 
 :::danger Critical for Mainnet
@@ -51,6 +53,7 @@ Before proceeding, understand:
 ## ⏰ Timeline Check
 
 **For November 14th Mainnet Launch:**
+
 - **October 27**: Absolute latest to create wallet
 - **Recommendation**: START TODAY
 
@@ -59,6 +62,7 @@ See [Mainnet Preparation Guide](./mainnet-preparation.md) for urgent timeline de
 ## Ready to Start?
 
 If all prerequisites are checked:
+
 1. **Mainnet operators**: Review [urgent timeline](./mainnet-preparation.md) first
 2. **All operators**: Begin with [Step 1: Register as Operator](./step-1-register-operator.md)
 
