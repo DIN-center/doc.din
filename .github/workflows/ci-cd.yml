@@ -84,10 +84,11 @@ jobs:
           DOC_DIR: ${{ matrix.folder }}
           SKIP_TEST: true
 
-  # Preview deployment for PRs - runs immediately
+  # Preview deployment for PRs - runs after all checks pass
   preview-deploy:
     name: Deploy Preview to Vercel
     if: github.event_name == 'pull_request'
+    needs: [build, lint, link-check, spelling, case-check]
     runs-on: ubuntu-latest
     permissions:
       contents: read
