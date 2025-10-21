@@ -7,7 +7,6 @@ This repository contains the documentation for the Decentralized Infrastructure 
 - **DIN documentation**: Comprehensive guides covering DIN's architecture, gateway operations, AVS integration, and protocol specifications.
 - **API reference**: Complete API documentation for supported blockchain networks.
 
-
 ## Running locally
 
 You will need to have Node.js installed to run the live previews of the docs locally.

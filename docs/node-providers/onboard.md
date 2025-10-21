@@ -4,8 +4,12 @@ Node providers must acquire a license to participate in DIN, which is obtained b
 Upon registration, providers declare the blockchain protocols they support, such as Ethereum, Layer 2 networks, or additional Layer 1s, and detail their API capabilities in the Node Registry.
 Node providers are then available to service requests from users, governed by SLA requirements and monitored by [watchers](../watchers/index.md).
 
-The identity registration of the infrastructure providers and the nodes for specific blockchain protocol services are separate.
-The completed registration of an infrastructure provider adds its identity for the application and set of tools via EigenLayer, while the individual set of nodes fulfilling the blockchain protocol requirements are separately tested and audited by the watchers.
+The identity registration of the infrastructure providers and the nodes for specific blockchain protocol services
+are separate.
+The completed registration of an infrastructure provider adds its identity for the application and set of tools
+via EigenLayer,
+while the individual set of nodes fulfilling the blockchain protocol requirements are separately tested
+and audited by the watchers.
 This allows specific nodes to be removed without necessarily removing the provider entity.
 A provider may have an overall reputation that is impacted by their combination of nodes operating across networks.
 

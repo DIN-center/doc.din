@@ -21,6 +21,21 @@ const sidebars = {
       link: { type: "doc", id: "avs/index" },
       collapsed: true,
       items: [
+        {
+          type: "category",
+          label: "Operator Onboarding",
+          link: { type: "doc", id: "avs/operator-onboarding/index" },
+          items: [
+            "avs/operator-onboarding/mainnet-preparation",
+            "avs/operator-onboarding/prerequisites",
+            "avs/operator-onboarding/step-1-register-operator",
+            "avs/operator-onboarding/step-2-stake-tokens",
+            "avs/operator-onboarding/step-3-allocation-delay",
+            "avs/operator-onboarding/step-4-watchers",
+            "avs/operator-onboarding/step-5-opt-in-avs",
+            "avs/operator-onboarding/troubleshooting"
+          ]
+        },
         "avs/slashing-and-rewards",
         "avs/operator-sets",
         "avs/veto-committee"

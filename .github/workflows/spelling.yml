@@ -1,15 +1,20 @@
 ---
-name: Check for spelling with vale
+name: Spelling Check
 
 on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  vale:
-    name: Spelling
+  spelling:
+    name: Vale Spelling and Style Check
     runs-on: ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: read
     steps:
@@ -19,4 +24,3 @@ jobs:
         uses: Consensys/github-actions/docs-spelling-check@main
         with:
           FILEPATHS: "docs"
-
