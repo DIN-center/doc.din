@@ -4,7 +4,9 @@ The AVS model within DIN provides structured incentives that reward high-perform
 This incentive structure ensures the network's sustainability and aligns participant behavior with DIN's quality standards.
 
 :::info Operator Onboarding
-If you're ready to become a DIN operator and start earning rewards, see our comprehensive [Operator Onboarding Guide](./operator-onboarding/index.md). Note the urgent timeline for mainnet launch on November 14th, 2025.
+If you're ready to become a DIN operator and start earning rewards, see our comprehensive
+[Operator Onboarding Guide](./operator-onboarding/index.md).
+Note the urgent timeline for mainnet launch on November 14th, 2025.
 :::
 
 ## Performance-based rewards
@@ -12,14 +14,16 @@ If you're ready to become a DIN operator and start earning rewards, see our comp
 - **Additional rewards for SLA compliance** - Node providers and watchers who consistently meet or exceed SLA standards receive additional token rewards.
   These rewards, distributed through the gateway contract, encourage participants to prioritize performance and reliability.
 
-- **Reputation-linked incentives** - As AVS supports a reputation system, operators with high SLA compliance scores can attract more request routing, maximizing their earning potential while reinforcing a culture of quality service.
+- **Reputation-linked incentives** - As AVS supports a reputation system, operators with high SLA compliance scores
+  can attract more request routing, maximizing their earning potential while reinforcing a culture of quality service.
 
 ## Deterrents for underperformance
 
 - **Incremental slashing for repeated violations** - AVS implements a tiered slashing system, where penalties increase in severity for operators with repeated SLA violations.
   This graduated approach encourages operators to rectify issues promptly, reducing long-term service disruptions.
 
-- **Suspension and removal for persistent non-compliance** - Node providers with chronic performance issues face suspension or removal from the network, ensuring that DIN maintains only reliable and committed participants.
+- **Suspension and removal for persistent non-compliance** - Node providers with chronic performance issues face
+  suspension or removal from the network, ensuring that DIN maintains only reliable and committed participants.
 
 ## Practical Slashing Scenarios
 

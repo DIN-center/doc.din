@@ -84,17 +84,17 @@ When joining operator sets, you'll allocate your stake across different strategi
 
 ### Allocation Examples
 
-**Conservative Approach (Focus on Yield)**
+#### Conservative Approach (Focus on Yield)
 
 - 75% stETH
 - 25% WETH
 
-**Balanced Approach**
+#### Balanced Approach
 
 - 50% stETH
 - 50% WETH
 
-**Flexible Approach (Focus on Liquidity)**
+#### Flexible Approach (Focus on Liquidity)
 
 - 25% stETH
 - 75% WETH

@@ -87,4 +87,4 @@ No, that's for wallet age on mainnet EigenLayer access.
 
 ---
 
-*Need help? Join #din-general on Slack*
+Need help? Join #din-general on Slack

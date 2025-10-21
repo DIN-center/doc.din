@@ -34,12 +34,12 @@ Quick solutions to common issues during DIN AVS onboarding.
 
 ### Step 1: Registration
 
-**Already Registered Error**
+#### Already Registered Error
 
 - Use "Check if registered" first
 - If registered, skip to Step 2
 
-**TXTX Won't Load**
+#### TXTX Won't Load
 
 - Allow pop-ups
 - Disable extensions
@@ -47,18 +47,18 @@ Quick solutions to common issues during DIN AVS onboarding.
 
 ### Step 2: Staking
 
-**Not Allowlisted**
+#### Not Allowlisted
 
 - Check request status
 - Contact #din-general if waiting over 24 hours
 
-**Token Conversion Failed**
+#### Token Conversion Failed
 
 - Check gas fees included
 - Try smaller amounts
 - Verify contract addresses
 
-**Approval Stuck**
+#### Approval Stuck
 
 - Check on Etherscan
 - Speed up with higher gas
@@ -66,31 +66,31 @@ Quick solutions to common issues during DIN AVS onboarding.
 
 ### Step 3: Allocation Delay
 
-**Wrong Delay Set**
+#### Wrong Delay Set
 
 :::danger Critical
 Cannot be changed once set! Must use new operator address if incorrect.
 :::
 
-**Contract Not Found**
+#### Contract Not Found
 
 - Verify correct network
 - Sepolia: `0x42583067658071247ec8ce0a516a58f682002d07`
 
 ### Step 5: Allocate Stake
 
-**Custom Image Not Ready**
+#### Custom Image Not Ready
 
 - Contact DIN team in Slack
 - Provide operator address and readiness confirmation
 
-**BLS Key Failed**
+#### BLS Key Failed
 
 - Restart runbook
 - Clear browser cache
 - Try different browser
 
-**Registration Failed**
+#### Registration Failed
 
 - Check allocation delay expired
 - Verify gas sufficient
@@ -161,4 +161,4 @@ Yes, but subject to withdrawal delays.
 
 ---
 
-*If your issue isn't covered here, reach out in #din-general Slack.*
+If your issue isn't covered here, reach out in #din-general Slack.

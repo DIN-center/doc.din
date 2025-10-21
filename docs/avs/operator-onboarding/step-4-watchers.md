@@ -12,4 +12,4 @@ Continue to [Step 5: Allocate Stake to Operator Sets](./step-5-opt-in-avs.md)
 
 ---
 
-*Questions? Join #din-general on Slack*
+Questions? Join #din-general on Slack
