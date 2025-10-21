@@ -59,7 +59,7 @@ DIN currently supports the following blockchain networks through operator sets:
 
 *Check [app.din.build](https://app.din.build) for the most up-to-date list and requirements.*
 
-## Joining Operator Sets
+## Joining operator sets
 
 Operators select which sets to join during onboarding:
 
@@ -71,46 +71,46 @@ Operators select which sets to join during onboarding:
 
 For detailed instructions, see our [Operator Onboarding Guide](./operator-onboarding/index.md).
 
-## Stake Allocation Strategies
+## Stake allocation strategies
 
 When joining operator sets, you'll allocate your stake across different strategies:
 
-### Available Strategies
+### Available strategies
 
 - **stETH** (Lido Staked ETH): Earns staking rewards
 - **WETH** (Wrapped ETH): Provides liquidity flexibility
 - **cbETH** (Coinbase Staked ETH): Alternative staking option (mainnet)
 - **rETH** (Rocket Pool ETH): Decentralized staking (mainnet)
 
-### Allocation Examples
+### Allocation examples
 
-#### Conservative Approach (Focus on Yield)
+#### Conservative approach (focus on yield)
 
 - 75% stETH
 - 25% WETH
 
-#### Balanced Approach
+#### Balanced approach
 
 - 50% stETH
 - 50% WETH
 
-#### Flexible Approach (Focus on Liquidity)
+#### Flexible approach (focus on liquidity)
 
 - 25% stETH
 - 75% WETH
 
-## Performance Requirements
+## Performance requirements
 
 Each operator set has specific SLA requirements:
 
-### General Standards
+### General standards
 
 - **Uptime**: Greater than 99.9%
 - **Response Time**: Less than 100ms p50
-- **Availability**: 24/7
+- **Availability**: Continuous (every day)
 - **Data Freshness**: Real-time
 
-### Network-Specific Requirements
+### Network-specific requirements
 
 Different networks may have additional requirements:
 
@@ -118,7 +118,7 @@ Different networks may have additional requirements:
 - **L2s**: Sequencer connectivity
 - **Alt-L1s**: Native token holdings
 
-## Rewards Distribution
+## Rewards distribution
 
 Rewards are calculated per operator set based on:
 
@@ -127,7 +127,7 @@ Rewards are calculated per operator set based on:
 3. **Stake Weight**: Your stake relative to total
 4. **Network Demand**: Overall usage of the network
 
-## Slashing Conditions
+## Slashing conditions
 
 Each operator set can have specific slashing conditions:
 
@@ -138,39 +138,39 @@ Each operator set can have specific slashing conditions:
 
 See [Slashing and Rewards](./slashing-and-rewards.md) for detailed information.
 
-## Managing Multiple Sets
+## Managing multiple sets
 
-### Best Practices
+### Best practices
 
 1. **Start Small**: Begin with 1-2 sets you know well
-2. **Monitor Performance**: Ensure SLAs before adding more
+2. **Monitor Performance**: Ensure service level agreements (SLAs) before adding more
 3. **Scale Gradually**: Add sets as infrastructure allows
 4. **Maintain Balance**: Don't overextend resources
 
-### Infrastructure Considerations
+### Infrastructure considerations
 
 - **Dedicated Nodes**: Run separate nodes per network
 - **Monitoring**: Track each set independently
 - **Redundancy**: Backup systems per network
 - **Team Expertise**: Ensure knowledge for each chain
 
-## Future Developments
+## Future developments
 
-### Upcoming Features
+### Upcoming features
 
 - Dynamic stake reallocation
 - Cross-set performance bonuses
 - Set-specific governance rights
 - Advanced slashing parameters
 
-### Planned Operator Sets
+### Planned operator sets
 
 - Additional L2 solutions
 - Cosmos ecosystem chains
 - Solana and other alt-L1s
 - Application-specific chains
 
-## Getting Started
+## Getting started
 
 Ready to join operator sets? Follow these steps:
 
