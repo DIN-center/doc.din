@@ -43,13 +43,13 @@ flowchart TD
 
 </p>
 
-- Is this a registered IP Address or domain that can ping the DIN Router? 
+- Is this a registered IP Address or domain that can ping the DIN Router?
   - **Answer:** Yes, this is a DNS (registered IP address).
 
-- Is there a smart contract allow list or is it a manual handshake process for now? 
+- Is there a smart contract allow list or is it a manual handshake process for now?
   - **Answer:** It would be a manual handshake for now, with the allowlist being stored in a configuration file until the smart contract registry is up and running.
 
-- How does Infura do this? 
+- How does Infura do this?
   - **Answer:** Currently, Infura does not authenticate to the DIN Router, but we are adding this functionality as we expand the services to more web3 gateways.
 
 ### Configuration
@@ -91,7 +91,7 @@ In the initial implementation of the authentication protocol, the bare minimum c
         - `$DOMAIN` - Domain should reflect the address of the router.
         - `$SIGNER_ADDRESS` - Should match the address used to sign this message.
         - `$PROVIDER_URL` - should match the public address of the provider verifying this message.
-        - `$NONCE` - This is a random value specified by the signer to distinguish this request from others. 
+        - `$NONCE` - This is a random value specified by the signer to distinguish this request from others.
         - `$ISSUED_AT` - An ISO-8601 Timestamp of when this message was created
         - `$EXPIRE_TIME` - An ISO-8601 Timestamp of when this message should no longer be accepted.
           Note that this is not the expiration of the token being requested, just for this request.
@@ -131,21 +131,29 @@ In the initial implementation of the authentication protocol, the bare minimum c
 
     1. The DIN Router will select a provider that offers the service capable of handling the incoming request.
 
-    2. If there is a current API Key available for that service / provider pairing, the router will forward the RPC request to that provider including the API Key associated with the session in the `x-api-key` header.
+    2. If there is a current API Key available for that service / provider pairing,
+       the router will forward the RPC request to that provider including the API Key associated with the session
+       in the `x-api-key` header.
 
-        1. If there is not a current API key for that service / provider pairing, the DIN Router should establish a session as defined above.
+        1. If there is not a current API key for that service / provider pairing,
+           the DIN Router should establish a session as defined above.
 
-    3. The DIN Provider will verify the API key in the `x-api-key` header, and ensure that it is associated with the appropriate service.
+    3. The DIN Provider will verify the API key in the `x-api-key` header,
+       and ensure that it is associated with the appropriate service.
 
         1. If the API key is not present, the provider should respond with a 401 status code.
 
-        2. If the API key is present, but is expired or does not authorize access to the request service, the provider should respond with a 403 status code.
+        2. If the API key is present, but is expired or does not authorize access to the request service,
+           the provider should respond with a 403 status code.
 
-        3. If the API key verifies successfully, the provider should proxy the request to the backend service and return the response.
+        3. If the API key verifies successfully,
+           the provider should proxy the request to the backend service and return the response.
 
 ## DIN Router initial registration
 
-This section answers questions on how we manually add the Web3 Gateway / Ingress Operator with your appropriate permissions. A Caddy Proxy router set of configurations is used to make the connection between the user and the provider.
+This section answers questions on how we manually add the Web3 Gateway / Ingress Operator
+with your appropriate permissions.
+A Caddy Proxy router set of configurations is used to make the connection between the user and the provider.
 
 <p align="center">
 
@@ -174,8 +182,8 @@ flowchart LR
 - What are the security requirements for this?
   - **Answer:** Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new gateway is using to access the DIN Router.
 
-- Is there an example handshake and what is registered (e.g. IP addresses vs domains)?
-  - **Answer:** There is an example code that can be shared.
+- Is there an example handshake and what is registered (for example, IP addresses vs domains)?
+  - **Answer:** Example code is available that can be shared.
     An Ethereum address is required in order to authenticate.
 
 - What rate limiting protection is created here?
@@ -185,8 +193,10 @@ flowchart LR
 
 ## DIN Router network configuration
 
-An Ingress Operator will choose between different registered networks/chains and their set technical requirements (e.g. methods, RPS, volume, advanced methods).
-The full list of these available networks and requirements has not been rendered into a web application, but we can use the Infura documentation as a starting point for which networks and methods are supported. 
+An Ingress Operator will choose between different registered networks/chains
+and their set technical requirements (for example, methods, RPS, volume, advanced methods).
+The full list of these available networks and requirements has not been rendered into a web application,
+but we can use the Infura documentation as a starting point for which networks and methods are supported.
 
 - How do I select which available networks (mainnet and testnet) where I can be added to requests?
 
@@ -198,8 +208,8 @@ The full list of these available networks and requirements has not been rendered
   - Is there a list of these chains?
     - **Answer:** The DIN team keeps a list of supported chains that are available for your consumption.
 
-  - Do I hardcode it on my side? The router side?
-    - **Answer:** You will hardcode a reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
+  - Do I use a fixed reference on my side? The router side?
+    - **Answer:** You will use a fixed reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
 
   - How can I change this?
     - **Answer:** You will likely not need to change the DIN endpoints, but in the event you do, you will be responsible for changing to any new DIN endpoints that are provided to you.
