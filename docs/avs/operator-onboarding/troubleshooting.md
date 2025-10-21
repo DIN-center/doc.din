@@ -86,7 +86,7 @@ Cannot be changed once set! Must use new operator address if incorrect.
 
 #### BLS Key Failed
 
-- Restart runbook
+- Restart workflow
 - Clear browser cache
 - Try different browser
 

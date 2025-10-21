@@ -21,8 +21,8 @@ DIN currently supports the following blockchain networks through operator sets:
 
 | Set ID | Network Name |
 |--------|-------------|
-| 2 | ethereum |
-| 3 | ethereum-holesky |
+| 2 | Ethereum |
+| 3 | Ethereum-holesky |
 | 4 | blast-mainnet |
 | 5 | blast-testnet |
 | 6 | polygon |
@@ -51,10 +51,10 @@ DIN currently supports the following blockchain networks through operator sets:
 | 29 | solana-devnet |
 | 30 | unichain-mainnet |
 | 31 | unichain-sepolia |
-| 32 | swellchain-mainnet |
-| 33 | swellchain-testnet |
-| 34 | sei-mainnet |
-| 35 | sei-mainnet-archive |
+| 32 | Swellchain-mainnet |
+| 33 | Swellchain-testnet |
+| 34 | Sei-mainnet |
+| 35 | Sei-mainnet-archive |
 | 36 | Hoodi |
 
 *Check [app.din.build](https://app.din.build) for the most up-to-date list and requirements.*
@@ -143,7 +143,7 @@ See [Slashing and Rewards](./slashing-and-rewards.md) for detailed information.
 ### Best practices
 
 1. **Start Small**: Begin with 1-2 sets you know well
-2. **Monitor Performance**: Ensure service level agreements (SLAs) before adding more
+2. **Monitor Performance**: Ensure service level agreement compliance before adding more
 3. **Scale Gradually**: Add sets as infrastructure allows
 4. **Maintain Balance**: Don't overextend resources
 

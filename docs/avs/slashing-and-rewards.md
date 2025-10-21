@@ -54,7 +54,7 @@ Operator Rewards = (Base Rate × Request Volume × Performance Score) / Total Ne
 ### Factors Affecting Rewards
 
 1. **Request Volume**: Higher traffic = higher rewards
-2. **Performance Score**: Better SLAs = bonus multipliers
+2. **Performance Score**: Better service level agreement compliance = bonus multipliers
 3. **Stake Weight**: Your stake vs. total network stake
 4. **Operator Set Demand**: Popular networks pay more
 
