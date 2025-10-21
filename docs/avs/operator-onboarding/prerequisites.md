@@ -1,8 +1,8 @@
-# Prerequisites Checklist
+# Prerequisites checklist
 
 Before starting the onboarding process, ensure you have the following ready:
 
-## ✅ Wallet Requirements
+## ✅ Wallet requirements
 
 ### For Mainnet
 
@@ -18,7 +18,7 @@ Before starting the onboarding process, ensure you have the following ready:
 Your wallet MUST be dedicated exclusively to DIN AVS. Using a wallet associated with another AVS will cause operational failures.
 :::
 
-## ✅ Financial Requirements
+## ✅ Financial requirements
 
 - [ ] **Minimum 1 ETH** in wallet (EigenLayer recommendation)
 - [ ] Stake amounts will be calculated during Step 2 based on your operator sets
@@ -30,14 +30,14 @@ Your wallet MUST be dedicated exclusively to DIN AVS. Using a wallet associated 
 
 *Additional strategies will be available after launch.*
 
-## ✅ Technical Requirements
+## ✅ Technical requirements
 
 - [ ] **Browser**: Chrome, Firefox, or Brave (latest version)
 - [ ] **Web3 Wallet**: MetaMask or WalletConnect compatible
 - [ ] **Stable internet** for transaction signing
 - [ ] **Pop-ups enabled** for app.din.build
 
-## ✅ Account Access
+## ✅ Account access
 
 - [ ] Account at [app.din.build](https://app.din.build)
 - [ ] Email verification completed

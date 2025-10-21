@@ -8,7 +8,7 @@ DIN uses a decentralized structure composed of multiple actors:
   The DIN dashboard is the source of truth for the processed requests by node providers.
 - [**Web3 gateways**](web3-gateways/index.md) - Web3 gateways connect to DIN nodes and pay for processing traffic from node providers.
   - **Web3 customers** - These individuals or companies interact directly with web3 gateways through their provided identities and processes.
-    They receive services and pay for SLAs covered by the web3 gateways.
+    They receive services and pay for service level agreements (SLAs) covered by the web3 gateways.
 
 ## Key components
 
@@ -35,7 +35,7 @@ flowchart TD
 
 </p>
 
-- **DIN Router** - A service registry that routes traffic properly between consumers and providers.
+- **DIN Router** - A service registry that routes traffic between consumers and providers.
 - **DIN Payments** - Mechanisms for paying from provider to provider, for successfully processed transactions and APIs.
 - **Staking contracts** - Contracts that enforce economic accountability.
 - **Performance monitoring systems** - Systems that ensure service level agreement (SLA) compliance.
