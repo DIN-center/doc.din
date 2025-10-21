@@ -1,0 +1,46 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `eth_unsubscribe`
+
+Cancel subscriptions by calling this method with the subscription ID. It returns a boolean indicating that the subscription was canceled successfully.
+
+## Parameters
+
+- `subscription ID`: (string) _[required]_ - The ID of the subscription you want to unsubscribe.
+
+## Returns
+
+`unsubscribed flag`: Returns `true` if the subscription is canceled successfully.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": true
+}
+```
+
+  </TabItem>
+</Tabs>

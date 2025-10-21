@@ -1,0 +1,78 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `trace_transaction`
+
+Provides transaction processing of type trace for the specified transaction. Use this API to improve smart contract performance by analyzing its internal transactions and execution steps. You can use this information to identify bottlenecks and optimize the contract for better performance.
+
+## Parameters
+
+- `transaction hash`: (string) _[required]_ - Hash of the transaction to trace (32 bytes).
+
+## Returns
+
+Array of trace objects for the specified transaction.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "trace_transaction", "params": ["0x17104ac9d3312d8c136b7f44d4b8b47852618065ebfa534bd2d3b5ef218ca1f3"], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "trace_transaction", "params": ["0x17104ac9d3312d8c136b7f44d4b8b47852618065ebfa534bd2d3b5ef218ca1f3"], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "result": [
+    {
+      "action": {
+        "callType": "call",
+        "from": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "gas": "0x5208",
+        "input": "0x",
+        "to": "0x8bbb73bcb5d553b5a556358d27625323fd781d37",
+        "value": "0x2386f26fc10000"
+      },
+      "blockHash": "0x7eb25504e4c202cf3d62fd91d3d3fd16c2c4b17d5a33b4de3e64e2b7db0baf3b",
+      "blockNumber": 3068100,
+      "result": {
+        "gasUsed": "0x0",
+        "output": "0x"
+      },
+      "subtraces": 0,
+      "traceAddress": [],
+      "transactionHash": "0x17104ac9d3312d8c136b7f44d4b8b47852618065ebfa534bd2d3b5ef218ca1f3",
+      "transactionPosition": 2,
+      "type": "call"
+    }
+  ],
+  "id": 1
+}
+```
+
+  </TabItem>
+</Tabs>

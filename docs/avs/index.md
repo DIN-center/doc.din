@@ -24,10 +24,10 @@ A subset of the Infura team that represents DIN has been building these componen
 
 The web3 infrastructure business is profitable in the short term, but in the long term becomes a commodity.
 The DIN team looked for a sustainable upkeep and network access of Infura (centralized SaaS business) and MetaMask (wallet) to the trending growth of L2s and new blockchain protocols.
-In a resounding successful 2024, we've launched 14 networks on DIN and Infura with 100M+ daily requests processed through the DIN Router.
+In 2024, we've launched 14 networks on DIN and Infura with 100M+ daily requests processed through the DIN Router.
 
 As DIN moves from the federated model towards permissionless open API marketplace, we've been strategic on our architecture and mechanism design incentives.
-To align our Token Generation Event (TGE) with the Linea Association ($LINEA announced at Devcon in Bangkok), we've worked on unique implementations that can be constructive to our GTM.
+To align our Token Generation Event (TGE) with the Linea Association ($LINEA announced at Devcon 2024), we've worked on unique implementations that can be constructive to our GTM.
 
 ## DIN as an AVS architecture
 
@@ -36,7 +36,7 @@ The available economic security in collaboration with the broader blockchain dev
 includes security measures with staking, jailing, and slashing conditions—all without the risk
 of immediately launching a floating token.
 
-The AVS set of components act as the third party decentralized set of explorers that allow for the eventual decentralization of the roles played by Consensys.
+The AVS components act as the third-party decentralized set of explorers that allow for the eventual decentralization of the roles played by Consensys.
 
 ## Economic alignment through staking and slashing
 

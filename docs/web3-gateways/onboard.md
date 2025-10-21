@@ -180,7 +180,7 @@ flowchart LR
 
 - What rate limiting protection is created here?
   All rate limiting is enforced on the Gateway side, and therefore Gateway providers must be able to pay for the requests that they use.
-  - **Answer:** The DIN Router will enforce some blocking of certain methods, but the assumption is that any requests that are sent to the DIN router by a gateway are expected to be returned.
+  - **Answer:** The DIN Router will enforce some blocking of certain methods, but the assumption is that any requests that are sent to the DIN Router by a gateway are expected to be returned.
     Therefore, there will be a list of methods that we will suggest do not make sense to forward to the DIN Router for certain networks.
 
 ## DIN Router network configuration
@@ -199,7 +199,7 @@ The full list of these available networks and requirements has not been rendered
     - **Answer:** The DIN team keeps a list of supported chains that are available for your consumption.
 
   - Do I hardcode it on my side? The router side?
-    - **Answer:** You will hardcode a reference to the relevant DIN router endpoint for each network you are consuming within your routing logic.
+    - **Answer:** You will hardcode a reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
 
   - How can I change this?
     - **Answer:** You will likely not need to change the DIN endpoints, but in the event you do, you will be responsible for changing to any new DIN endpoints that are provided to you.

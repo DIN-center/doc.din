@@ -2,64 +2,9 @@
 title: Ethereum eth_maxPriorityFeePerGas
 sidebar_label: eth_maxPriorityFeePerGas
 description: Estimates max priority fee on Ethereum.
+hide_title: true
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+import Method from "../../evm-partials/_eth_maxpriorityfeepergas.mdx"
 
-# `eth_maxPriorityFeePerGas`
-
-
-Returns an estimate of how much priority fee, in wei, you need to be included in a block. 
-
-## Parameters
-
-None.
-
-## Returns
-
-A hexadecimal value of the priority fee, in wei, needed to be included in a block.
-
-## Example
-
-Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
-
-### Request
-
-
-<Tabs>
-  <TabItem value="curl">
-
-```bash
-curl <ENDPOINT> \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "method": "eth_maxPriorityFeePerGas", "params": [], "id": 1}'
-```
-
-  </TabItem>
-  <TabItem value="WSS">
-
-```bash
-wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "eth_maxPriorityFeePerGas", "params": [], "id": 1}'
-```
-
-  </TabItem>
-</Tabs>
-
-### Response
-
-
-<Tabs>
-  <TabItem value="JSON">
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0x55d4a80"
-}
-```
-
-  </TabItem>
-</Tabs>
+<Method />

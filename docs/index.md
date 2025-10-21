@@ -14,7 +14,8 @@ DIN’s RPC-as-a-service model lets centralized RPC providers give developers ac
 blockchain network APIs and RPCs across many chains, through resilient and high-performance endpoints. Developers continue to consume RPCs from their chosen provider, not from DIN directly.
 
 DIN builds with the EigenLayer ecosystem to align onboarding and incentives for participants
-[node providers](node-providers/index.md), [watchers](watchers/index.md), and [web3 gateways](web3-gateways/index.md). DIN as an AVS (Actively Validated Service) provides decentralized administration for router identities, reputation, and network endpoint management.
+[node providers](node-providers/index.md), [watchers](watchers/index.md), and [web3 gateways](web3-gateways/index.md).
+[DIN as an AVS](avs/index.md) (Autonomous Verifiable Service) provides decentralized administration for router identities, reputation, and network endpoint management.
 
 ## DIN values
 
