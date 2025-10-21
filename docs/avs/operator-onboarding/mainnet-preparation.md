@@ -161,7 +161,7 @@ This ensures optimal network coverage and performance based on proven traffic pa
 
 :::
 
-## Ready to Start?
+## Ready to start
 
 If you haven't already:
 

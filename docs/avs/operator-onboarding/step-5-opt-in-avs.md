@@ -1,4 +1,4 @@
-# Step 5: Allocate Stake to Operator Sets
+# Step 5: Allocate stake to operator sets
 
 Final step to complete your operator registration and begin serving traffic.
 
@@ -13,9 +13,9 @@ Step 5 requires coordination with the DIN team to configure a custom operator im
 - [ ] Infrastructure ready
 - [ ] Coordinated with DIN team
 
-## Pre-Step 5: Team Coordination
+## Pre-step 5: Team coordination
 
-### Request Setup
+### Request setup
 
 1. Join #din-general Slack
 2. Provide:
@@ -36,14 +36,14 @@ Step 5 requires coordination with the DIN team to configure a custom operator im
 Specific details will be provided by the DIN team when your custom image is ready.
 :::
 
-### 1. Access Step 5
+### 1. Access step 5
 
 1. Go to [app.din.build](https://app.din.build)
 2. Step 5 enabled by DIN team
 3. Click **"Start Step 5"**
 4. Custom TXTX workflow opens
 
-### 2. BLS Key Registration
+### 2. BLS key registration
 
 The workflow will:
 
@@ -51,7 +51,7 @@ The workflow will:
 - Register public key
 - Store private key securely
 
-### 3. AVS Contract Registration
+### 3. AVS contract registration
 
 Execute registration with:
 
@@ -59,7 +59,7 @@ Execute registration with:
 - Operator set IDs
 - Socket configuration
 
-### 4. Operator Set Activation
+### 4. Operator set activation
 
 For each selected set:
 
@@ -77,7 +77,7 @@ When successful:
 - Dashboard shows "Active" ✓
 - Receiving RPC requests ✓
 
-## Contract Addresses
+## Contract addresses
 
 ### Testnet (Sepolia V3)
 

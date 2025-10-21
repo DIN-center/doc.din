@@ -1,4 +1,4 @@
-# Step 3: Set Allocation Delay
+# Step 3: Set allocation delay
 
 Configure the allocation delay that determines when your stake becomes active for slashing.
 
@@ -6,7 +6,7 @@ Configure the allocation delay that determines when your stake becomes active fo
 [Watch Step 2 & 3 Combined Tutorial](https://www.loom.com/share/871e1f969e664f73ae64f033d434ffce?sid=09ba1cf4-726b-4a44-8fd0-49f064edb364) (Step 3 begins at 14:00)
 :::
 
-## What is Allocation Delay?
+## What is allocation delay
 
 The time between staking tokens and when they become slashable. This is **customizable** on both testnet and mainnet.
 
@@ -21,13 +21,13 @@ This is different from the 17-day wallet age requirement for mainnet. The alloca
 
 ## Process
 
-### 1. Start Step 3
+### 1. Start step 3
 
 1. Go to [app.din.build](https://app.din.build)
 2. Click **"Start Step 3"**
 3. TXTX platform opens
 
-### 2. Set Delay Value
+### 2. Set delay value
 
 In TXTX:
 
@@ -40,7 +40,7 @@ In TXTX:
 Once set, the allocation delay is permanent for your operator address.
 :::
 
-### 3. Execute Transaction
+### 3. Execute transaction
 
 1. Click **"Send Transaction"**
 2. Sign in wallet
@@ -54,7 +54,7 @@ When successful:
 - Download output file
 - Step 3 shows ✓
 
-## Output File
+## Output file
 
 Your output contains:
 
@@ -66,21 +66,21 @@ Your output contains:
 }
 ```
 
-## Common Questions
+## Common questions
 
-**Q: What delay should I set?**
+**What delay should I set?**
 
 Most operators use 0 (immediate) for flexibility.
 
-**Q: Can I change it later?**
+**Can I change it later?**
 
 No, it's permanent once set.
 
-**Q: Is this the 17-day requirement?**
+**Is this the 17-day requirement?**
 
 No, that's for wallet age on mainnet EigenLayer access.
 
-## Next Step
+## Next step
 
 - **Step 4**: Watcher Setup (Not yet available)
 - **Step 5**: [Allocate Stake to Operator Sets](./step-5-opt-in-avs.md) (Requires DIN team coordination)

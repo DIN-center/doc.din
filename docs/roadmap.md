@@ -117,7 +117,8 @@ In the final phase, DIN will operate as a fully decentralized, community-governe
 
 ### Advanced payment and reward structures
 
-- **Dynamic pricing and custom SLAs** - As DIN matures, the DAO may introduce dynamic pricing for API requests and allows operators to offer customized SLAs.
+- **Dynamic pricing and custom service level agreements** - As DIN matures, the DAO may introduce dynamic pricing
+  for API requests and allows operators to offer customized service level agreements.
   This flexibility enables providers to compete based on specialized services, fostering a competitive and adaptable market for blockchain API services.
 
 - **Cross-protocol staking and partnerships** - DIN will explore partnerships with other web3 projects, such as staking collaborations, liquidity pooling, and cross-chain integrations, enhancing DIN's economic resilience and extending its ecosystem reach.

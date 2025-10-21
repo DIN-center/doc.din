@@ -6,7 +6,7 @@ By implementing DIN as an AVS, the network aligns incentives among node provider
 and other participants, ensuring high standards of service quality, resilience, and transparency
 across all operations.
 
-Through AVS, DIN enforces rigorous standards for service level agreements (SLAs),
+Through AVS, DIN enforces rigorous standards for service level agreements,
 incentivizes consistent performance, and incorporates real-time slashing and staking mechanisms,
 providing a reliable and economically secure infrastructure for Web3 applications.
 
