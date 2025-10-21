@@ -5,6 +5,9 @@
   "installCommand": "npm install",
   "cleanUrls": true,
   "trailingSlash": false,
+  "git": {
+    "deploymentEnabled": false
+  },
   "headers": [
     {
       "source": "/llms.txt",
