@@ -63,7 +63,7 @@ Final registration step to join the DIN AVS and begin serving traffic.
 Before beginning the onboarding process, ensure you have:
 
 1. **A dedicated wallet** (EOA) for operator functions
-   - For mainnet: MUST be a brand new wallet never used with other AVSs
+   - For mainnet: MUST be a brand new wallet never used with other Actively Validated Services
    - For testnet: Any wallet can be used
 
 2. **Sufficient ETH** for gas fees
@@ -88,7 +88,7 @@ You'll select which operator sets to join during the onboarding process.
 
 :::info Key Points
 
-- **Mainnet wallet isolation**: Using a wallet that's been used with other AVSs will significantly complicate your operations
+- **Mainnet wallet isolation**: Using a wallet that's been used with other Actively Validated Services will significantly complicate your operations
 - **Wallet age requirement**: Mainnet requires wallet to exist for 17 days before EigenLayer access
 - **Slashing conditions**: Understand the [slashing](../slashing-and-rewards.md) mechanisms
 - **Performance requirements**: Maintain high availability and low latency for RPC services

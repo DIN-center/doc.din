@@ -34,8 +34,8 @@ DIN admins will guide you on which operator sets to participate in based on your
 
 | Set ID | Network Name |
 |--------|-------------|
-| 2 | ethereum |
-| 3 | ethereum-holesky |
+| 2 | Ethereum |
+| 3 | Ethereum-holesky |
 | 4 | blast-mainnet |
 | 5 | blast-testnet |
 | 6 | polygon |
@@ -64,10 +64,10 @@ DIN admins will guide you on which operator sets to participate in based on your
 | 29 | solana-devnet |
 | 30 | unichain-mainnet |
 | 31 | unichain-sepolia |
-| 32 | swellchain-mainnet |
-| 33 | swellchain-testnet |
-| 34 | sei-mainnet |
-| 35 | sei-mainnet-archive |
+| 32 | Swellchain-mainnet |
+| 33 | Swellchain-testnet |
+| 34 | Sei-mainnet |
+| 35 | Sei-mainnet-archive |
 | 36 | Hoodi |
 
 ### Part B: Prepare Tokens

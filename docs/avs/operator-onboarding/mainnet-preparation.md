@@ -65,7 +65,7 @@ Your mainnet operator wallet must be:
 - **Isolated** - No other AVS associations
 - **Permanent** - Cannot be changed later
 
-Using a wallet associated with other AVSs will cause operational failures.
+Using a wallet associated with other Actively Validated Services will cause operational failures.
 
 :::
 
@@ -120,7 +120,7 @@ This ensures optimal network coverage and performance based on proven traffic pa
 | **ETH** | Test ETH | Real ETH |
 | **Allocation Delay** | Customizable (0 default) | Customizable (0 default) |
 | **Slashing** | No real loss | Real economic risk |
-| **Performance** | Relaxed SLAs | Strict SLAs |
+| **Performance** | Relaxed service level agreements | Strict service level agreements |
 
 ## Common Mainnet Pitfalls
 

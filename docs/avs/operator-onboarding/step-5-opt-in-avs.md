@@ -41,11 +41,11 @@ Specific details will be provided by the DIN team when your custom image is read
 1. Go to [app.din.build](https://app.din.build)
 2. Step 5 enabled by DIN team
 3. Click **"Start Step 5"**
-4. Custom TXTX runbook opens
+4. Custom TXTX workflow opens
 
 ### 2. BLS Key Registration
 
-The runbook will:
+The workflow will:
 
 - Generate BLS key pair
 - Register public key
@@ -93,14 +93,14 @@ Addresses will be provided before launch
 
 ## Monitoring Your Operator
 
-Monitor these KPIs:
+Monitor these key performance indicators:
 
 - Request volume
 - Response time
 - Success rate
 - Uptime percentage
 
-Maintain SLAs:
+Maintain service level agreements:
 
 - **Uptime**: Greater than 99.9%
 - **Latency**: Less than 100ms p50
@@ -114,7 +114,7 @@ Maintain SLAs:
 
 **BLS Key Generation Failed?**
 
-- Restart runbook
+- Restart workflow
 - Clear browser cache
 
 **Registration Failed?**
