@@ -6,6 +6,7 @@ DIN's implementation focuses on the AI agent's access to web3 API calls across m
 This creates a "headless gateway" implementation so the AI agent can access multiple RPC networks.
 
 The main user stories covered include:
+
 - As an AI agent, I can call a DIN endpoint (Ethereum, Base, Blast), pay with a token (USDC), and receive relevant JSON-RPC information for my response.
 - As an AI agent, I can receive additional information on my DIN usage (transaction receipts, calls with the endpoint).
   This can be a redirect of the user to a DIN app for monitoring.
