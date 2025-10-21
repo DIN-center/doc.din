@@ -1,140 +1,170 @@
 # Step 5: Allocate stake to operator sets
 
-Final step to complete your operator registration and begin serving traffic.
+Final step to associate your stake with operator sets and begin serving traffic.
 
-:::info Coordination Required
-Step 5 requires coordination with the DIN team to configure a custom operator image. Contact the team in #din-general Slack when ready.
+:::tip Video Walkthrough
+Watch the [Step 5 onboarding video](https://www.loom.com/share/ff00347005a445e8ba8dc125714ce869) for a complete walkthrough.
 :::
 
-## Prerequisites
+## What step 5 does
 
-- [ ] Completed Steps 1-3
+Step 5 takes the stake you allocated in Step 2 and associates it with the specific operator sets you've been allowlisted for.
+This registration enables you to start receiving and serving RPC requests.
+
+## Before you start
+
+- [ ] Completed Steps 1-4
 - [ ] Allocation delay period has passed (if set)
-- [ ] Infrastructure ready
-- [ ] Coordinated with DIN team
+- [ ] Messaged DIN team that you reached Step 5 in #din-general Slack
 
-## Pre-step 5: Team coordination
+## Waiting for configuration
 
-### Request setup
+When you reach Step 5, you'll see "Step 5: Configuration Required" in the app.
 
-1. Join #din-general Slack
-2. Provide:
+**What this means:** The DIN team needs to configure your custom operator image on the backend.
+Most operators have already notified us, but if you haven't, message in #din-general Slack that you've reached Step 5.
 
-   ```text
-   Operator Address: 0x...
-   Operator Sets: [10, 20, 30]
-   Allocation Complete: Yes
-   Infrastructure Ready: Yes
-   ```
+Once configured by the DIN team, the status will change to "Step 5 Ready" and you can proceed.
 
-3. Wait for custom image configuration
-4. Receive specific instructions
+## Running step 5
 
-## Process
+### 1. Start the workflow
 
-:::note
-Specific details will be provided by the DIN team when your custom image is ready.
-:::
+1. Go to [app.din.build](https://app.din.build) → Onboarding
+2. Click **Step 5**
+3. Enter your operator name (this is how you'll appear in the web app)
+   - Example: "Rivet", "SimplyStaking", your company name
+4. Click **Continue to Step 5**
 
-### 1. Access step 5
+### 2. Open TXTX
 
-1. Go to [app.din.build](https://app.din.build)
-2. Step 5 enabled by DIN team
-3. Click **"Start Step 5"**
-4. Custom TXTX workflow opens
+The TXTX workflow will open in a secure environment. This automates the complex EigenLayer CLI commands for you.
 
-### 2. BLS key registration
+### 3. Execute transactions
 
-The workflow will:
+The workflow executes two main transactions:
 
-- Generate BLS key pair
-- Register public key
-- Store private key securely
+**Transaction 1: Modify allocations**
 
-### 3. AVS contract registration
+- Associates your stake with your assigned operator sets
+- Uses the `modifyAllocations` contract function
 
-Execute registration with:
+**Transaction 2: Register for operator sets**
 
-- AVS Service Manager
-- Operator set IDs
-- Socket configuration
+- Registers your BLS public key
+- Adds you to each operator set
+- Uses the `registerForOperatorSets` contract function
 
-### 4. Operator set activation
+Follow the prompts in TXTX to sign each transaction.
 
-For each selected set:
+### 4. Complete
 
-- Register with set
-- Verify activation
-- Begin serving requests
+When you see confetti and "Runbook Complete":
 
-### 5. Complete
+1. Review the output data (optional: download for your records)
+2. Click **End Session**
+3. Close TXTX
 
-When successful:
+## Verify registration
 
-- BLS key registered ✓
-- AVS registration confirmed ✓
-- All operator sets active ✓
-- Dashboard shows "Active" ✓
-- Receiving RPC requests ✓
+Go to the **Operators** page in the app to see your newly created operator(s).
+
+You'll see one operator entry for each operator set you were assigned:
+
+- Operator set ID (for example: 5, 35)
+- Network name (for example: blast-testnet, base-mainnet)
+- Your operator name
+- Status: Active
+
+## What you just did
+
+Step 5 essentially:
+
+1. **Took your stake** from Step 2
+2. **Associated it** with your assigned operator sets (for example: sets 5 and 35)
+3. **Registered your BLS key** for secure validation
+4. **Made you discoverable** in the DIN network
+
+This would normally require running complex EigenLayer CLI commands, but the TXTX workflow abstracts all of that for you.
+
+## Output data
+
+The step 5 output includes:
+
+- **Operator name**: How you're identified in the app
+- **Operator sets**: Which sets you're registered for (for example: [5, 35])
+- **Service manager**: DIN AVS contract address
+- **Allocation manager**: EigenLayer allocation contract address
+- **Transaction hashes**: Both modify allocations and register for operator sets
+- **Registration logs**: Confirmation events for each operator set
+
+Example output:
+
+```json
+{
+  "operator_name": "Rivet",
+  "operator_sets": [5, 35],
+  "modify_allocations_tx_hash": "0xa851e0...",
+  "register_for_operator_sets_tx_hash": "0x73ac44...",
+  "register_for_operator_sets_logs": [
+    {
+      "event_name": "OperatorAddedToOperatorSet",
+      "data": {
+        "operator": {
+          "OperatorSet": {
+            "id": 5
+          }
+        }
+      }
+    }
+  ]
+}
+```
 
 ## Contract addresses
 
-### Testnet (Sepolia V3)
+### Testnet (Sepolia)
 
 ```text
-AVS Service Manager: 0x42583067658071247ec8ce0a516a58f682002d07
-Registry Coordinator: 0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6
-Chain ID: 11155111
+Service Manager:     0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6
+Allocation Manager:  0x42583067658071247ec8ce0a516a58f682002d07
+Chain ID:            11155111
+RPC:                 https://sepolia.infura.io/v3/...
 ```
 
 ### Mainnet
 
-Addresses will be provided before launch
+Addresses will be provided before launch.
 
-## Monitoring Your Operator
+## Common issues
 
-Monitor these key performance indicators:
+**"Step 5: Configuration Required"**
 
-- Request volume
-- Response time
-- Success rate
-- Uptime percentage
+Contact the DIN team in #din-general Slack. They need to set up your custom operator image on the backend.
 
-Maintain service level agreements:
+**Transaction failed**
 
-- **Uptime**: Greater than 99.9%
-- **Latency**: Less than 100ms p50
-- **Accuracy**: 100%
+- Ensure your allocation delay period has passed
+- Check you have enough ETH for gas on Sepolia
+- Try increasing gas limit
 
-## Common Issues
+**Can't see my operator**
 
-**Custom Image Not Ready?**
+- Refresh the Operators page
+- Check you're looking at the correct network
+- Verify transaction completed successfully (check tx hash on Etherscan)
 
-- Contact DIN team in Slack
+## Next steps
 
-**BLS Key Generation Failed?**
+You're now an active DIN AVS operator! 🎉
 
-- Restart workflow
-- Clear browser cache
+Continue to the next section to learn about:
 
-**Registration Failed?**
-
-- Check allocation delay expired
-- Verify network selection
-- Increase gas
-
-## Support Channels
-
-- **During Step 5**: #din-general with @din-team
-- **Post-Activation**:
-  - Technical: #din-support
-  - Performance: #din-operators
-  - General: #din-general
-
-## Success! 🎉
-
-You're now an active DIN AVS operator. Welcome to the network!
+- Running your operator infrastructure
+- Monitoring performance
+- Maintaining service level agreements
+- Getting support
 
 ---
 
-Questions? Join #din-general Slack
+Questions? Join #din-general on Slack
