@@ -44,12 +44,12 @@ The TXTX workflow will open in a secure environment. This automates the complex 
 
 The workflow executes two main transactions:
 
-**Transaction 1: Modify allocations**
+#### Transaction 1: Modify allocations
 
 - Associates your stake with your assigned operator sets
 - Uses the `modifyAllocations` contract function
 
-**Transaction 2: Register for operator sets**
+#### Transaction 2: Register for operator sets
 
 - Registers your BLS public key
 - Adds you to each operator set
@@ -138,17 +138,17 @@ Addresses will be provided before launch.
 
 ## Common issues
 
-**"Step 5: Configuration Required"**
+#### "Step 5: Configuration Required"
 
 Contact the DIN team in #din-general Slack. They need to set up your custom operator image on the backend.
 
-**Transaction failed**
+#### Transaction failed
 
 - Ensure your allocation delay period has passed
 - Check you have enough ETH for gas on Sepolia
 - Try increasing gas limit
 
-**Can't see my operator**
+#### Can't see my operator
 
 - Refresh the Operators page
 - Check you're looking at the correct network
