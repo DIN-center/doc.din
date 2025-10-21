@@ -174,8 +174,8 @@ flowchart LR
 - What are the security requirements for this?
   - **Answer:** Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new gateway is using to access the DIN Router.
 
-- Is there an example handshake and what is registered (e.g. IP addresses vs domains)?
-  - **Answer:** There is an example code that can be shared.
+- Is there an example handshake and what is registered (for example, IP addresses vs domains)?
+  - **Answer:** Example code is available that can be shared.
     An Ethereum address is required in order to authenticate.
 
 - What rate limiting protection is created here?
@@ -185,7 +185,7 @@ flowchart LR
 
 ## DIN Router network configuration
 
-An Ingress Operator will choose between different registered networks/chains and their set technical requirements (e.g. methods, RPS, volume, advanced methods).
+An Ingress Operator will choose between different registered networks/chains and their set technical requirements (for example, methods, RPS, volume, advanced methods).
 The full list of these available networks and requirements has not been rendered into a web application, but we can use the Infura documentation as a starting point for which networks and methods are supported. 
 
 - How do I select which available networks (mainnet and testnet) where I can be added to requests?
@@ -198,8 +198,8 @@ The full list of these available networks and requirements has not been rendered
   - Is there a list of these chains?
     - **Answer:** The DIN team keeps a list of supported chains that are available for your consumption.
 
-  - Do I hardcode it on my side? The router side?
-    - **Answer:** You will hardcode a reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
+  - Do I use a fixed reference on my side? The router side?
+    - **Answer:** You will use a fixed reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
 
   - How can I change this?
     - **Answer:** You will likely not need to change the DIN endpoints, but in the event you do, you will be responsible for changing to any new DIN endpoints that are provided to you.

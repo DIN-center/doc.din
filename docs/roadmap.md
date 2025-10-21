@@ -17,7 +17,7 @@ This phase focuses on establishing DIN's basic operational capabilities, ensurin
 ### Joining DIN
 
 - **Acceptance criteria and minimum performance thresholds** - During this phase, DIN implements strict entry requirements for node providers and watchers, ensuring that each participant meets predefined performance standards.
-  Providers must demonstrate compliance with service-level agreements (SLAs) covering metrics such as response freshness, data validity, and uptime.
+  Providers must demonstrate compliance with service-level agreements covering metrics such as response freshness, data validity, and uptime.
 
 - **Assigned identities for DIN routing** - Each participant is assigned a unique identity, enabling seamless routing of developer API requests to the appropriate node providers.
   This identity management system lays the groundwork for effective transaction processing and tracking, setting clear accountability for each operator within the network.
@@ -44,13 +44,13 @@ DIN has integrated new functionalities that streamline agent onboarding, improve
 
 - **Onboarding components** - Ability for providers to stake and add their wallet identities to join the DIN Router Registry contracts
 
-- **Economic security SLAs** - Watcher and AVS operator capabilities for staking, slashing, and challenging the onboarded node performance and reputation of entities in DIN.
+- **Economic security service level agreements** - Watcher and AVS operator capabilities for staking, slashing, and challenging the onboarded node performance and reputation of entities in DIN.
 
 The DIN AVS system aims to deploy watchers with a dedicated "watcher node kit," which operates as both a monitoring tool and a user-friendly interface to the DIN network backend.
 Through the AVS interface, watchers access essential modules for onboarding DIN providers, viewing onboarding notes, tracking network status, and enforcing slashing protocols.
 
 Acting as operators on EigenLayer, DIN watchers not only monitor service accuracy and reliability but also uphold AVS-based slashing and staking rules for performance infractions.
-Watchers gather and analyze response data by running simulated requests to ensure adherence to SLAs. 
+Watchers gather and analyze response data by running simulated requests to ensure adherence to service level agreements. 
 Their results are then published on a public event stream, providing transparency and informing DIN's crypto-economic incentives.
 By aligning with EigenLayer's AVS structure, DIN strengthens its validation processes, ensuring real-time accountability and economic security for all network participants.
 

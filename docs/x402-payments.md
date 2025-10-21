@@ -15,7 +15,7 @@ The main user stories covered include:
 
 This interaction shows how the AI agent can interact with multiple APIs in order to gather sufficient information to complete its requests.
 
-## Web3 API marketplace with micropayments
+## Web3 API marketplace with micro-payments
 
 Web3 infrastructure still runs on traditional financial rails.
 DIN node providers still need to pay for their bare metal electric bills or AWS bills with fiat invoices.
