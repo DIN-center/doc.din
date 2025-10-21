@@ -32,14 +32,17 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy vercel.json to build
-        run: cp vercel.json ./build
+      - name: Create Vercel output structure
+        run: |
+          mkdir -p .vercel/output
+          cp -r build .vercel/output/static
+          echo '{"version": 3}' > .vercel/output/config.json
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: .vercel/output/
           retention-days: 1
 
   lint:
@@ -105,7 +108,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: .vercel/output/
 
       - name: Deploy to Vercel (Preview)
         uses: amondnet/vercel-action@v25
@@ -115,7 +118,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prebuilt'
-          working-directory: ./build
           github-comment: true
 
   # Production deployment - reuses build artifact
@@ -134,7 +136,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: build/
+          path: .vercel/output/
 
       - name: Deploy to Vercel (Production)
         uses: amondnet/vercel-action@v25
@@ -143,7 +145,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod --prebuilt'
-          working-directory: ./build
 
   # Semantic release - runs after production deploy
   release:
