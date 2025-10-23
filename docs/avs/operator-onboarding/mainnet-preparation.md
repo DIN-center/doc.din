@@ -42,9 +42,25 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
 
 4. **Register BOTH wallets with EigenLayer**
    - Access the [DIN app](https://app.din.build)
-   - Complete [Step 1](./onboard/register-operator.md) with your **primary wallet**
-   - Complete [Step 1](./onboard/register-operator.md) again with your **backup wallet**
+   - **Complete only [Step 1](./onboard/register-operator.md)** with your **primary wallet**
+   - **Complete only [Step 1](./onboard/register-operator.md)** again with your **backup wallet**
    - This ensures both wallets will be ready by mainnet launch in case you need to switch
+   - **Note**: Only Step 1 (EigenLayer registration) is needed now. Steps 2-5 will be completed after the DIN contract is deployed on mainnet.
+
+## Configuration steps
+
+Before starting Step 1 registration, configure the DIN app for mainnet:
+
+1. **Switch MetaMask to Ethereum Mainnet**
+   - Open MetaMask and switch from Sepolia to Ethereum Mainnet network
+
+2. **Select DIN Mainnet configuration**
+   - In the DIN app, go to AVS settings
+   - Select "DIN Mainnet" from the AVS configuration dropdown
+
+3. **Verify network settings before registration**
+   - When you open the TXTX page for Step 1, confirm "Mainnet" is displayed
+   - Ensure your wallet shows the correct mainnet address and ETH balance
 
 ## Wallet setup options
 
@@ -115,9 +131,10 @@ assets and accept slashing risk.
 
     _Fix_: Use a fresh, DIN-dedicated EOA for mainnet. Do not reuse keys/accounts tied to any other AVS.
 
-- **Wrong network configuration**
+- **Wrong network selected during registration**
 
-    _Fix_:  Double check your network configurations when selecting your operator set.
+    _Fix_: Before starting Step 1, switch MetaMask from Sepolia to Ethereum Mainnet AND select "DIN Mainnet" in the app's AVS configuration.
+    Verify "Mainnet" is displayed in the TXTX page before proceeding. Registering on the wrong network wastes the 17-day activation period.
 
 ### Costly errors
 
