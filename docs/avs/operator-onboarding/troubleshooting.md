@@ -83,6 +83,16 @@ Cannot be changed once set! Must use new operator address if incorrect.
 
 ### Step 5: Allocate stake
 
+#### Configuration Required
+
+The message, **Step 5: Configuration Required** means you must contact the DIN team at `din@consensys.net`. They need to set up your custom operator image on the backend.
+
+#### Can't see my operator
+
+- Refresh the Operators page
+- Check you're looking at the correct network
+- Verify the transaction completed successfully (check the transaction hash on Etherscan)
+
 #### Custom image not ready
 
 - Contact DIN team at `din@consensys.net`
