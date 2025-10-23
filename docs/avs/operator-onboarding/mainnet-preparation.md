@@ -37,6 +37,10 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
 
 ## Wallet setup options
 
+:::warning MetaMask Required for Onboarding
+**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** While you can store your keys in a hardware wallet or Fireblocks, you must access them through MetaMask during the onboarding process. Onboarding may fail if you use other wallet connection methods (WalletConnect, Coinbase Wallet, etc.).
+:::
+
 Use one of the following wallet options:
 
 - **Option 1: Hardware wallet (recommended)**
@@ -77,7 +81,8 @@ assets and accept slashing risk.
 
 |  | Testnet | Mainnet |
 |--------|---------|---------|
-| **Wallet** | Any EOA wallet | New EOA wallet, dedicated to DIN AVS |
+| **Wallet** | Any EOA wallet (MetaMask recommended) | New EOA wallet, dedicated to DIN AVS |
+| **Wallet connection** | MetaMask required for onboarding | MetaMask required for onboarding |
 | **Wallet age requirement** | None | Must be registered on EigenLayer for 17 days before activation |
 | **Funding** | Testnet ETH | ETH |
 | **Allocation delay** | Customizable (0 default) | Customizable (0 default) |
@@ -87,6 +92,10 @@ assets and accept slashing risk.
 ## Common mainnet pitfalls
 
 ### Fatal mistakes
+
+- **Using a non-MetaMask wallet connection**
+
+    _Fix_: Always connect through MetaMask when onboarding in the DIN app. You can use hardware wallets or Fireblocks for key storage, but connect them through MetaMask. Other wallet providers (WalletConnect, Coinbase Wallet, etc.) may cause onboarding to fail.
 
 - **Reusing a wallet from another AVS**
 

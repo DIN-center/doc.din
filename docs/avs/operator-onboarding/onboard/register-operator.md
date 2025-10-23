@@ -15,6 +15,10 @@ to start serving traffic because EigenLayer has 17-day operator allocation delay
 
 Ensure you've completed all the [prerequisites](../prerequisites.md) before starting this process.
 
+:::warning MetaMask Required
+**You must use MetaMask wallet for AVS onboarding.** Onboarding may fail if you use other wallet providers (TrustWallet, Coinbase Wallet, etc.). Connect your operator wallet through MetaMask to ensure a successful registration.
+:::
+
 ## Steps
 
 ### 1. Start registration
@@ -26,7 +30,7 @@ Ensure you've completed all the [prerequisites](../prerequisites.md) before star
 
 ### 2. Check the registration status
 
-1. Connect your DIN AVS wallet
+1. Connect your DIN AVS wallet **using MetaMask**
 1. Select **Check if registered**
 1. If already registered → Skip to [Step 2](./stake-tokens.md)
 1. If not registered → Continue below
