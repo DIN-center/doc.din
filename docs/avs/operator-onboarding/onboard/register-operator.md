@@ -16,7 +16,8 @@ to start serving traffic because EigenLayer has 17-day operator allocation delay
 Ensure you've completed all the [prerequisites](../prerequisites.md) before starting this process.
 
 :::warning MetaMask Required
-**You must use MetaMask wallet for AVS onboarding.** Onboarding may fail if you use other wallet providers (TrustWallet, Coinbase Wallet, etc.). Connect your operator wallet through MetaMask to ensure a successful registration.
+**You must use MetaMask wallet for AVS onboarding.** Onboarding may fail if you use other wallet providers (TrustWallet, Coinbase Wallet, etc.).
+Connect your operator wallet through MetaMask to ensure a successful registration.
 :::
 
 ## Steps

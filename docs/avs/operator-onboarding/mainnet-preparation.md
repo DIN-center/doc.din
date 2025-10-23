@@ -6,7 +6,8 @@ description: Instructions for preparing for mainnet launch
 
 :::danger Time Sensitive - DIN AVS Mainnet Launch: November 14th, 2025
 
-Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest to create your wallets and onboard in time for mainnet launch.
+Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest
+to create your wallets and onboard in time for mainnet launch.
 
 **Critical: Create and register TWO wallets (primary + backup) with EigenLayer.** If your primary wallet encounters issues during onboarding, you won't have time to activate a new wallet before the deadline.
 :::
@@ -21,7 +22,8 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
     - Each wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
     - Secure your private keys for both wallets.
     - Document both wallet addresses.
-    - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch deadline if any issues occur with your primary wallet during onboarding.
+    - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch
+      deadline if any issues occur with your primary wallet during onboarding.
 
 2. **Start Fireblocks setup** (optional)
    - Contact [Fireblocks](https://www.fireblocks.com/) for an account
@@ -43,7 +45,9 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
 ## Wallet setup options
 
 :::warning MetaMask Required for Onboarding
-**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** While you can store your keys in a hardware wallet or Fireblocks, you must access them through MetaMask during the onboarding process. Onboarding may fail if you use other wallet connection methods (WalletConnect, Coinbase Wallet, etc.).
+**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** While you can store your keys in a hardware wallet or
+Fireblocks, you must access them through MetaMask during the onboarding process. Onboarding may fail if you use other wallet connection methods
+(WalletConnect, Coinbase Wallet, etc.).
 :::
 
 Use one of the following wallet options:
@@ -100,7 +104,8 @@ assets and accept slashing risk.
 
 - **Using a non-MetaMask wallet connection**
 
-    _Fix_: Always connect through MetaMask when onboarding in the DIN app. You can use hardware wallets or Fireblocks for key storage, but connect them through MetaMask. Other wallet providers (WalletConnect, Coinbase Wallet, etc.) may cause onboarding to fail.
+    _Fix_: Always connect through MetaMask when onboarding in the DIN app. You can use hardware wallets or Fireblocks for key storage, but connect
+    them through MetaMask. Other wallet providers (WalletConnect, Coinbase Wallet, etc.) may cause onboarding to fail.
 
 - **Reusing a wallet from another AVS**
 
@@ -114,7 +119,9 @@ assets and accept slashing risk.
 
 - **Not creating a backup wallet**
 
-    _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (e.g., transaction failures, wrong configuration), you won't have time to create and activate a new wallet before the November 14th deadline due to the 17-day activation period.
+    _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (e.g., transaction
+    failures, wrong configuration), you won't have time to create and activate a new wallet before the November 14th deadline due to the 17-day
+    activation period.
 
 - **Starting after October 27th, 2025**
 
