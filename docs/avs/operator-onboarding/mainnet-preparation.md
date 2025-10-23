@@ -12,6 +12,10 @@ to create your wallets and onboard in time for mainnet launch.
 **Critical: Create and register TWO wallets (primary + backup) with EigenLayer.** If your primary wallet encounters issues during onboarding, you won't have time to activate a new wallet before the deadline.
 :::
 
+:::info Video tutorial
+[Watch the mainnet preparation tutorial](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
+:::
+
 ## Immediate action items
 
 Perform the following steps before the October 27, 2025 cut-off for mainnet launch:
