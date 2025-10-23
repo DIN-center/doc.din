@@ -44,14 +44,14 @@ The workflow executes two main transactions:
 
 - Transaction 1: Modify allocations
 
-    - Associates your stake with your assigned operator sets
-    - Uses the `modifyAllocations` contract function
+  - Associates your stake with your assigned operator sets
+  - Uses the `modifyAllocations` contract function
 
 - Transaction 2: Register for operator sets
 
-   - Registers your BLS public key
-   - Adds you to each operator set
-   - Uses the `registerForOperatorSets` contract function
+  - Registers your BLS public key
+  - Adds you to each operator set
+  - Uses the `registerForOperatorSets` contract function
 
 Follow the prompts in TXTX to sign each transaction.
 
@@ -65,7 +65,7 @@ The step is complete when you see confetti and **Runbook Complete**, next:
 
 ### 4. Verify your registration
 
-Go to the **Operators** page in the DIN app to view your newly created operator(s).
+Go to the **Operators** page in the DIN app to view your newly created operator.
 
 You'll see one operator entry for each operator set you were assigned:
 
@@ -75,6 +75,7 @@ You'll see one operator entry for each operator set you were assigned:
 - Status: `Active`
 
 Step 5 has performed the following:
+
 - Taken your stake from Step 2 and associated it with your assigned operator sets
     (for example: sets `5` and `35`)
 - Registered your BLS key for secure validation.
@@ -124,4 +125,3 @@ Allocation Manager:  `0x42583067658071247ec8ce0a516a58f682002d07`
 ### Mainnet
 
 Addresses will be provided before launch.
-

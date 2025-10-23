@@ -122,4 +122,3 @@ assets and accept slashing risk.
     _Fix_: Set the default allocation delay to `0` (see [Step 3](./onboard/allocation-delay.md)) unless you
     need an operations buffer; size and place stake where you can meet SLAs, and avoid over-concentration
     or thin coverage.
-
