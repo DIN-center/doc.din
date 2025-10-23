@@ -6,34 +6,39 @@ description: Instructions for preparing for mainnet launch
 
 :::danger Time Sensitive - DIN AVS Mainnet Launch: November 14th, 2025
 
-Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest to create your wallet and onboard in time for mainnet launch.
+Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest to create your wallets and onboard in time for mainnet launch.
+
+**Critical: Create and register TWO wallets (primary + backup) with EigenLayer.** If your primary wallet encounters issues during onboarding, you won't have time to activate a new wallet before the deadline.
 :::
 
 ## Immediate action items
 
 Perform the following steps before the October 27, 2025 cut-off for mainnet launch:
 
-1. **Create a new wallet**
-    - Generate a new externally owned account wallet. Refer to the
+1. **Create TWO new wallets (primary + backup)**
+    - Generate **two** new externally owned account wallets. Refer to the
 [wallet setup options](#wallet-setup-options)
-    - The wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
-    - Secure your private keys.
-    - Document your wallet address.
+    - Each wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
+    - Secure your private keys for both wallets.
+    - Document both wallet addresses.
+    - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch deadline if any issues occur with your primary wallet during onboarding.
 
 2. **Start Fireblocks setup** (optional)
    - Contact [Fireblocks](https://www.fireblocks.com/) for an account
    - Begin the KYC/verification process
    - [Install and register on EigenLayer using Fireblocks](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)
 
-3. **Secure ETH**
-   - Minimum 1 ETH (EigenLayer recommendation)
-   - Transfer to operator wallet
+3. **Secure ETH for both wallets**
+   - Minimum 1 ETH per wallet (EigenLayer recommendation)
+   - Transfer to both operator wallets
 
    Specific stake amounts will be calculated during [Step 2](./onboard/stake-tokens.md).
 
-4. **Begin registration**
+4. **Register BOTH wallets with EigenLayer**
    - Access the [DIN app](https://app.din.build)
-   - Start [Step 1](./onboard/register-operator.md) immediately
+   - Complete [Step 1](./onboard/register-operator.md) with your **primary wallet**
+   - Complete [Step 1](./onboard/register-operator.md) again with your **backup wallet**
+   - This ensures both wallets will be ready by mainnet launch in case you need to switch
 
 ## Wallet setup options
 
@@ -81,9 +86,9 @@ assets and accept slashing risk.
 
 |  | Testnet | Mainnet |
 |--------|---------|---------|
-| **Wallet** | Any EOA wallet (MetaMask recommended) | New EOA wallet, dedicated to DIN AVS |
+| **Wallet** | Any EOA wallet (MetaMask recommended) | Two new EOA wallets (primary + backup), dedicated to DIN AVS |
 | **Wallet connection** | MetaMask required for onboarding | MetaMask required for onboarding |
-| **Wallet age requirement** | None | Must be registered on EigenLayer for 17 days before activation |
+| **Wallet age requirement** | None | Both wallets must be registered on EigenLayer for 17 days before activation |
 | **Funding** | Testnet ETH | ETH |
 | **Allocation delay** | Customizable (0 default) | Customizable (0 default) |
 | **Slashing** | No real loss | Real economic risk |
@@ -107,9 +112,13 @@ assets and accept slashing risk.
 
 ### Costly errors
 
+- **Not creating a backup wallet**
+
+    _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (e.g., transaction failures, wrong configuration), you won't have time to create and activate a new wallet before the November 14th deadline due to the 17-day activation period.
+
 - **Starting after October 27th, 2025**
 
-    _Fix_: Plan for EigenLayer’s protocol activation delay (~17 days). Start by Oct 27, 2025 to be
+    _Fix_: Plan for EigenLayer's protocol activation delay (~17 days). Start by Oct 27, 2025 to be
     active by Nov 14, 2025.
 
 - **Insufficient ETH for gas**
