@@ -178,4 +178,3 @@ Ready to join operator sets? Follow these steps:
 2. **Begin Onboarding**: Start with [Step 1: Register](./operator-onboarding/onboard/register-operator.md)
 3. **Select Sets**: Choose during the allowlisting process
 4. **Allocate Stake**: Configure in [Step 2](./operator-onboarding/onboard/stake-tokens.md)
-
