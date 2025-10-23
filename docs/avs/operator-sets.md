@@ -175,10 +175,6 @@ See [Slashing and Rewards](./slashing-and-rewards.md) for detailed information.
 Ready to join operator sets? Follow these steps:
 
 1. **Review Requirements**: Check our [Prerequisites](./operator-onboarding/prerequisites.md)
-2. **Begin Onboarding**: Start with [Step 1: Register](./operator-onboarding/step-1-register-operator.md)
+2. **Begin Onboarding**: Start with [Step 1: Register](./operator-onboarding/onboard/register-operator.md)
 3. **Select Sets**: Choose during the allowlisting process
-4. **Allocate Stake**: Configure in [Step 2](./operator-onboarding/step-2-stake-tokens.md)
-
----
-
-*For the latest operator set information and requirements, visit [app.din.build](https://app.din.build)*
+4. **Allocate Stake**: Configure in [Step 2](./operator-onboarding/onboard/stake-tokens.md)

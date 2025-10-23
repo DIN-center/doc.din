@@ -1,111 +1,65 @@
-# Operator Onboarding Guide
+---
+description: Overview of the steps to register as a DIN AVS operator.
+---
 
-Welcome to the DIN AVS Operator Onboarding Guide. This comprehensive documentation will walk you through the process of becoming a DIN AVS operator and staking with one or more operator sets.
+# Operator onboarding
 
-:::warning Mainnet Launch - Urgent Action Required
-**DIN AVS Mainnet launches on November 14th, 2025.** Due to EigenLayer's 17-day allocation delay period, operators must begin registration **immediately** to be ready for mainnet launch.
+A DIN Autonomous Verifiable Service (AVS) operator runs infrastructure that serves RPC requests on the
+DIN network while staking funds with one or more [operator sets](../operator-sets.md).
+
+:::warning Mainnet Launch - November 14th, 2025
+DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately**
+due to a 17-day operator allocation delay.
 :::
 
-## Overview
+## Onboarding process
 
-The DIN AVS (Actively Validated Service) leverages EigenLayer's restaking infrastructure to provide decentralized RPC services across multiple blockchain networks.
-As an operator, you'll be responsible for running infrastructure that serves RPC requests while maintaining high availability and performance standards.
+The complete onboarding process consists of the following steps:
 
-## Quick Links
+1. [Review the prerequisite checklist](./prerequisites.md) - The checklist provides information about
+    all the requirements (wallet, financial, account) you must meet to begin onboarding through the DIN app.
 
-- **Onboarding Portal**: [app.din.build](https://app.din.build)
-- **Video Tutorials**: Available for each step of the process
-- **Support**: Join our #din-general Slack channel
+1. [Prepare for mainnet launch](./mainnet-preparation.md) - View the time-sensitive instructions to be
+    ready for the mainnet launch on November 14, 2025.
 
-## Onboarding Process
+1. Onboard using the [DIN app](https://app.din.build):
 
-The complete onboarding process consists of five steps:
+    1. [Register as an EigenLayer operator](./onboard/register-operator.md) - Register your operator address
+        with EigenLayer's delegation manager contract. This establishes your identity as an operator on
+        the EigenLayer protocol.
 
-### Step 1: [Register as EigenLayer Operator](./step-1-register-operator.md)
+    1. [Stake tokens](./onboard/stake-tokens.md) - Stake the required tokens (stETH, WETH, etc.) into
+        EigenLayer strategies. This provides the economic security backing for your operator services.
 
-Register your operator address with EigenLayer's delegation manager contract. This establishes your identity as an operator on the EigenLayer protocol.
+    1. [Set the allocation delay](./onboard/allocation-delay.md) - Configure the allocation delay for your
+        staked assets. This determines when your stake becomes active for slashing conditions.
 
-### Step 2: [Stake Tokens](./step-2-stake-tokens.md)
+    1. [Watcher setup](./onboard/watchers.md) (Coming soon) - Configure watcher services to monitor your
+        operator performance. Currently in development.
 
-Stake the required tokens (stETH, WETH, etc.) into EigenLayer strategies. This provides the economic security backing for your operator services.
+    1. [Allocate stake to operator sets](./onboard/opt-in-avs.md) - Final registration step to join the
+        DIN AVS and begin serving traffic.
 
-### Step 3: [Set Allocation Delay](./step-3-allocation-delay.md)
+## Environment differences
 
-Configure the allocation delay for your staked assets. This determines when your stake becomes active for slashing conditions.
+Testnet and mainnet have different risk, funding, and activation profiles. Use Sepolia testnet to
+validate your setup end to end with test funds, then move to mainnet when you are ready to stake real
+assets and accept slashing risk.
 
-### Step 4: [Watcher Setup](./step-4-watchers.md) (Coming Soon)
+View the [environment differences](./mainnet-preparation.md#mainnet-vs-testnet-differences)
+for more information about the differences between running as a DIN operator on mainnet and testnet.
 
-Configure watcher services to monitor your operator performance. Currently in development.
+## Supported operator sets
 
-### Step 5: [Allocate Stake to Operator Sets](./step-5-opt-in-avs.md)
-
-Final registration step to join the DIN AVS and begin serving traffic.
-
-## Environment Differences
-
-### Testnet (Current - v0.3)
-
-- **Network**: Sepolia testnet
-- **Requirements**: Test ETH for gas fees
-- **Allocation Delay**: 0 blocks (immediate)
-- **Wallet**: Any EOA can be used
-
-### Mainnet (Launching November 14th)
-
-- **Network**: Ethereum mainnet
-- **Requirements**: Real ETH for gas and staking
-- **Allocation Delay**: 17 days
-- **Wallet**: **MUST use a fresh wallet dedicated only to DIN AVS**
-- **Recommended**: [Fireblocks integration](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks) for enhanced security
-
-## Prerequisites
-
-Before beginning the onboarding process, ensure you have:
-
-1. **A dedicated wallet** (EOA) for operator functions
-   - For mainnet: MUST be a brand new wallet never used with other Actively Validated Services
-   - For testnet: Any wallet can be used
-
-2. **Sufficient ETH** for gas fees
-
-3. **Access to [app.din.build](https://app.din.build)**
-
-4. **Understanding of operator responsibilities** and slashing conditions
-
-## Supported Networks (Operator Sets)
-
-DIN AVS supports multiple blockchain networks through operator sets including:
-
-- Ethereum, Base, Optimism, Arbitrum
-- Polygon, Avalanche, BSC, Mantle
-- zkSync, Starknet, Scroll, Solana
-- Blast, Sei, Swellchain, Unichain
-- And more (see full list in [Step 2](./step-2-stake-tokens.md))
+[Operator sets](../operator-sets.md) in DIN represent different blockchain networks that operators can serve. For example: Ethereum, Base, Optimism, Arbitrum, and so on.
 
 You'll select which operator sets to join during the onboarding process.
 
-## Important Considerations
+You can view the most up-to-date list of supported operator sets in the [DIN app](https://app.din.build).
 
-:::info Key Points
+## Get started
 
-- **Mainnet wallet isolation**: Using a wallet that's been used with other Actively Validated Services will significantly complicate your operations
-- **Wallet age requirement**: Mainnet requires wallet to exist for 17 days before EigenLayer access
-- **Slashing conditions**: Understand the [slashing](../slashing-and-rewards.md) mechanisms
-- **Performance requirements**: Maintain high availability and low latency for RPC services
+To begin, start with the [prerequisites](./prerequisites.md) to ensure you have everything needed
+for a smooth onboarding experience.
 
-:::
-
-## Getting Started
-
-Ready to begin? Start with our [Prerequisites Guide](./prerequisites.md) to ensure you have everything needed for a smooth onboarding experience.
-
-## Need Help?
-
-- **Documentation**: You're in the right place!
-- **Video Guides**: Each step includes a detailed video walkthrough
-- **Technical Support**: Reach out in our Slack channel
-- **Contract Addresses**: Available in each step's documentation
-
----
-
-Last updated: October 2024 | Mainnet launch: November 14th, 2025
+Additional resources include video guides for each step in the DIN onboarding process.

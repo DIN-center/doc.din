@@ -23,16 +23,24 @@ const sidebars = {
       items: [
         {
           type: "category",
-          label: "Operator Onboarding",
+          label: "Onboard as an operator",
           link: { type: "doc", id: "avs/operator-onboarding/index" },
           items: [
-            "avs/operator-onboarding/mainnet-preparation",
             "avs/operator-onboarding/prerequisites",
-            "avs/operator-onboarding/step-1-register-operator",
-            "avs/operator-onboarding/step-2-stake-tokens",
-            "avs/operator-onboarding/step-3-allocation-delay",
-            "avs/operator-onboarding/step-4-watchers",
-            "avs/operator-onboarding/step-5-opt-in-avs",
+            "avs/operator-onboarding/mainnet-preparation",
+            {
+              type: "category",
+              label: "Onboard with the DIN app",
+              link: { type: "doc", id: "avs/operator-onboarding/onboard/index" },
+              collapsed: false,
+              items: [
+                "avs/operator-onboarding/onboard/register-operator",
+                "avs/operator-onboarding/onboard/stake-tokens",
+                "avs/operator-onboarding/onboard/allocation-delay",
+                "avs/operator-onboarding/onboard/watchers",
+                "avs/operator-onboarding/onboard/opt-in-avs"
+              ]
+            },
             "avs/operator-onboarding/troubleshooting"
           ]
         },
