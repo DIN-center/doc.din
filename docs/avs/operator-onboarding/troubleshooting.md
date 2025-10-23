@@ -1,45 +1,49 @@
-# Troubleshooting Guide
+---
+description: Troubleshoot issue during DIN AVS onboarding
+---
 
-Quick solutions to common issues during DIN AVS onboarding.
+# Troubleshooting
 
-## Login Issues
+Solutions to common issues during DIN AVS onboarding.
 
-### Turnkey Code Not Received
+## Login issues
+
+### Turnkey code not received
 
 - Wait 2-3 minutes
-- Check spam folder
+- Check your spam folder
 - Request code resend
-- Try different browser
+- Try a different browser
 
-### Dashboard Won't Load
+### Dashboard won't load
 
 - Disable ad blockers
-- Allow pop-ups for app.din.build
+- Allow pop-ups for `https://app.din.build`
 - Try incognito mode
 
-## Wallet Issues
+## Wallet issues
 
-### MetaMask Won't Connect
+### MetaMask won't connect
 
 - Unlock MetaMask first
 - Check correct network
 - Clear MetaMask activity data
 
-### Wrong Network
+### Wrong network
 
-- Testnet: Switch to Sepolia (Chain ID: 11155111)
+- Testnet: Switch to Sepolia (chain ID: `11155111`)
 - Mainnet: Switch to Ethereum Mainnet
 
-## Step-Specific Issues
+## Step-specific issues
 
 ### Step 1: Registration
 
-#### Already Registered Error
+#### Already registered error
 
-- Use "Check if registered" first
+- Select **Check if registered** first
 - If registered, skip to Step 2
 
-#### TXTX Won't Load
+#### TXTX won't load
 
 - Allow pop-ups
 - Disable extensions
@@ -47,18 +51,18 @@ Quick solutions to common issues during DIN AVS onboarding.
 
 ### Step 2: Staking
 
-#### Not Allowlisted
+#### Not allowlisted
 
 - Check request status
-- Contact #din-general if waiting over 24 hours
+- Contact `din@consensys.net` if waiting over 24 hours
 
-#### Token Conversion Failed
+#### Token conversion failed
 
-- Check gas fees included
+- Check the gas fees included
 - Try smaller amounts
 - Verify contract addresses
 
-#### Approval Stuck
+#### Approval stuck
 
 - Check on Etherscan
 - Speed up with higher gas
@@ -66,76 +70,69 @@ Quick solutions to common issues during DIN AVS onboarding.
 
 ### Step 3: Allocation Delay
 
-#### Wrong Delay Set
+#### Wrong delay set
 
 :::danger Critical
 Cannot be changed once set! Must use new operator address if incorrect.
 :::
 
-#### Contract Not Found
+#### Contract not found
 
 - Verify correct network
 - Sepolia: `0x42583067658071247ec8ce0a516a58f682002d07`
 
-### Step 5: Allocate Stake
+### Step 5: Allocate stake
 
-#### Custom Image Not Ready
+#### Custom image not ready
 
-- Contact DIN team in Slack
+- Contact DIN team at `din@consensys.net`
 - Provide operator address and readiness confirmation
 
-#### BLS Key Failed
+#### BLS key failed
 
 - Restart workflow
 - Clear browser cache
 - Try different browser
 
-#### Registration Failed
+#### Registration failed
 
-- Check allocation delay expired
-- Verify gas sufficient
+- Confirm if allocation delay has expired
+- Verify whether the gas is sufficient
 - Confirm previous steps complete
 
 ## Transaction Issues
 
-### General Transaction Failures
+### General transaction failures
 
 - Increase gas limit
 - Check ETH balance
 - Wait for lower gas prices
 - Verify network selection
 
-### Session Timeout
+### Session timeout
 
-- Click "Extend +30" before expiry
+- Select **Extend +30** before expiry
 - If expired, restart the step
 - Complete in one sitting
 
 ## Post-Onboarding
 
-### Not Receiving Traffic
+### Not receiving traffic
 
 - Verify all steps completed
 - Check allocation delay expired
 - Test infrastructure connectivity
 - Contact support team
 
-## Getting Help
+## Getting help
 
-### When Contacting Support
+When contacting support always provide:
 
-Always provide:
-
-1. Operator address
+1. Your operator address
 2. Step where issue occurred
 3. Error messages (exact text)
 4. Transaction hashes
 5. Screenshots if applicable
-
-### Support Channels
-
-- **Primary**: #din-general on Slack
-- **Documentation**: doc.din.app
 
 ## FAQ
 
@@ -158,7 +155,3 @@ Can still join after launch but will miss initial traffic.
 **Can I withdraw my stake?**
 
 Yes, but subject to withdrawal delays.
-
----
-
-If your issue isn't covered here, reach out in #din-general Slack.

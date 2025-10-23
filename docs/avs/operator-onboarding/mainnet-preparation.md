@@ -1,177 +1,125 @@
-# Mainnet Preparation Guide
+---
+description: Instructions for preparing for mainnet launch
+---
 
-:::danger URGENT - Time Sensitive
-**DIN AVS Mainnet Launch: November 14th, 2025**
+# Prepare for mainnet launch
 
-Your wallet must have existed for at least 17 days to access EigenLayer on mainnet.
-You must begin onboarding **IMMEDIATELY** to be ready for launch.
-Starting after October 27th means missing the mainnet launch.
+:::danger Time Sensitive - DIN AVS Mainnet Launch: November 14th, 2025
+
+Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest to create your wallet and onboard in time for mainnet launch.
 :::
 
-## Critical Timeline
+## Immediate action items
 
-| Date | Event | Action Required |
-|------|-------|-----------------|
-| **NOW** | Preparation Window | Start onboarding immediately |
-| **Oct 27** | Latest Start Date | Absolute deadline to begin |
-| **Nov 14** | Mainnet Launch | DIN AVS goes live |
+Perform the following steps before the October 27, 2025 cut-off for mainnet launch:
 
-### Why October 27th?
+1. **Create a new wallet**
+    - Generate a new externally owned account wallet. Refer to the
+[wallet setup options](#wallet-setup-options)
+    - The wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
+    - Secure your private keys.
+    - Document your wallet address.
 
-```text
-November 14 (Launch)
-    ↑
-17 days wallet age requirement
-    ↑
-October 27 (Absolute latest wallet creation)
-    ↑
-Time for onboarding steps
-    ↑
-October 24-26 (Realistic latest start)
-
-RECOMMENDATION: START TODAY
-```
-
-## Immediate Action Items
-
-### Today (Priority Order)
-
-1. **Create New Wallet**
-   - Generate brand new EOA
-   - Never used with any AVS
-   - Secure private keys
-   - Document wallet address
-
-2. **Start Fireblocks Setup** (If using)
-   - Contact Fireblocks for account
-   - Begin KYC/verification process
-   - [Fireblocks Documentation](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)
+2. **Start Fireblocks setup** (optional)
+   - Contact [Fireblocks](https://www.fireblocks.com/) for an account
+   - Begin the KYC/verification process
+   - [Install and register on EigenLayer using Fireblocks](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)
 
 3. **Secure ETH**
    - Minimum 1 ETH (EigenLayer recommendation)
    - Transfer to operator wallet
 
-4. **Begin Registration**
-   - Access [app.din.build](https://app.din.build)
-   - Start Step 1 immediately
+   Specific stake amounts will be calculated during [Step 2](./onboard/stake-tokens.md).
 
-## The Golden Rule: One Wallet, One AVS
+4. **Begin registration**
+   - Access the [DIN app](https://app.din.build)
+   - Start [Step 1](./onboard/register-operator.md) immediately
 
-:::danger Critical Requirement
-Your mainnet operator wallet must be:
+## Wallet setup options
 
-- **Brand new** - Never used before
-- **Dedicated** - Only for DIN AVS
-- **Isolated** - No other AVS associations
-- **Permanent** - Cannot be changed later
+Use one of the following wallet options:
 
-Using a wallet associated with other Actively Validated Services will cause operational failures.
+- **Option 1: Hardware wallet (recommended)**
 
-:::
+  - Use Ledger or Trezor
+  - Create new derivation path
+  - Document recovery phrase securely
 
-## Wallet Setup Options
+- **Option 2: [Fireblocks MPC]((https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)) (enterprise)**
 
-### Option 1: Hardware Wallet (Recommended)
+  - Superior security for institutions
+  - Multi-party computation
+  - No single point of failure
 
-- Use Ledger or Trezor
-- Create new derivation path
-- Document recovery phrase securely
+- **Option 3: Software wallet (not recommended)**
 
-### Option 2: Fireblocks MPC (Enterprise)
+  - Higher risk profile
+  - Use only if hardware unavailable
 
-- Superior security for institutions
-- Multi-party computation
-- No single point of failure
+## Prepare infrastructure
 
-### Option 3: Software Wallet (Not Recommended)
+While completing onboarding, ensure your infrastructure is ready:
 
-- Higher risk profile
-- Use only if hardware unavailable
-
-## ETH Requirements
-
-- **Minimum**: 1 ETH in wallet (EigenLayer recommendation)
-- **Timing**: Have ETH ready before starting
-
-Specific stake amounts will be calculated during Step 2.
-
-## Infrastructure Preparation
-
-While completing onboarding:
-
-- Set up RPC nodes for chosen networks
+- Set up RPC nodes for chosen networks (operator sets)
 - Configure high availability
 - Implement monitoring
-- Prepare team for operations
 
-### Operator Set Selection
-
-:::info Initial Period Guidance
-For the first period of the DIN AVS, the DIN admins will guide you on which operator sets to participate in based on your DIN router traffic history.
-This ensures optimal network coverage and performance based on proven traffic patterns.
+:::info Initial period guidance
+During the initial period of the DIN AVS, DIN admins will recommend which operator sets you should
+join based on your DIN Router traffic history. This helps ensure optimal network coverage and performance using observed traffic patterns.
 :::
 
-## Mainnet vs Testnet Differences
+## Mainnet and testnet differences
 
-| Aspect | Testnet | Mainnet |
+Testnet and mainnet have different risk, funding, and activation profiles. Use Sepolia testnet to
+validate your setup end to end with test funds, then move to mainnet when you are ready to stake real
+assets and accept slashing risk.
+
+|  | Testnet | Mainnet |
 |--------|---------|---------|
-| **Wallet** | Any wallet | Fresh, dedicated wallet |
-| **Wallet Age Requirement** | None | Must exist for 17 days to access EigenLayer |
-| **ETH** | Test ETH | Real ETH |
-| **Allocation Delay** | Customizable (0 default) | Customizable (0 default) |
+| **Wallet** | Any EOA wallet | New EOA wallet, dedicated to DIN AVS |
+| **Wallet age requirement** | None | Must be registered on EigenLayer for 17 days before activation |
+| **Funding** | Testnet ETH | ETH |
+| **Allocation delay** | Customizable (0 default) | Customizable (0 default) |
 | **Slashing** | No real loss | Real economic risk |
 | **Performance** | Relaxed service level agreements | Strict service level agreements |
 
-## Common Mainnet Pitfalls
+## Common mainnet pitfalls
 
-### Fatal Mistakes
+### Fatal mistakes
 
-❌ Using wallet from another AVS
-❌ Starting after October 27th
-❌ Insufficient ETH for gas
-❌ Wrong network configuration
+- **Reusing a wallet from another AVS**
 
-### Costly Errors
+    _Fix_: Use a fresh, DIN-dedicated EOA for mainnet. Do not reuse keys/accounts tied to any other AVS.
 
-⚠️ Not using hardware wallet
-⚠️ Delayed Fireblocks setup
-⚠️ Underestimating gas costs
-⚠️ Poor allocation strategy
+- **Wrong network configuration**
 
-## Getting Help
+    _Fix_:  Double check your network configurations when selecting your operator set.
 
-**For Immediate Issues:**
+### Costly errors
 
-- DIN Slack: #din-general
+- **Starting after October 27th, 2025**
 
-**For Technical Questions:**
+    _Fix_: Plan for EigenLayer’s protocol activation delay (~17 days). Start by Oct 27, 2025 to be
+    active by Nov 14, 2025.
 
-- DIN documentation (you're here!)
-- Video tutorials (linked in each step)
+- **Insufficient ETH for gas**
 
-## Final Reminders
+    _Fix_: Pre-fund your operator wallet with buffered ETH (gas + safety margin). Monitor fees; top
+    up before critical steps.
 
-:::warning Critical Success Factors
+- **Not using hardware wallet**
 
-1. **Start TODAY** - Every day counts
-2. **New wallet only** - No exceptions
-3. **17-day requirement** - For wallet age, not allocation delay
-4. **November 14 launch** - Fixed date
-5. **No second chances** - Get it right first time
+   _Fix_: Prefer Ledger/Trezor or MPC, enforce approvals/policies, and restrict who can sign mainnet
+   transactions.
 
-:::
+- **Delayed Fireblocks setup**
 
-## Ready to start
+    _Fix_: Start KYC and workspace setup early; test a full registration flow before deadline.
 
-If you haven't already:
+- **Poor allocation strategy**
 
-1. **RIGHT NOW**: Create your mainnet operator wallet
-2. **NEXT**: Check all [Prerequisites](./prerequisites.md)
-3. **THEN**: Begin [Step 1: Register as Operator](./step-1-register-operator.md)
-4. **URGENT**: Complete all steps before October 27th
+    _Fix_: Set the default allocation delay to `0` (see [Step 3](./onboard/allocation-delay.md)) unless you
+    need an operations buffer; size and place stake where you can meet SLAs, and avoid over-concentration
+    or thin coverage.
 
-Time is running out. Start your mainnet onboarding immediately!
-
----
-
-*Questions? Join #din-general Slack for immediate assistance. Time is critical - don't delay!*

@@ -1,36 +1,40 @@
-# Step 2: Stake Tokens
+---
+description: How to complete Step 2 (stake tokens) in the DIN app during the onboarding process
+---
+
+# Step 2: Stake tokens
 
 Deposit tokens into EigenLayer strategies to back your operator with economic security.
 
-:::info Video Tutorials
+:::info Video tutorials
 
-- [Allowlisting & Allocations](https://www.loom.com/share/39a6e731504749eca9b5dff11db9a038?sid=b0b0942c-e3ee-4635-87cf-61f785a9933f)
-- [Staking Process](https://www.loom.com/share/871e1f969e664f73ae64f033d434ffce?sid=09ba1cf4-726b-4a44-8fd0-49f064edb364)
+- [Allowlisting and allocations](https://www.loom.com/share/39a6e731504749eca9b5dff11db9a038?sid=b0b0942c-e3ee-4635-87cf-61f785a9933f)
+- [Staking process](https://www.loom.com/share/871e1f969e664f73ae64f033d434ffce?sid=09ba1cf4-726b-4a44-8fd0-49f064edb364)
 
 :::
 
 ## Prerequisites
 
-- [ ] Completed Step 1
-- [ ] ETH for staking (amounts calculated in app)
-- [ ] Ready to convert to stETH/WETH
+- Completed Step 1
+- Enough ETH for staking (amounts calculated in app)
+- Ready to convert to stETH/WETH
 
-## Process
+## Steps
 
-### Part A: Request Allowlisting
+### Part A: Request allowlisting
 
-1. Go to [app.din.build](https://app.din.build)
-2. Click **"Request access to participate in DIN"**
-3. Select operator sets from available networks (see table below)
+1. Open the [DIN app](https://app.din.build)
+2. Select **"Request access to participate in DIN"**
+3. Select the operator sets from available networks (see table below)
 4. Configure allocation percentages (must total 100%)
 5. Submit request
 6. Wait for approval (usually within 24 hours)
 
-:::info Operator Set Selection
+:::info Operator set selection
 DIN admins will guide you on which operator sets to participate in based on your DIN router traffic history during the initial period.
 :::
 
-#### Available Operator Sets
+#### Available operator sets
 
 | Set ID | Network Name |
 |--------|-------------|
@@ -70,7 +74,7 @@ DIN admins will guide you on which operator sets to participate in based on your
 | 35 | Sei-mainnet-archive |
 | 36 | Hoodi |
 
-### Part B: Prepare Tokens
+### Part B: Prepare tokens
 
 Based on your approved allocations, convert ETH to:
 
@@ -79,27 +83,27 @@ Based on your approved allocations, convert ETH to:
 
 The dashboard shows exact amounts needed.
 
-### Part C: Stake Tokens
+### Part C: Stake tokens
 
-1. Click **"Start Step 2"** in dashboard
-2. TXTX platform opens
+1. Select **"Start Step 2"** in the DIN app.
+2. Select **Open TXTX** to open the runbook.
 3. For each strategy (WETH, stETH):
-   - Connect wallet
-   - Approve token spending
-   - Sign transaction
-   - Deposit into strategy
-   - Sign transaction
+   1. Connect your wallet
+   1. Approve the token spending
+   1. Sign the transaction
+   1. Deposit funds into the strategy
+   1. Sign the transaction
 4. Wait for confirmations
 
-### 4. Complete
+### 4. Completion
 
 When successful:
 
-- All strategies show "Complete"
+- All strategies show **Complete**
 - Download output file
 - Step 2 shows ✓
 
-## Output File
+## Output file example
 
 Your output contains deposit details for each strategy:
 
@@ -118,26 +122,6 @@ Your output contains deposit details for each strategy:
 }
 ```
 
-## Common Issues
+## Next step
 
-**Not Allowlisted?**
-
-- Check request status
-- Contact #din-general if waiting over 24 hours
-
-**Insufficient Tokens?**
-
-- Acquire needed amounts before proceeding
-
-**Transaction Failed?**
-
-- Check gas settings
-- Ensure sufficient ETH for gas
-
-## Next Step
-
-Continue to [Step 3: Set Allocation Delay](./step-3-allocation-delay.md)
-
----
-
-Need help? Join #din-general on Slack
+Continue to [Step 3: Set allocation delay](./allocation-delay.md)
