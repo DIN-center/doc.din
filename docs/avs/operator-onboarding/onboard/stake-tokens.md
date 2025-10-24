@@ -15,20 +15,22 @@ Deposit tokens into EigenLayer strategies to back your operator with economic se
 
 ## Prerequisites
 
-- Completed Step 1
-- Enough ETH for staking (amounts calculated in app)
-- Ready to convert to stETH/WETH
+Ensure the following:
+
+- You've completed [Step 1: Register as an operator](register-operator.md).
+- You have enough ETH for staking (amounts calculated in app).
+- You're ready to convert to stETH/WETH.
 
 ## Steps
 
 ### Part A: Request allowlisting
 
-1. Open the [DIN app](https://app.din.build)
-2. Select **"Request access to participate in DIN"**
-3. Select the operator sets from available networks (see table below)
-4. Configure allocation percentages (must total 100%)
-5. Submit request
-6. Wait for approval (usually within 24 hours)
+1. Open the [DIN app](https://app.din.build).
+2. Select **Request access to participate in DIN**.
+3. Select the operator sets from available networks (see table below).
+4. Configure allocation percentages (must total 100%).
+5. Submit request.
+6. Wait for approval (usually within 24 hours).
 
 :::info Operator set selection
 DIN admins will guide you on which operator sets to participate in based on your DIN router traffic history during the initial period.
@@ -78,30 +80,30 @@ DIN admins will guide you on which operator sets to participate in based on your
 
 Based on your approved allocations, convert ETH to:
 
-- **WETH**: Use any DEX or wrap directly
-- **stETH**: Use Lido for mainnet, test contracts for testnet
+- **WETH** - Use any DEX or wrap directly.
+- **stETH** - Use Lido for mainnet, test contracts for testnet.
 
 The dashboard shows exact amounts needed.
 
 ### Part C: Stake tokens
 
-1. Select **"Start Step 2"** in the DIN app.
+1. Select **Start Step 2** in the DIN app.
 2. Select **Open TXTX** to open the runbook.
 3. For each strategy (WETH, stETH):
-   1. Connect your wallet
-   1. Approve the token spending
-   1. Sign the transaction
-   1. Deposit funds into the strategy
-   1. Sign the transaction
-4. Wait for confirmations
+   1. Connect your wallet.
+   1. Approve the token spending.
+   1. Sign the transaction.
+   1. Deposit funds into the strategy.
+   1. Sign the transaction.
+4. Wait for confirmations.
 
 ### 4. Completion
 
 When successful:
 
-- All strategies show **Complete**
-- Download output file
-- Step 2 shows ✓
+- All strategies show **Complete**.
+- Download output file.
+- Step 2 shows **✓**.
 
 ## Output file example
 
@@ -124,4 +126,4 @@ Your output contains deposit details for each strategy:
 
 ## Next step
 
-Continue to [Step 3: Set allocation delay](./allocation-delay.md)
+Continue to [Step 3: Set allocation delay](./allocation-delay.md).

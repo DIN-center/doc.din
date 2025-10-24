@@ -16,28 +16,28 @@ due to a 17-day operator allocation delay.
 
 The complete onboarding process consists of the following steps:
 
-1. [Review the prerequisite checklist](./prerequisites.md) - The checklist provides information about
+1. [**Review the prerequisite checklist**](./prerequisites.md) - The checklist provides information about
     all the requirements (wallet, financial, account) you must meet to begin onboarding through the DIN app.
 
-1. [Prepare for mainnet launch](./mainnet-preparation.md) - View the time-sensitive instructions to be
+1. [**Prepare for mainnet launch**](./mainnet-preparation.md) - View the time-sensitive instructions to be
     ready for the mainnet launch on November 14, 2025.
 
-1. Onboard using the [DIN app](https://app.din.build):
+1. [**Onboard using the DIN app**](onboard/index.md):
 
-    1. [Register as an EigenLayer operator](./onboard/register-operator.md) - Register your operator address
+    1. [**Register as an EigenLayer operator**](./onboard/register-operator.md) - Register your operator address
         with EigenLayer's delegation manager contract. This establishes your identity as an operator on
         the EigenLayer protocol.
 
-    1. [Stake tokens](./onboard/stake-tokens.md) - Stake the required tokens (stETH, WETH, etc.) into
+    1. [**Stake tokens**](./onboard/stake-tokens.md) - Stake the required tokens (stETH, WETH, etc.) into
         EigenLayer strategies. This provides the economic security backing for your operator services.
 
-    1. [Set the allocation delay](./onboard/allocation-delay.md) - Configure the allocation delay for your
+    1. [**Set the allocation delay**](./onboard/allocation-delay.md) - Configure the allocation delay for your
         staked assets. This determines when your stake becomes active for slashing conditions.
 
-    1. [Watcher setup](./onboard/watchers.md) (Coming soon) - Configure watcher services to monitor your
+    1. [**Watcher setup**](./onboard/watchers.md) (Coming soon) - Configure watcher services to monitor your
         operator performance. Currently in development.
 
-    1. [Allocate stake to operator sets](./onboard/opt-in-avs.md) - Final registration step to join the
+    1. [**Allocate stake to operator sets**](./onboard/opt-in-avs.md) - Final registration step to join the
         DIN AVS and begin serving traffic.
 
 ## Environment differences
@@ -46,7 +46,7 @@ Testnet and mainnet have different risk, funding, and activation profiles. Use S
 validate your setup end to end with test funds, then move to mainnet when you are ready to stake real
 assets and accept slashing risk.
 
-View the [environment differences](./mainnet-preparation.md#mainnet-vs-testnet-differences)
+View the [environment differences](./mainnet-preparation.md#mainnet-and-testnet-differences)
 for more information about the differences between running as a DIN operator on mainnet and testnet.
 
 ## Supported operator sets

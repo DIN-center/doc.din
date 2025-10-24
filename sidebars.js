@@ -41,7 +41,7 @@ const sidebars = {
                 "avs/operator-onboarding/onboard/opt-in-avs"
               ]
             },
-            "avs/operator-onboarding/troubleshooting"
+            "avs/operator-onboarding/troubleshoot"
           ]
         },
         "avs/slashing-and-rewards",
@@ -54,9 +54,7 @@ const sidebars = {
       label: "Node providers",
       link: { type: "doc", id: "node-providers/index" },
       collapsed: true,
-      items: [
-        "node-providers/onboard"
-      ]
+      items: []
     },
     {
       type: "category",
@@ -64,7 +62,6 @@ const sidebars = {
       link: { type: "doc", id: "watchers/index" },
       collapsed: true,
       items: [
-        "watchers/onboard",
         "watchers/make-api-requests",
         "watchers/monitor-health"
       ]
