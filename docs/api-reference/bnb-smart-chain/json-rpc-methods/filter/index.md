@@ -14,3 +14,4 @@ Filter methods allow you to create, poll, and manage filters for monitoring bloc
 - [`eth_newFilter`](./eth_newfilter.mdx) - Create new log filter
 - [`eth_newPendingTransactionFilter`](./eth_newpendingtransactionfilter.mdx) - Create new pending transaction filter
 - [`eth_uninstallFilter`](./eth_uninstallfilter.mdx) - Remove filter
+
