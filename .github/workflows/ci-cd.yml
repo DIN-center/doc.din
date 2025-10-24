@@ -100,7 +100,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      deployments: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -120,7 +119,6 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prebuilt'
           github-comment: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   # Production deployment - reuses build artifact
   production-deploy:
