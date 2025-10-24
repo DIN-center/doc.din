@@ -6,61 +6,64 @@ description: Instructions for preparing for mainnet launch
 
 :::danger Time Sensitive - DIN AVS Mainnet Launch: November 14th, 2025
 
-Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the absolute latest
+Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the latest date
 to create your wallets and onboard in time for mainnet launch.
 
 **Critical: Create and register TWO wallets (primary + backup) with EigenLayer.** If your primary wallet encounters issues during onboarding, you won't have time to activate a new wallet before the deadline.
 :::
 
 :::info Video tutorial
-[Watch the mainnet preparation tutorial](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
+[Watch the mainnet preparation tutorial.](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
 :::
 
 ## Immediate action items
 
 Perform the following steps before the October 27, 2025 cut-off for mainnet launch:
 
-1. **Create TWO new wallets (primary + backup)**
+1. **Create TWO new wallets (primary + backup):**
     - Generate **two** new externally owned account wallets. Refer to the
-[wallet setup options](#wallet-setup-options)
+[wallet setup options](#wallet-setup-options).
     - Each wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
     - Secure your private keys for both wallets.
     - Document both wallet addresses.
     - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch
       deadline if any issues occur with your primary wallet during onboarding.
 
-2. **Start Fireblocks setup** (optional)
-   - Contact [Fireblocks](https://www.fireblocks.com/) for an account
-   - Begin the KYC/verification process
-   - [Install and register on EigenLayer using Fireblocks](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)
+2. **Start Fireblocks setup (optional):**
+   - Contact [Fireblocks](https://www.fireblocks.com/) for an account.
+   - Begin the KYC/verification process.
+   - [Install and register on EigenLayer using Fireblocks](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks).
 
-3. **Secure ETH for both wallets**
-   - Minimum 1 ETH per wallet (EigenLayer recommendation)
-   - Transfer to both operator wallets
+3. **Secure ETH for both wallets:**
+   - Minimum 1 ETH per wallet (EigenLayer recommendation).
+   - Transfer to both operator wallets.
 
    Specific stake amounts will be calculated during [Step 2](./onboard/stake-tokens.md).
 
-4. **Register BOTH wallets with EigenLayer**
-   - Access the [DIN app](https://app.din.build)
-   - **Complete only [Step 1](./onboard/register-operator.md)** with your **primary wallet**
-   - **Complete only [Step 1](./onboard/register-operator.md)** again with your **backup wallet**
-   - This ensures both wallets will be ready by mainnet launch in case you need to switch
-   - **Note**: Only Step 1 (EigenLayer registration) is needed now. Steps 2-5 will be completed after the DIN contract is deployed on mainnet.
+4. **Register BOTH wallets with EigenLayer:**
+   - Access the [DIN app](https://app.din.build).
+   - Complete only [Step 1](./onboard/register-operator.md) with your **primary wallet**.
+   - Complete only [Step 1](./onboard/register-operator.md) again with your **backup wallet**.
+   - This ensures both wallets will be ready by mainnet launch in case you need to switch.
+
+   :::note
+   Only Step 1 (EigenLayer registration) is needed now. Steps 2-5 will be completed after the DIN contract is deployed on mainnet.
+   :::
 
 ## Configuration steps
 
 Before starting Step 1 registration, configure the DIN app for mainnet:
 
-1. **Switch MetaMask to Ethereum Mainnet**
-   - Open MetaMask and switch from Sepolia to Ethereum Mainnet network
+1. **Switch MetaMask to Ethereum Mainnet:**
+   - Open MetaMask and switch from Sepolia to Ethereum Mainnet network.
 
-2. **Select DIN Mainnet configuration**
-   - In the DIN app, go to AVS settings
-   - Select "DIN Mainnet" from the AVS configuration dropdown
+2. **Select DIN Mainnet configuration:**
+   - In the DIN app, go to AVS settings.
+   - Select **DIN Mainnet** from the AVS configuration dropdown.
 
-3. **Verify network settings before registration**
-   - When you open the TXTX page for Step 1, confirm "Mainnet" is displayed
-   - Ensure your wallet shows the correct mainnet address and ETH balance
+3. **Verify network settings before registration:**
+   - When you open the TXTX page for Step 1, confirm **Mainnet** is displayed.
+   - Ensure your wallet shows the correct mainnet address and ETH balance.
 
 ## Wallet setup options
 
@@ -93,9 +96,9 @@ Use one of the following wallet options:
 
 While completing onboarding, ensure your infrastructure is ready:
 
-- Set up RPC nodes for chosen networks (operator sets)
-- Configure high availability
-- Implement monitoring
+- Set up RPC nodes for chosen networks (operator sets).
+- Configure high availability.
+- Implement monitoring.
 
 :::info Initial period guidance
 During the initial period of the DIN AVS, DIN admins will recommend which operator sets you should
@@ -133,8 +136,8 @@ assets and accept slashing risk.
 
 - **Wrong network selected during registration**
 
-    _Fix_: Before starting Step 1, switch MetaMask from Sepolia to Ethereum Mainnet AND select "DIN Mainnet" in the app's AVS configuration.
-    Verify "Mainnet" is displayed in the TXTX page before proceeding. Registering on the wrong network wastes the 17-day activation period.
+    _Fix_: Before starting Step 1, switch MetaMask from Sepolia to Ethereum Mainnet AND select **DIN Mainnet** in the app's AVS configuration.
+    Verify **Mainnet** is displayed in the TXTX page before proceeding. Registering on the wrong network wastes the 17-day activation period.
 
 ### Costly errors
 
@@ -146,8 +149,8 @@ assets and accept slashing risk.
 
 - **Starting after October 27th, 2025**
 
-    _Fix_: Plan for EigenLayer's protocol activation delay (~17 days). Start by Oct 27, 2025 to be
-    active by Nov 14, 2025.
+    _Fix_: Plan for EigenLayer's protocol activation delay (17 days). Start by October 27, 2025, to be
+    active by November 14, 2025.
 
 - **Insufficient ETH for gas**
 

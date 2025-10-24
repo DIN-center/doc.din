@@ -10,7 +10,7 @@ providers. DIN improves reliability, performance, and cost efficiency through pr
 For more background information, read the DIN [litepaper](https://drive.google.com/file/d/17t7tLbpyafvVv8UPSrjtaO68zgxOzXXa/view) and [whitepaper](https://drive.google.com/file/d/1hCHmcXMN6YpmGQkdxSTuZb6Ne_EaehJt/view).
 :::
 
-DIN’s RPC-as-a-service model lets centralized RPC providers give developers access to
+DIN's RPC-as-a-service model lets centralized RPC providers give developers access to
 blockchain network APIs and RPCs across many chains, through resilient and high-performance endpoints. Developers continue to consume RPCs from their chosen provider, not from DIN directly.
 
 DIN builds with the EigenLayer ecosystem to align onboarding and incentives for participants

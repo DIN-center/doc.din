@@ -1,4 +1,4 @@
-# Operator Sets
+# Operator sets
 
 EigenLayer operator sets have been discussed and designed at length to create more granular roles and permissions for EigenLayer operators and AVS design.
 For DIN as an AVS, this would mean the node providers would be able to join EigenLayer restaking and specifically be identified for watchers to stake or slash.
@@ -6,7 +6,7 @@ Each operator set will need to represent a specific service—for example, the w
 
 ![DIN operator sets](/img/operator-sets.png)
 
-## Understanding Operator Sets
+## Understanding operator sets
 
 Operator sets in DIN represent different blockchain networks that operators can serve. Each set has its own:
 
@@ -15,7 +15,7 @@ Operator sets in DIN represent different blockchain networks that operators can 
 - Slashing conditions
 - Infrastructure requirements
 
-## Available Operator Sets
+## Available operator sets
 
 DIN currently supports the following blockchain networks through operator sets:
 

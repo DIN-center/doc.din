@@ -9,14 +9,16 @@ the stake you allocated in Step 2 and associates it with the specific operator s
 allowlisted for. This registration enables you to start receiving and serving RPC requests.
 
 :::info Video tutorial
-[Watch the Step 5 tutorial for the complete walkthrough](https://www.loom.com/share/ff00347005a445e8ba8dc125714ce869). (5 minutes)
+[Watch the Step 5 tutorial for the complete walkthrough.](https://www.loom.com/share/ff00347005a445e8ba8dc125714ce869) (5 minutes)
 :::
 
 ## Prerequisites
 
-- Completed Steps 1-4
-- Allocation delay period has passed (if set)
-- Messaged DIN team ( `din@consensys.net`) that you reached Step 5
+Ensure the following:
+
+- You've completed Steps 1-4.
+- If set, the [allocation delay](allocation-delay.md) period has passed.
+- You've messaged DIN team (`din@consensys.net`) that you reached Step 5.
 
 ## Steps
 
@@ -31,10 +33,10 @@ Once configured by the DIN team, the status will change to **Step 5 Ready** and 
 
 ### 1. Access Step 5
 
-1. Open the [DIN app](https://app.din.build)
-1. Select **Step 5**
-1. Enter your operator name. This name determines how you'll appear in the DIN app (for example, `Rivet`, `SimplyStaking`)
-1. Select **Continue to Step 5**
+1. Open the [DIN app](https://app.din.build).
+1. Select **Step 5**.
+1. Enter your operator name. This name determines how you'll appear in the DIN app (for example, `Rivet`, `SimplyStaking`).
+1. Select **Continue to Step 5**.
 1. Select **Open TXTX** to open a secure environment. This step automates the complex EigenLayer CLI
     commands for you.
 
@@ -42,12 +44,12 @@ Once configured by the DIN team, the status will change to **Step 5 Ready** and 
 
 The workflow executes two main transactions:
 
-- Transaction 1: Modify allocations
+- **Transaction 1: Modify allocations**
 
   - Associates your stake with your assigned operator sets
   - Uses the `modifyAllocations` contract function
 
-- Transaction 2: Register for operator sets
+- **Transaction 2: Register for operator sets**
 
   - Registers your BLS public key
   - Adds you to each operator set
@@ -57,11 +59,11 @@ Follow the prompts in TXTX to sign each transaction.
 
 ### 3. Completion
 
-The step is complete when you see confetti and **Runbook Complete**, next:
+The step is complete when you see confetti and **Runbook Complete**. Next:
 
-1. Review the output data (optional: download for your records)
-2. Select **End Session**
-3. Close TXTX
+1. Review the output data (optional: download for your records).
+2. Select **End Session**.
+3. Close TXTX.
 
 ### 4. Verify your registration
 
@@ -77,7 +79,7 @@ You'll see one operator entry for each operator set you were assigned:
 Step 5 has performed the following:
 
 - Taken your stake from Step 2 and associated it with your assigned operator sets
-    (for example: sets `5` and `35`)
+    (for example: sets `5` and `35`).
 - Registered your BLS key for secure validation.
 - Made you discoverable in the DIN network.
 
@@ -85,12 +87,12 @@ Step 5 has performed the following:
 
 The step 5 output includes:
 
-- **Operator name**: How you're identified in the DIN app
-- **Operator sets**: Which sets you're registered for (for example: [5, 35])
-- **Service manager**: DIN AVS contract address
-- **Allocation manager**: EigenLayer allocation contract address
-- **Transaction hashes**: Both modify allocations and register for operator sets
-- **Registration logs**: Confirmation events for each operator set
+- **Operator name** - How you're identified in the DIN app.
+- **Operator sets** - Which sets you're registered for (for example: `[5, 35]`).
+- **Service manager** - DIN AVS contract address.
+- **Allocation manager** - EigenLayer allocation contract address.
+- **Transaction hashes** - Both modify allocations and register for operator sets.
+- **Registration logs** - Confirmation events for each operator set.
 
 Example output:
 
@@ -119,8 +121,8 @@ Example output:
 
 ### Testnet (Sepolia)
 
-Service Manager:     `0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6`
-Allocation Manager:  `0x42583067658071247ec8ce0a516a58f682002d07`
+- **Service Manager** - `0xC3dFB1C6cd1Ef8487Fd0f777e26B80d999b941d6`
+- **Allocation Manager** -  `0x42583067658071247ec8ce0a516a58f682002d07`
 
 ### Mainnet
 

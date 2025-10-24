@@ -10,6 +10,6 @@ Step 4 is under development and not required for operators. Skip to [Step 5](./o
 
 Watchers will monitor operator performance in the future. We'll notify operators when this becomes available.
 
-## Next Step
+## Next step
 
-Continue to [Step 5: Allocate Stake to Operator Sets](./opt-in-avs.md)
+Continue to [Step 5: Allocate stake to operator sets](./opt-in-avs.md).
