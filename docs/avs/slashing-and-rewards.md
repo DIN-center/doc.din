@@ -1,90 +1,104 @@
-# Slashing and Rewards
+---
+description: Information about how slashing and rewards work with DIN
+---
 
-The AVS model within DIN provides structured incentives that reward high-performing node providers and watchers while penalizing those who fail to meet expectations.
-This incentive structure ensures the network's sustainability and aligns participant behavior with DIN's quality standards.
+# Slashing and rewards
 
-:::info Operator Onboarding
-If you're ready to become a DIN operator and start earning rewards, see our comprehensive
-[Operator Onboarding Guide](./operator-onboarding/index.md).
-Note the urgent timeline for mainnet launch on November 14th, 2025.
+The DIN AVS ties incentives to measured performance. Node providers and watchers earn rewards for
+meeting service level agreements (SLAs), and face penalties (including slashing) when independent watcher
+attestations show sustained violations. This aligns behavior with DIN’s reliability and performance goals.
+
+:::info Operator onboarding
+Ready to operate and earn? Start with the [operator onboarding guide](./operator-onboarding/index.md).
+
+DIN AVS is launching on mainnet soon! Operators must begin onboarding immediately due to a 17-day
+operator allocation delay.
 :::
 
 ## Performance-based rewards
 
-- **Additional rewards for SLA compliance** - Node providers and watchers who consistently meet or exceed SLA standards receive additional token rewards.
-  These rewards, distributed through the gateway contract, encourage participants to prioritize performance and reliability.
+- **SLA compliance rewards** - Node providers and watchers who consistently meet or
+    exceed SLA standards receive additional token rewards. These rewards, distributed through the
+    gateway contract, encourage participants to prioritize performance and reliability.
 
-- **Reputation-linked incentives** - As AVS supports a reputation system, operators with high SLA compliance scores
-  can attract more request routing, maximizing their earning potential while reinforcing a culture of quality service.
+- **Reputation-linked routing** - Higher SLA scores improve reputation, which can increase traffic
+    allocation and earnings.
 
 ## Deterrents for underperformance
 
-- **Incremental slashing for repeated violations** - AVS implements a tiered slashing system, where penalties increase in severity for operators with repeated SLA violations.
-  This graduated approach encourages operators to rectify issues promptly, reducing long-term service disruptions.
+- **Progressive penalties and slashing** - Repeated or severe SLA violations trigger escalating responses,
+    which encourages operators to rectify issues promptly, reducing long-term service disruptions.
 
-- **Suspension and removal for persistent non-compliance** - Node providers with chronic performance issues face
-  suspension or removal from the network, ensuring that DIN maintains only reliable and committed participants.
+- **Suspension or removal** - Chronic non-compliance can result in removal from relevant operator
+    sets to protect network quality.
 
-## Practical Slashing Scenarios
+## Slashable events and penalties
 
-### Types of Slashing Events
+### Types of slashing events
 
-| Violation Type | First Offense | Repeated Offense | Recovery Time |
+The following table identifies the types of slashable events. The recovery time specifies the time
+in which to rectify the issue to avoid a repeated offense. TODO: confirm exact meaning of "Recovery time"
+
+| Violation type | First offense | Repeated offense | Recovery time |
 |---------------|---------------|------------------|---------------|
 | **Downtime** (less than 99.9% uptime) | 0.1% stake | 0.5% stake | 24 hours |
-| **High Latency** (over 200ms p50) | 0.05% stake | 0.25% stake | 12 hours |
-| **Invalid Data** | 1% stake | 5% stake | 48 hours |
-| **Complete Failure** | 2% stake | 10% stake | 72 hours |
+| **High latency** (over 200ms p50) | 0.05% stake | 0.25% stake | 12 hours |
+| **Invalid data** | 1% stake | 5% stake | 48 hours |
+| **Complete failure** | 2% stake | 10% stake | 72 hours |
 
-### Mitigation Strategies
+### Mitigation strategies
 
-1. **Infrastructure Redundancy**: Multiple nodes per operator set
-2. **Monitoring Systems**: Real-time alerting for issues
-3. **Gradual Scaling**: Start with fewer operator sets
-4. **Team Coverage**: 24/7 operational support
+Us the following strategies to reduce SLA violations and minimize slashing risk:
 
-## Reward Calculations
+1. **Infrastructure redundancy**: Run multiple nodes per operator set
+2. **Monitoring systems**: Track uptime, latency, error rate, and data freshness; alert before breaches.
+3. **Gradual scaling**: Start with fewer operator sets and scale upwards
+4. **Team coverage**: Maintain runbooks, on-call rotation, and incident drills.
 
-### Reward Formula
+## Reward calculations
+
+### Reward formula
 
 ```text
-Operator Rewards = (Base Rate × Request Volume × Performance Score) / Total Network Stake
+operator rewards = (base rate × request volume × performance score) / total network stake
 ```
 
-### Factors Affecting Rewards
+### Factors affecting rewards
 
-1. **Request Volume**: Higher traffic = higher rewards
-2. **Performance Score**: Better service level agreement compliance = bonus multipliers
-3. **Stake Weight**: Your stake vs. total network stake
-4. **Operator Set Demand**: Popular networks pay more
+1. **Request volume**: Higher traffic = higher rewards
+2. **Performance score**: Better service level agreement compliance = bonus multipliers
+3. **Stake weight**: Your stake vs. total network stake
+4. **Operator set demand**: Popular networks pay more
 
-### Expected Returns
+### Expected returns
 
-| Scenario | Annual Return | Requirements |
+::info
+Returns are estimates and depend on network growth and demand.
+:::
+
+| Scenario | Annual return | Requirements |
 |----------|---------------|--------------|
 | **Conservative** | 5-8% APY | Basic SLA compliance |
 | **Standard** | 8-12% APY | Good performance, multiple sets |
 | **Optimized** | 12-18% APY | Excellent performance, high volume |
 
-*Note: Returns are estimates and depend on network growth and demand.*
+## Reward distribution
 
-## Reward Distribution
-
-### Payment Schedule
+### Payment schedule
 
 - **Frequency**: Monthly distributions
 - **Method**: Direct to operator address
 - **Currency**: ETH and potentially DIN tokens
 - **Timing**: First week of each month
 
-### Tracking Your Rewards
+### Tracking your rewards
 
 1. Monitor dashboard at [app.din.build](https://app.din.build)
 2. View per-operator-set breakdown
 3. Export reports for accounting
 4. Track performance metrics
 
-## Veto Committee Protection
+## Veto committee protection
 
 The [Veto Committee](./veto-committee.md) can review and potentially reverse slashing events in cases of:
 
@@ -93,15 +107,11 @@ The [Veto Committee](./veto-committee.md) can review and potentially reverse sla
 - Technical failures beyond operator control
 - Coordinated attacks on operators
 
-## Getting Started
+## Getting started
 
 Ready to start earning rewards while avoiding slashing?
 
-1. **Understand Requirements**: Review our [Prerequisites](./operator-onboarding/prerequisites.md)
-2. **Begin Onboarding**: Follow our [Step-by-Step Guide](./operator-onboarding/index.md)
-3. **Prepare for Mainnet**: Check [Mainnet Preparation](./operator-onboarding/mainnet-preparation.md)
-4. **Monitor Performance**: Set up robust monitoring systems
-
----
-
-*Remember: Good performance leads to rewards, poor performance leads to slashing. Prepare thoroughly before joining the network.*
+1. **Understand requirements**: Review our [Prerequisites](./operator-onboarding/prerequisites.md)
+2. **Begin onboarding**: Follow our [Step-by-Step Guide](./operator-onboarding/index.md)
+3. **Prepare for mainnet**: Check [Mainnet Preparation](./operator-onboarding/mainnet-preparation.md)
+4. **Monitor performance**: Set up robust monitoring systems

@@ -10,3 +10,4 @@ Subscription methods enable real-time event monitoring via WebSocket connections
 
 - [`eth_subscribe`](./eth_subscribe.mdx) - Subscribe to events
 - [`eth_unsubscribe`](./eth_unsubscribe.mdx) - Cancel subscription
+
