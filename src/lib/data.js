@@ -28,11 +28,11 @@ export const NETWORK_LINKS = [
   //   href: '/services/reference/avalanche-c-chain',
   //   logo: `${LOGO_PATH}/logo-avalanche.svg`,
   // },
-  // {
-  //   name: 'Base',
-  //   href: '/services/reference/base',
-  //   logo: `${LOGO_PATH}/logo-base.svg`,
-  // },
+  {
+    name: 'Base',
+    href: '/api-reference/base',
+    logo: `${LOGO_PATH}/logo-base.svg`,
+  },
   // {
   //   name: 'Blast',
   //   href: '/services/reference/blast',
