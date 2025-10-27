@@ -18,7 +18,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Consensys", // Usually your GitHub org/user name.
+  organizationName: "DIN", // Usually your GitHub org/user name.
   projectName: "doc.din", // Usually your repo name.
   deploymentBranch: "gh-pages", // Github Pages deploying branch
 
@@ -271,8 +271,7 @@ const config = {
           'node-providers/*',
           'watchers/*',
           'web3-gateways/*',
-          'api-reference/ethereum/*',
-          'api-reference/solana/*',
+          'api-reference/*',
         ],
       }
     ],
