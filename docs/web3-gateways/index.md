@@ -1,9 +1,5 @@
 # Web3 gateways
 
-TO DO: Add more information about web3 gateways and routers.
-
----
-
 Web3 gateways can:
 
 - Authenticate with the DIN Router using the DIN Authentication Protocol.

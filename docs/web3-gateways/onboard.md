@@ -1,9 +1,5 @@
 # Onboard as a web3 gateway
 
-TO DO: Clarify what content is needed here.
-
----
-
 ## DIN authentication process
 
 This section describes how a gateway would be added as an Ingress Operator for the router.

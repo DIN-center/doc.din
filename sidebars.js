@@ -62,8 +62,7 @@ const sidebars = {
       link: { type: "doc", id: "watchers/index" },
       collapsed: true,
       items: [
-        "watchers/make-api-requests",
-        "watchers/monitor-health"
+
       ]
     },
     {
@@ -74,8 +73,7 @@ const sidebars = {
       items: [
         "web3-gateways/onboard",
         "web3-gateways/monitor-usage",
-        "web3-gateways/manage-payments",
-        "web3-gateways/view-api-pricing"
+        "web3-gateways/manage-payments"
       ]
     }
   ],
