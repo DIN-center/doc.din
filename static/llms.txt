@@ -6,133 +6,240 @@ This file contains links to documentation sections following the llmstxt.org sta
 
 ## Table of Contents
 
-- [Digital Asset Standard (DAS) API](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard): The DAS API provides an interface for interacting with digital assets such as fungible tokens, regular
-- [JSON-RPC methods](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods): Supported methods on the Solana network.
-- [DIN as an AVS](https://docs-template.consensys.io/docs/avs): DIN leverages [EigenLayer](https://app.eigenlayer.xyz/)'s AVS model to establish a robust framework of economic security, performance accountabilit...
-- [DIN documentation](https://docs-template.consensys.io/docs/): import CardList from "@site/src/components/CardList"
-- [Node providers](https://docs-template.consensys.io/docs/node-providers): Overview of node providers
-- [Watchers](https://docs-template.consensys.io/docs/watchers): Watchers have the following responsibilities:
-- [Web3 gateways](https://docs-template.consensys.io/docs/web3-gateways): TO DO: Add more information about web3 gateways and routers.
-- [Architecture](https://docs-template.consensys.io/docs/architecture): ![DIN participants](/img/participants.png)
-- [Ethereum](https://docs-template.consensys.io/docs/api-reference/ethereum): Ethereum API reference section.
-- [Ethereum eth_accounts](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_accounts): Returns a list of Ethereum accounts.
-- [Ethereum eth_blobBaseFee](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_blobbasefee): Returns the expected blob base fee for the next Ethereum block.
-- [Ethereum eth_blockNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_blocknumber): Returns the latest Ethereum block number.
-- [Ethereum eth_call](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_call): Executes a Ethereum call without creating a transaction.
-- [Ethereum eth_chainId](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_chainid): Returns the Ethereum chain ID.
-- [Ethereum eth_createAccessList](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_createaccesslist): Creates an access list to include in a Ethereum transaction.
-- [Ethereum eth_estimateGas](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_estimategas): Estimates gas required for a Ethereum transaction.
-- [Ethereum eth_feeHistory](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_feehistory): Returns historical Ethereum gas information.
-- [Ethereum eth_gasPrice](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gasprice): Returns the current Ethereum gas price.
-- [Ethereum eth_getBalance](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getbalance): Returns the balance of a Ethereum address.
-- [Ethereum eth_getBlockByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbyhash): Returns Ethereum block information by hash.
-- [Ethereum eth_getBlockByNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbynumber): Returns Ethereum block information by number.
-- [Ethereum eth_getBlockReceipts](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblockreceipts): Returns receipts for a block on Ethereum.
-- [Ethereum eth_getBlockTransactionCountByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbyhash): Returns transaction count by block hash on Ethereum.
-- [Ethereum eth_getBlockTransactionCountByNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbynumber): Returns transaction count by block number on Ethereum.
-- [Ethereum eth_getCode](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getcode): Returns byte code of a smart contract on Ethereum.
-- [Ethereum eth_getLogs](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getlogs): Returns filtered logs on Ethereum.
-- [Ethereum eth_getProof](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getproof): Returns account and storage proofs on Ethereum.
-- [Ethereum eth_getStorageAt](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getstorageat): Gets storage value for an address on Ethereum.
-- [Ethereum eth_getTransactionByBlockHashAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblockhashandindex): Gets a transaction by block hash on Ethereum.
-- [Ethereum eth_getTransactionByBlockNumberAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblocknumberandindex): Gets a transaction by block number on Ethereum.
-- [Ethereum eth_getTransactionByHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyhash): Gets a transaction by hash on Ethereum.
-- [Ethereum eth_getTransactionCount](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactioncount): Gets transaction count for an address on Ethereum.
-- [Ethereum eth_getTransactionReceipt](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionreceipt): Gets transaction receipt by transaction hash on Ethereum.
-- [Ethereum eth_getUncleByBlockHashAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblockhashandindex): Gets uncle by block hash on Ethereum.
-- [Ethereum eth_getUncleByBlockNumberAndIndex](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblocknumberandindex): Gets uncle by block number on Ethereum.
-- [Ethereum eth_getUncleCountByBlockHash](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblockhash): Gets uncle count by block hash on Ethereum.
-- [Ethereum eth_getUncleCountByBlockNumber](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblocknumber): Gets uncle count by block number on Ethereum.
-- [Ethereum eth_getWork](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_getwork): Return current block and seed hash on Ethereum.
-- [Ethereum eth_hashrate](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_hashrate): Return hashes per second on Ethereum.
-- [Ethereum eth_maxPriorityFeePerGas](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas): Estimates max priority fee on Ethereum.
-- [Ethereum eth_mining](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_mining): Indicates whether client is mining on Ethereum.
-- [Ethereum eth_protocolVersion](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_protocolversion): Returns protocol version on Ethereum.
-- [Ethereum eth_sendRawTransaction](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_sendrawtransaction): Submits pre-signed transaction on Ethereum.
-- [Ethereum eth_simulateV1](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_simulatev1): Simulate transactions across multiple blocks on Ethereum.
-- [Ethereum eth_submitWork](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_submitwork): Submits PoW solution on Ethereum.
-- [Ethereum eth_syncing](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/eth_syncing): Indicates whether client is syncing on Ethereum.
-- [Ethereum net_listening](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_listening): Indicates whether client listening for network connections on Ethereum.
-- [Ethereum net_peerCount](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_peercount): Returns peer count on Ethereum.
-- [Ethereum net_version](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/net_version): Returns network ID on Ethereum.
-- [Ethereum web3_clientVersion](https://docs-template.consensys.io/docs/api-reference/ethereum/json-rpc-methods/web3_clientversion): Returns client version on Ethereum.
-- [Solana](https://docs-template.consensys.io/docs/api-reference/solana): Solana API reference section.
-- [getAsset](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getasset): import Tabs from '@theme/Tabs';
-- [getAssetProof](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproof): import Tabs from '@theme/Tabs';
-- [getAssetProofBatch](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproofbatch): import Tabs from '@theme/Tabs';
-- [getAssets](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassets): import Tabs from '@theme/Tabs';
-- [getAssetsByAuthority](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyauthority): import Tabs from '@theme/Tabs';
-- [getAssetsByCreator](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbycreator): import Tabs from '@theme/Tabs';
-- [getAssetsByGroup](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbygroup): import Tabs from '@theme/Tabs';
-- [getAssetsByOwner](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyowner): import Tabs from '@theme/Tabs';
-- [getAssetSignatures](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsignatures): import Tabs from '@theme/Tabs';
-- [getNftEditions](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getnfteditions): import Tabs from '@theme/Tabs';
-- [getTokenAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/gettokenaccounts): import Tabs from '@theme/Tabs';
-- [searchAssets](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/searchassets): import Tabs from '@theme/Tabs';
-- [getAccountInfo](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getaccountinfo): import Tabs from '@theme/Tabs';
-- [getBalance](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getbalance): import Tabs from '@theme/Tabs';
-- [getBlock](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblock): import Tabs from '@theme/Tabs';
-- [getBlockCommitment](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockcommitment): import Tabs from '@theme/Tabs';
-- [getBlockHeight](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockheight): import Tabs from '@theme/Tabs';
-- [getBlockProduction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockproduction): import Tabs from '@theme/Tabs';
-- [getBlocks](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblocks): import Tabs from '@theme/Tabs';
-- [getBlocksWithLimit](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getblockswithlimit): import Tabs from '@theme/Tabs';
-- [getClusterNodes](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getclusternodes): import Tabs from '@theme/Tabs';
-- [getEpochInfo](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getepochinfo): import Tabs from '@theme/Tabs';
-- [getEpochSchedule](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getepochschedule): import Tabs from '@theme/Tabs';
-- [getFeeForMessage](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getfeeformessage): import Tabs from '@theme/Tabs';
-- [getFirstAvailableBlock](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getfirstavailableblock): import Tabs from '@theme/Tabs';
-- [getGenesisHash](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getgenesishash): import Tabs from '@theme/Tabs';
-- [getHealth](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gethealth): import Tabs from '@theme/Tabs';
-- [getHighestSnapshotSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gethighestsnapshotslot): import Tabs from '@theme/Tabs';
-- [getIdentity](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getidentity): import Tabs from '@theme/Tabs';
-- [getInflationGovernor](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationgovernor): import Tabs from '@theme/Tabs';
-- [getInflationRate](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationrate): import Tabs from '@theme/Tabs';
-- [getInflationReward](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getinflationreward): import Tabs from '@theme/Tabs';
-- [getLargestAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getlargestaccounts): import Tabs from '@theme/Tabs';
-- [getLatestBlockhash](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getlatestblockhash): import Tabs from '@theme/Tabs';
-- [getLeaderSchedule](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getleaderschedule): import Tabs from '@theme/Tabs';
-- [getMaxRetransmitSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmaxretransmitslot): import Tabs from '@theme/Tabs';
-- [getMaxShredInsertSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmaxshredinsertslot): import Tabs from '@theme/Tabs';
-- [getMinimumBalanceForRentExemption](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getminimumbalanceforrentexemption): import Tabs from '@theme/Tabs';
-- [getMultipleAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getmultipleaccounts): import Tabs from '@theme/Tabs';
-- [getProgramAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getprogramaccounts): import Tabs from '@theme/Tabs';
-- [getRecentPerformanceSamples](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getrecentperformancesamples): import Tabs from '@theme/Tabs';
-- [getRecentPrioritizationFees](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getrecentprioritizationfees): import Tabs from '@theme/Tabs';
-- [getSignaturesForAddress](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsignaturesforaddress): import Tabs from '@theme/Tabs';
-- [getSignatureStatuses](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsignaturestatuses): import Tabs from '@theme/Tabs';
-- [getSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslot): import Tabs from '@theme/Tabs';
-- [getSlotLeader](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslotleader): import Tabs from '@theme/Tabs';
-- [getSlotLeaders](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getslotleaders): import Tabs from '@theme/Tabs';
-- [getStakeMinimumDelegation](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getstakeminimumdelegation): import Tabs from '@theme/Tabs';
-- [getSupply](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getsupply): import Tabs from '@theme/Tabs';
-- [getTokenAccountBalance](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountbalance): import Tabs from '@theme/Tabs';
-- [getTokenAccountsByDelegate](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbydelegate): import Tabs from '@theme/Tabs';
-- [getTokenAccountsByOwner](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbyowner): import Tabs from '@theme/Tabs';
-- [getTokenLargestAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokenlargestaccounts): import Tabs from '@theme/Tabs';
-- [getTokenSupply](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettokensupply): import Tabs from '@theme/Tabs';
-- [getTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettransaction): import Tabs from '@theme/Tabs';
-- [getTransactionCount](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/gettransactioncount): import Tabs from '@theme/Tabs';
-- [getVersion](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getversion): import Tabs from '@theme/Tabs';
-- [getVoteAccounts](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/getvoteaccounts): import Tabs from '@theme/Tabs';
-- [isBlockhashValid](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/isblockhashvalid): import Tabs from '@theme/Tabs';
-- [minimumLedgerSlot](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/minimumledgerslot): import Tabs from '@theme/Tabs';
-- [requestAirdrop](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/requestairdrop): import Tabs from '@theme/Tabs';
-- [sendTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/sendtransaction): import Tabs from '@theme/Tabs';
-- [simulateTransaction](https://docs-template.consensys.io/docs/api-reference/solana/json-rpc-methods/simulatetransaction): import Tabs from '@theme/Tabs';
-- [Supported Networks](https://docs-template.consensys.io/docs/api-reference/supported-networks): Networks supported by DIN API services
-- [Onboard as an AVS operator](https://docs-template.consensys.io/docs/avs/onboard): TO DO: Add onboarding information for AVS operators. Need to clarify difference between AVS operators and node providers/operators, and AVS operato...
-- [Operator sets](https://docs-template.consensys.io/docs/avs/operator-sets): EigenLayer operator sets have been discussed and designed at length to create more granular roles and permissions for EigenLayer operators and AVS ...
-- [Slashing and rewards](https://docs-template.consensys.io/docs/avs/slashing-and-rewards): The AVS model within DIN provides structured incentives that reward high-performing node providers and watchers while penalizing those who fail to ...
-- [Veto Committee](https://docs-template.consensys.io/docs/avs/veto-committee): The DIN Veto Committee is comprised of the seven highest performing node providers over a 14.5 day period (an epoch).
-- [LLM markdown txt files](https://docs-template.consensys.io/docs/llms-txt): Download LLM-friendly documentation in text format
-- [Onboard as a node provider](https://docs-template.consensys.io/docs/node-providers/onboard): Node providers must acquire a license to participate in DIN, which is obtained by joining the DIN AVS through EigenLayer restaking (or staking toke...
-- [Roadmap](https://docs-template.consensys.io/docs/roadmap): DIN is progressing through a carefully structured roadmap that gradually enhances its decentralization, scalability, and governance capabilities.
-- [Make API requests](https://docs-template.consensys.io/docs/watchers/make-api-requests): TO DO: Add more information here.
-- [Monitor health](https://docs-template.consensys.io/docs/watchers/monitor-health): TO DO: Add more information here.
-- [Onboard as a watcher](https://docs-template.consensys.io/docs/watchers/onboard): Watchers need to join the DIN AVS as an operator.
-- [Manage payments](https://docs-template.consensys.io/docs/web3-gateways/manage-payments): The Ingress Operators pay DIN Providers via DIN Payments for their processed requests/relays through the DIN Router.
-- [Monitor usage](https://docs-template.consensys.io/docs/web3-gateways/monitor-usage): The DIN Watcher function consists of a variety of monitoring tools, including an OpenTelemetry Collector that can be used for your own SRE review.
-- [Onboard as a web3 gateway](https://docs-template.consensys.io/docs/web3-gateways/onboard): TO DO: Clarify what content is needed here.
-- [View API pricing](https://docs-template.consensys.io/docs/web3-gateways/view-api-pricing): TO DO: Add information here.
-- [x402 payments](https://docs-template.consensys.io/docs/x402-payments): DIN implements [x402](https://www.coinbase.com/developer-platform/products/x402), which is an internet-native payment protocol that was developed b...
+- [Filter methods](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter): Filter methods allow you to create, poll, and manage filters for monitoring blockchain events and logs.
+- [Subscription methods](https://docs.din.build/docs/api-reference/base/json-rpc-methods/subscription): Subscription methods enable real-time event monitoring via WebSocket connections.
+- [Filter methods](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter): Filter methods allow you to create, poll, and manage filters for monitoring blockchain events and logs.
+- [Subscription methods](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/subscription): Subscription methods enable real-time event monitoring via WebSocket connections.
+- [Filter methods](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter): Filter methods allow you to create, poll, and manage filters for monitoring blockchain events and logs.
+- [Subscription methods](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/subscription): Subscription methods enable real-time event monitoring via WebSocket connections.
+- [Trace methods](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace): Trace methods provide detailed execution information for transactions and blocks, useful for debugging and analysis.
+- [Digital Asset Standard (DAS) API](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard): The DAS API provides an interface for interacting with digital assets such as fungible tokens, regular
+- [JSON-RPC methods](https://docs.din.build/docs/api-reference/solana/json-rpc-methods): Supported methods on the Solana network.
+- [DIN as an AVS](https://docs.din.build/docs/avs): Information about the DIN using EigenLayer's AVS.
+- [Operator onboarding](https://docs.din.build/docs/avs/operator-onboarding): Overview of the steps to register as a DIN AVS operator.
+- [Onboard using the DIN app](https://docs.din.build/docs/avs/operator-onboarding/onboard): Use the DIN app to register as a DIN operator
+- [DIN documentation](https://docs.din.build/docs/): import CardList from "@site/src/components/CardList"
+- [Node providers](https://docs.din.build/docs/node-providers): Overview of node providers
+- [Watchers](https://docs.din.build/docs/watchers): Watchers have the following responsibilities:
+- [Web3 gateways](https://docs.din.build/docs/web3-gateways): Web3 gateways can:
+- [Architecture](https://docs.din.build/docs/architecture): DIN uses a decentralized structure composed of multiple actors:
+- [Base](https://docs.din.build/docs/api-reference/base): Base API reference section.
+- [Base eth_accounts](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_accounts): Returns a list of Base accounts.
+- [Base eth_blockNumber](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_blocknumber): Returns the number of the most recent block on Base.
+- [Base eth_call](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_call): Executes a new message call immediately on Base without creating a transaction.
+- [Base eth_chainId](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_chainid): Returns the chain ID of the Base network.
+- [Base eth_estimateGas](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_estimategas): Generates and returns an estimate of how much gas is necessary for a transaction on Base.
+- [Base eth_feeHistory](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_feehistory): Returns base fee and priority fee history for Base.
+- [Base eth_gasPrice](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gasprice): Returns the current gas price in wei on Base.
+- [Base eth_getBalance](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getbalance): Returns the balance of an account on Base.
+- [Base eth_getBlockByHash](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getblockbyhash): Returns information about a Base block by hash.
+- [Base eth_getBlockByNumber](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getblockbynumber): Returns information about a Base block by number.
+- [Base eth_getBlockTransactionCountByHash](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getblocktransactioncountbyhash): Returns the number of transactions in a Base block by hash.
+- [Base eth_getBlockTransactionCountByNumber](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getblocktransactioncountbynumber): Returns the number of transactions in a Base block by number.
+- [Base eth_getCode](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getcode): Returns the code at a given address on Base.
+- [Base eth_getLogs](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getlogs): Returns an array of logs matching a given filter object on Base.
+- [Base eth_getProof](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getproof): Returns the account and storage values, including the Merkle proof, of the specified account on Base.
+- [Base eth_getStorageAt](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getstorageat): Returns the value from a storage position at a given address on Base.
+- [Base eth_getTransactionByBlockHashAndIndex](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gettransactionbyblockhashandindex): Returns information about a Base transaction by block hash and transaction index position.
+- [Base eth_getTransactionByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gettransactionbyblocknumberandindex): Returns information about a Base transaction by block number and transaction index position.
+- [Base eth_getTransactionByHash](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gettransactionbyhash): Returns information about a Base transaction by transaction hash.
+- [Base eth_getTransactionCount](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gettransactioncount): Returns the number of transactions sent from an address on Base.
+- [Base eth_getTransactionReceipt](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_gettransactionreceipt): Returns the receipt of a Base transaction by transaction hash.
+- [Base eth_getUncleByBlockHashAndIndex](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getunclebyblockhashandindex): Returns information about an uncle of a Base block by hash and uncle index position.
+- [Base eth_getUncleByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getunclebyblocknumberandindex): Returns information about an uncle of a Base block by number and uncle index position.
+- [Base eth_getUncleCountByBlockHash](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getunclecountbyblockhash): Returns the number of uncles in a Base block by hash.
+- [Base eth_getUncleCountByBlockNumber](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_getunclecountbyblocknumber): Returns the number of uncles in a Base block by number.
+- [Base eth_maxPriorityFeePerGas](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_maxpriorityfeepergas): Returns the current max priority fee per gas on Base.
+- [Base eth_protocolVersion](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_protocolversion): Returns the current Ethereum protocol version on Base.
+- [Base eth_sendRawTransaction](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_sendrawtransaction): Submits a raw transaction to the Base network.
+- [Base eth_syncing](https://docs.din.build/docs/api-reference/base/json-rpc-methods/eth_syncing): Returns an object with data about the sync status of Base or FALSE.
+- [Base eth_getFilterChanges](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter/eth_getfilterchanges): Returns an array of logs which occurred since last poll on Base.
+- [Base eth_getFilterLogs](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter/eth_getfilterlogs): Returns an array of all logs matching filter with given id on Base.
+- [Base eth_newBlockFilter](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter/eth_newblockfilter): Creates a filter in the node to notify when a new block arrives on Base.
+- [Base eth_newFilter](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter/eth_newfilter): Creates a filter object on Base based on filter options.
+- [Base eth_uninstallFilter](https://docs.din.build/docs/api-reference/base/json-rpc-methods/filter/eth_uninstallfilter): Uninstalls a filter with given id on Base.
+- [Base net_peerCount](https://docs.din.build/docs/api-reference/base/json-rpc-methods/net_peercount): Returns the number of peers currently connected to the Base client.
+- [Base net_version](https://docs.din.build/docs/api-reference/base/json-rpc-methods/net_version): Returns the current network ID on Base.
+- [Base eth_subscribe](https://docs.din.build/docs/api-reference/base/json-rpc-methods/subscription/eth_subscribe): Subscribe to events on Base via WebSocket.
+- [Base eth_unsubscribe](https://docs.din.build/docs/api-reference/base/json-rpc-methods/subscription/eth_unsubscribe): Cancel a subscription on Base.
+- [Base web3_clientVersion](https://docs.din.build/docs/api-reference/base/json-rpc-methods/web3_clientversion): Returns the current client version on Base.
+- [BNB Smart Chain](https://docs.din.build/docs/api-reference/bnb-smart-chain): BNB Smart Chain API reference section.
+- [BNB Smart Chain eth_accounts](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_accounts): Returns a list of BNB Smart Chain accounts.
+- [BNB Smart Chain eth_blockNumber](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_blocknumber): Returns the current block number on BNB Smart Chain.
+- [BNB Smart Chain eth_call](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_call): Executes a new message call on BNB Smart Chain.
+- [BNB Smart Chain eth_chainId](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_chainid): Returns the chain ID of BNB Smart Chain.
+- [BNB Smart Chain eth_estimateGas](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_estimategas): Estimates gas needed for a transaction on BNB Smart Chain.
+- [BNB Smart Chain eth_gasPrice](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gasprice): Returns current gas price on BNB Smart Chain.
+- [BNB Smart Chain eth_getBalance](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getbalance): Returns account balance on BNB Smart Chain.
+- [BNB Smart Chain eth_getBlockByHash](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getblockbyhash): Returns block information by hash on BNB Smart Chain.
+- [BNB Smart Chain eth_getBlockByNumber](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getblockbynumber): Returns block information by number on BNB Smart Chain.
+- [BNB Smart Chain eth_getBlockReceipts](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getblockreceipts): Returns block receipts on BNB Smart Chain.
+- [BNB Smart Chain eth_getBlockTransactionCountByHash](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getblocktransactioncountbyhash): Returns transaction count by block hash on BNB Smart Chain.
+- [BNB Smart Chain eth_getBlockTransactionCountByNumber](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getblocktransactioncountbynumber): Returns transaction count by block number on BNB Smart Chain.
+- [BNB Smart Chain eth_getCode](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getcode): Returns contract code on BNB Smart Chain.
+- [BNB Smart Chain eth_getLogs](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getlogs): Returns logs on BNB Smart Chain.
+- [BNB Smart Chain eth_getProof](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getproof): Returns account proof on BNB Smart Chain.
+- [BNB Smart Chain eth_getStorageAt](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getstorageat): Returns storage value at position on BNB Smart Chain.
+- [BNB Smart Chain eth_getTransactionByBlockHashAndIndex](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gettransactionbyblockhashandindex): Returns transaction by block hash and index on BNB Smart Chain.
+- [BNB Smart Chain eth_getTransactionByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gettransactionbyblocknumberandindex): Returns transaction by block number and index on BNB Smart Chain.
+- [BNB Smart Chain eth_getTransactionByHash](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gettransactionbyhash): Returns transaction information by hash on BNB Smart Chain.
+- [BNB Smart Chain eth_getTransactionCount](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gettransactioncount): Returns transaction count for account on BNB Smart Chain.
+- [BNB Smart Chain eth_getTransactionReceipt](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_gettransactionreceipt): Returns transaction receipt on BNB Smart Chain.
+- [BNB Smart Chain eth_getUncleByBlockHashAndIndex](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getunclebyblockhashandindex): Returns uncle by block hash and index on BNB Smart Chain.
+- [BNB Smart Chain eth_getUncleByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getunclebyblocknumberandindex): Returns uncle by block number and index on BNB Smart Chain.
+- [BNB Smart Chain eth_getUncleCountByBlockHash](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getunclecountbyblockhash): Returns uncle count by block hash on BNB Smart Chain.
+- [BNB Smart Chain eth_getUncleCountByBlockNumber](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_getunclecountbyblocknumber): Returns uncle count by block number on BNB Smart Chain.
+- [BNB Smart Chain eth_maxPriorityFeePerGas](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_maxpriorityfeepergas): Returns max priority fee per gas on BNB Smart Chain.
+- [BNB Smart Chain eth_protocolVersion](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_protocolversion): Returns protocol version on BNB Smart Chain.
+- [BNB Smart Chain eth_sendRawTransaction](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_sendrawtransaction): Sends raw transaction on BNB Smart Chain.
+- [BNB Smart Chain eth_submitWork](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_submitwork): Submits PoW solution on BNB Smart Chain.
+- [BNB Smart Chain eth_syncing](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/eth_syncing): Indicates whether client is syncing on BNB Smart Chain.
+- [BNB Smart Chain eth_getFilterChanges](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_getfilterchanges): Returns BNB Smart Chain logs since last poll.
+- [BNB Smart Chain eth_getFilterLogs](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_getfilterlogs): Returns logs by filter ID on BNB Smart Chain.
+- [BNB Smart Chain eth_newBlockFilter](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_newblockfilter): Creates new block filter on BNB Smart Chain.
+- [BNB Smart Chain eth_newFilter](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_newfilter): Creates new filter for logs on BNB Smart Chain.
+- [BNB Smart Chain eth_newPendingTransactionFilter](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_newpendingtransactionfilter): Creates new pending transaction filter on BNB Smart Chain.
+- [BNB Smart Chain eth_uninstallFilter](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/filter/eth_uninstallfilter): Uninstalls filter on BNB Smart Chain.
+- [BNB Smart Chain net_listening](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/net_listening): Indicates whether client listening for network connections on BNB Smart Chain.
+- [BNB Smart Chain net_peerCount](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/net_peercount): Returns peer count on BNB Smart Chain.
+- [BNB Smart Chain net_version](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/net_version): Returns network ID on BNB Smart Chain.
+- [BNB Smart Chain eth_subscribe](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/subscription/eth_subscribe): Subscribe to events on BNB Smart Chain via WebSocket.
+- [BNB Smart Chain eth_unsubscribe](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/subscription/eth_unsubscribe): Unsubscribe from events on BNB Smart Chain via WebSocket.
+- [BNB Smart Chain web3_clientVersion](https://docs.din.build/docs/api-reference/bnb-smart-chain/json-rpc-methods/web3_clientversion): Returns client version on BNB Smart Chain.
+- [Ethereum](https://docs.din.build/docs/api-reference/ethereum): Ethereum API reference section.
+- [Ethereum eth_accounts](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_accounts): Returns a list of Ethereum accounts.
+- [Ethereum eth_blobBaseFee](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_blobbasefee): Returns the expected blob base fee for the next Ethereum block.
+- [Ethereum eth_blockNumber](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_blocknumber): Returns the latest Ethereum block number.
+- [Ethereum eth_call](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_call): Executes a Ethereum call without creating a transaction.
+- [Ethereum eth_chainId](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_chainid): Returns the Ethereum chain ID.
+- [Ethereum eth_createAccessList](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_createaccesslist): Creates an access list to include in a Ethereum transaction.
+- [Ethereum eth_estimateGas](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_estimategas): Estimates gas required for an Ethereum transaction.
+- [Ethereum eth_feeHistory](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_feehistory): Returns historical Ethereum gas information.
+- [Ethereum eth_gasPrice](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gasprice): Returns the current Ethereum gas price.
+- [Ethereum eth_getBalance](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getbalance): Returns the balance of a Ethereum address.
+- [Ethereum eth_getBlockByHash](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbyhash): Returns Ethereum block information by hash.
+- [Ethereum eth_getBlockByNumber](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getblockbynumber): Returns Ethereum block information by number.
+- [Ethereum eth_getBlockReceipts](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getblockreceipts): Returns receipts for a block on Ethereum.
+- [Ethereum eth_getBlockTransactionCountByHash](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbyhash): Returns transaction count by block hash on Ethereum.
+- [Ethereum eth_getBlockTransactionCountByNumber](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getblocktransactioncountbynumber): Returns transaction count by block number on Ethereum.
+- [Ethereum eth_getCode](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getcode): Returns byte code of a smart contract on Ethereum.
+- [Ethereum eth_getLogs](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getlogs): Returns filtered logs on Ethereum.
+- [Ethereum eth_getProof](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getproof): Returns account and storage proofs on Ethereum.
+- [Ethereum eth_getStorageAt](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getstorageat): Gets storage value for an address on Ethereum.
+- [Ethereum eth_getTransactionByBlockHashAndIndex](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblockhashandindex): Gets a transaction by block hash on Ethereum.
+- [Ethereum eth_getTransactionByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyblocknumberandindex): Gets a transaction by block number on Ethereum.
+- [Ethereum eth_getTransactionByHash](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionbyhash): Gets a transaction by hash on Ethereum.
+- [Ethereum eth_getTransactionCount](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactioncount): Gets transaction count for an address on Ethereum.
+- [Ethereum eth_getTransactionReceipt](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_gettransactionreceipt): Gets transaction receipt by transaction hash on Ethereum.
+- [Ethereum eth_getUncleByBlockHashAndIndex](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblockhashandindex): Gets uncle by block hash on Ethereum.
+- [Ethereum eth_getUncleByBlockNumberAndIndex](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getunclebyblocknumberandindex): Gets uncle by block number on Ethereum.
+- [Ethereum eth_getUncleCountByBlockHash](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblockhash): Gets uncle count by block hash on Ethereum.
+- [Ethereum eth_getUncleCountByBlockNumber](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getunclecountbyblocknumber): Gets uncle count by block number on Ethereum.
+- [Ethereum eth_getWork](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_getwork): Return current block and seed hash on Ethereum.
+- [Ethereum eth_hashrate](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_hashrate): Return hashes per second on Ethereum.
+- [Ethereum eth_maxPriorityFeePerGas](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_maxpriorityfeepergas): Estimates max priority fee on Ethereum.
+- [Ethereum eth_mining](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_mining): Indicates whether client is mining on Ethereum.
+- [Ethereum eth_protocolVersion](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_protocolversion): Returns protocol version on Ethereum.
+- [Ethereum eth_sendRawTransaction](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_sendrawtransaction): Submits pre-signed transaction on Ethereum.
+- [Ethereum eth_simulateV1](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_simulatev1): Simulate transactions across multiple blocks on Ethereum.
+- [Ethereum eth_submitWork](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_submitwork): Submits PoW solution on Ethereum.
+- [Ethereum eth_syncing](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/eth_syncing): Indicates whether client is syncing on Ethereum.
+- [Ethereum eth_getFilterChanges](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_getfilterchanges): Returns Ethereum logs since last poll.
+- [Ethereum eth_getFilterLogs](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_getfilterlogs): Returns logs by filter ID on Ethereum.
+- [Ethereum eth_newBlockFilter](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_newblockfilter): Creates new block filter on Ethereum.
+- [Ethereum eth_newFilter](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_newfilter): Creates new filter for logs on Ethereum.
+- [Ethereum eth_newPendingTransactionFilter](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_newpendingtransactionfilter): Creates new pending transaction filter on Ethereum.
+- [Ethereum eth_uninstallFilter](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/filter/eth_uninstallfilter): Uninstalls filter on Ethereum.
+- [Ethereum net_listening](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/net_listening): Indicates whether client listening for network connections on Ethereum.
+- [Ethereum net_peerCount](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/net_peercount): Returns peer count on Ethereum.
+- [Ethereum net_version](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/net_version): Returns network ID on Ethereum.
+- [Ethereum eth_subscribe](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/subscription/eth_subscribe): Subscribe to events on Ethereum via WebSocket.
+- [Ethereum eth_unsubscribe](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/subscription/eth_unsubscribe): Unsubscribe from events on Ethereum via WebSocket.
+- [Ethereum trace_block](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace/trace_block): Get trace information about transactions in a block on Ethereum.
+- [Ethereum trace_call](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace/trace_call): Execute call and return traces on Ethereum.
+- [Ethereum trace_callMany](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace/trace_callmany): Perform multiple call traces on Ethereum.
+- [Ethereum trace_filter](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace/trace_filter): Get traces matching filter criteria on Ethereum.
+- [Ethereum trace_transaction](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/trace/trace_transaction): Get trace information for specific transaction on Ethereum.
+- [Ethereum web3_clientVersion](https://docs.din.build/docs/api-reference/ethereum/json-rpc-methods/web3_clientversion): Returns client version on Ethereum.
+- [Solana](https://docs.din.build/docs/api-reference/solana): Solana API reference section.
+- [getAsset](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getasset): import Tabs from '@theme/Tabs';
+- [getAssetProof](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproof): import Tabs from '@theme/Tabs';
+- [getAssetProofBatch](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetproofbatch): import Tabs from '@theme/Tabs';
+- [getAssets](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassets): import Tabs from '@theme/Tabs';
+- [getAssetsByAuthority](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyauthority): import Tabs from '@theme/Tabs';
+- [getAssetsByCreator](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbycreator): import Tabs from '@theme/Tabs';
+- [getAssetsByGroup](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbygroup): import Tabs from '@theme/Tabs';
+- [getAssetsByOwner](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsbyowner): import Tabs from '@theme/Tabs';
+- [getAssetSignatures](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getassetsignatures): import Tabs from '@theme/Tabs';
+- [getNftEditions](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/getnfteditions): import Tabs from '@theme/Tabs';
+- [getTokenAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/gettokenaccounts): import Tabs from '@theme/Tabs';
+- [searchAssets](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/digital-asset-standard/searchassets): import Tabs from '@theme/Tabs';
+- [getAccountInfo](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getaccountinfo): import Tabs from '@theme/Tabs';
+- [getBalance](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getbalance): import Tabs from '@theme/Tabs';
+- [getBlock](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblock): import Tabs from '@theme/Tabs';
+- [getBlockCommitment](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblockcommitment): import Tabs from '@theme/Tabs';
+- [getBlockHeight](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblockheight): import Tabs from '@theme/Tabs';
+- [getBlockProduction](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblockproduction): import Tabs from '@theme/Tabs';
+- [getBlocks](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblocks): import Tabs from '@theme/Tabs';
+- [getBlocksWithLimit](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getblockswithlimit): import Tabs from '@theme/Tabs';
+- [getClusterNodes](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getclusternodes): import Tabs from '@theme/Tabs';
+- [getEpochInfo](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getepochinfo): import Tabs from '@theme/Tabs';
+- [getEpochSchedule](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getepochschedule): import Tabs from '@theme/Tabs';
+- [getFeeForMessage](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getfeeformessage): import Tabs from '@theme/Tabs';
+- [getFirstAvailableBlock](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getfirstavailableblock): import Tabs from '@theme/Tabs';
+- [getGenesisHash](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getgenesishash): import Tabs from '@theme/Tabs';
+- [getHealth](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gethealth): import Tabs from '@theme/Tabs';
+- [getHighestSnapshotSlot](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gethighestsnapshotslot): import Tabs from '@theme/Tabs';
+- [getIdentity](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getidentity): import Tabs from '@theme/Tabs';
+- [getInflationGovernor](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getinflationgovernor): import Tabs from '@theme/Tabs';
+- [getInflationRate](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getinflationrate): import Tabs from '@theme/Tabs';
+- [getInflationReward](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getinflationreward): import Tabs from '@theme/Tabs';
+- [getLargestAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getlargestaccounts): import Tabs from '@theme/Tabs';
+- [getLatestBlockhash](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getlatestblockhash): import Tabs from '@theme/Tabs';
+- [getLeaderSchedule](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getleaderschedule): import Tabs from '@theme/Tabs';
+- [getMaxRetransmitSlot](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getmaxretransmitslot): import Tabs from '@theme/Tabs';
+- [getMaxShredInsertSlot](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getmaxshredinsertslot): import Tabs from '@theme/Tabs';
+- [getMinimumBalanceForRentExemption](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getminimumbalanceforrentexemption): import Tabs from '@theme/Tabs';
+- [getMultipleAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getmultipleaccounts): import Tabs from '@theme/Tabs';
+- [getProgramAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getprogramaccounts): import Tabs from '@theme/Tabs';
+- [getRecentPerformanceSamples](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getrecentperformancesamples): import Tabs from '@theme/Tabs';
+- [getRecentPrioritizationFees](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getrecentprioritizationfees): import Tabs from '@theme/Tabs';
+- [getSignaturesForAddress](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getsignaturesforaddress): import Tabs from '@theme/Tabs';
+- [getSignatureStatuses](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getsignaturestatuses): import Tabs from '@theme/Tabs';
+- [getSlot](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getslot): import Tabs from '@theme/Tabs';
+- [getSlotLeader](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getslotleader): import Tabs from '@theme/Tabs';
+- [getSlotLeaders](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getslotleaders): import Tabs from '@theme/Tabs';
+- [getStakeMinimumDelegation](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getstakeminimumdelegation): import Tabs from '@theme/Tabs';
+- [getSupply](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getsupply): import Tabs from '@theme/Tabs';
+- [getTokenAccountBalance](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettokenaccountbalance): import Tabs from '@theme/Tabs';
+- [getTokenAccountsByDelegate](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbydelegate): import Tabs from '@theme/Tabs';
+- [getTokenAccountsByOwner](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettokenaccountsbyowner): import Tabs from '@theme/Tabs';
+- [getTokenLargestAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettokenlargestaccounts): import Tabs from '@theme/Tabs';
+- [getTokenSupply](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettokensupply): import Tabs from '@theme/Tabs';
+- [getTransaction](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettransaction): import Tabs from '@theme/Tabs';
+- [getTransactionCount](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/gettransactioncount): import Tabs from '@theme/Tabs';
+- [getVersion](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getversion): import Tabs from '@theme/Tabs';
+- [getVoteAccounts](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/getvoteaccounts): import Tabs from '@theme/Tabs';
+- [isBlockhashValid](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/isblockhashvalid): import Tabs from '@theme/Tabs';
+- [minimumLedgerSlot](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/minimumledgerslot): import Tabs from '@theme/Tabs';
+- [requestAirdrop](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/requestairdrop): import Tabs from '@theme/Tabs';
+- [sendTransaction](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/sendtransaction): import Tabs from '@theme/Tabs';
+- [simulateTransaction](https://docs.din.build/docs/api-reference/solana/json-rpc-methods/simulatetransaction): import Tabs from '@theme/Tabs';
+- [Supported networks](https://docs.din.build/docs/api-reference/supported-networks): Networks supported by DIN API services
+- [Prepare for mainnet launch](https://docs.din.build/docs/avs/operator-onboarding/mainnet-preparation): Instructions for preparing for mainnet launch
+- [Step 3: Set allocation delay](https://docs.din.build/docs/avs/operator-onboarding/onboard/allocation-delay): How to complete Step 3 (set allocation delay) in the DIN app during the onboarding process
+- [Step 5: Allocate stake to operator sets](https://docs.din.build/docs/avs/operator-onboarding/onboard/opt-in-avs): How to complete Step 5 (allocate stake to operator sets) in the DIN app during the onboarding process
+- [Step 1: Register as an operator](https://docs.din.build/docs/avs/operator-onboarding/onboard/register-operator): How to complete Step 1 (register as an operator) in the DIN app during the onboarding process
+- [Step 2: Stake tokens](https://docs.din.build/docs/avs/operator-onboarding/onboard/stake-tokens): How to complete Step 2 (stake tokens) in the DIN app during the onboarding process
+- [Step 4: Watcher setup](https://docs.din.build/docs/avs/operator-onboarding/onboard/watchers): How to complete Step 4 (watcher setup) in the DIN app during the onboarding process
+- [Prerequisites](https://docs.din.build/docs/avs/operator-onboarding/prerequisites): Before starting the [onboarding process](./onboard/) using the [DIN app](https://app.din.build), ensure you have the following ready:
+- [Troubleshoot](https://docs.din.build/docs/avs/operator-onboarding/troubleshoot): Troubleshoot issues during DIN AVS onboarding
+- [Operator sets](https://docs.din.build/docs/avs/operator-sets): EigenLayer operator sets have been discussed and designed at length to create more granular roles and permissions for EigenLayer operators and AVS ...
+- [Slashing and rewards](https://docs.din.build/docs/avs/slashing-and-rewards): Information about how slashing and rewards work with DIN
+- [Veto Committee](https://docs.din.build/docs/avs/veto-committee): The DIN Veto Committee is comprised of the seven highest performing node providers over a 14.5 day period (an epoch).
+- [LLM markdown txt files](https://docs.din.build/docs/llms-txt): Download LLM-friendly documentation in text format
+- [Roadmap](https://docs.din.build/docs/roadmap): DIN is progressing through a carefully structured roadmap that gradually enhances its decentralization, scalability, and governance capabilities.
+- [Manage payments](https://docs.din.build/docs/web3-gateways/manage-payments): The Ingress Operators pay DIN Providers via DIN Payments for their processed requests/relays through the DIN Router.
+- [Monitor usage](https://docs.din.build/docs/web3-gateways/monitor-usage): The DIN Watcher function consists of a variety of monitoring tools, including an OpenTelemetry Collector that can be used for your own SRE review.
+- [Onboard as a web3 gateway](https://docs.din.build/docs/web3-gateways/onboard): This section describes how a gateway would be added as an Ingress Operator for the router.
+- [x402 payments](https://docs.din.build/docs/x402-payments): DIN implements [x402](https://docs.cdp.coinbase.com/x402/core-concepts/how-it-works), which is an internet-native payment protocol that was develop...
