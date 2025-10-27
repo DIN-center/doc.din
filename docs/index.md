@@ -41,7 +41,7 @@ See the following documentation to onboard and participate as various DIN roles:
     {
       href: "avs",
       title: "DIN AVS",
-      description: "Learn how DIN operates as an AVS on EigenLayer and  onboard as a DIN operator.",
+      description: "Learn how DIN operates as an AVS on EigenLayer and onboard as a DIN operator.",
     },
     {
       href: "node-providers",
