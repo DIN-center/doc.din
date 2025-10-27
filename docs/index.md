@@ -1,3 +1,7 @@
+---
+description: Introduction topic for Decentralized Infrastructure Network (DIN)
+---
+
 import CardList from "@site/src/components/CardList"
 
 # DIN documentation
@@ -34,6 +38,11 @@ See the following documentation to onboard and participate as various DIN roles:
 
 <CardList
   items={[
+    {
+      href: "avs",
+      title: "DIN AVS",
+      description: "Learn how DIN operates as an AVS on EigenLayer and  onboard as a DIN operator.",
+    },
     {
       href: "node-providers",
       title: "Node providers",
