@@ -9,11 +9,11 @@ const baseUrl = isDev ? "/" : "/";
 const config = {
   title: "DIN docs",
   tagline: "Documentation for the Decentralized Infrastrucure Network (DIN).",
-  url: "https://docs-template.consensys.io",
+  url: "https://docs.din.build/",
   baseUrl,
   onBrokenLinks: "warn",
   staticDirectories: ["static"],
-  favicon: "img/favicons/favicon.svg",
+  favicon: "img/logos/logo-orange.svg",
   trailingSlash: false,
 
   // GitHub pages deployment config.
