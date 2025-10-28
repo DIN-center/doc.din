@@ -11,11 +11,17 @@ export default function DocBreadcrumbsWrapper(props: Props): ReactNode {
     <div style={{
       display: 'flex',
       justifyContent: 'space-between',
-      alignItems: 'center',
+      alignItems: 'flex-start',
+      flexWrap: 'wrap',
+      gap: '0.75rem',
       marginBottom: '1rem'
     }}>
-      <DocBreadcrumbs {...props} />
-      <CopyPageButton />
+      <div style={{ flex: '1 1 300px', minWidth: 0 }}>
+        <DocBreadcrumbs {...props} />
+      </div>
+      <div style={{ flex: '0 0 auto', marginLeft: 'auto' }}>
+        <CopyPageButton />
+      </div>
     </div>
   );
 }

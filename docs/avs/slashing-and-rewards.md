@@ -72,9 +72,7 @@ operator rewards = (base rate × request volume × performance score) / total ne
 
 ### Expected returns
 
-::info
 Returns are estimates and depend on network growth and demand.
-:::
 
 | Scenario | Annual return | Requirements |
 |----------|---------------|--------------|
