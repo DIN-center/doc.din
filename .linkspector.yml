@@ -1,0 +1,14 @@
+dirs:
+  - ./docs
+baseUrl: https://docs.din.build
+ignorePatterns:
+  - pattern: '^/img/.*$'
+  - pattern: '^/static/.*$'
+  - pattern: '^/llms\.txt$'
+  - pattern: '^/llms-full\.txt$'
+aliveStatusCodes:
+  - 200
+  - 201
+  - 204
+useGitIgnore: true
+
