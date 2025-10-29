@@ -1,0 +1,82 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `debug_traceCall`
+
+Returns the number of possible tracing result by executing an `eth_call` within the context of the given block execution.
+
+## Parameters
+
+- `transaction call object`: (object) _[required]_ - The transaction call object containing:
+  - `from`: (string) _[optional]_ - Address the transaction is sent from (20 bytes).
+  - `to`: (string) _[required]_ - Address the transaction is directed to (20 bytes).
+  - `gas`: (string) _[optional]_ - Hexadecimal value of the gas provided for the transaction execution. `eth_call` consumes zero gas, but this parameter may be needed by some executions.
+  - `gasPrice`: (string) _[optional]_ - Hexadecimal value of the `gasPrice` used for each paid gas.
+  - `maxPriorityFeePerGas`: (string) _[optional]_ - Maximum fee, in wei, the sender is willing to pay per gas above the base fee.
+  - `maxFeePerGas`: (string) _[optional]_ - Maximum total fee (base fee + priority fee), in wei, the sender is willing to pay per gas.
+  - `value`: (string) _[optional]_ - Hexadecimal of the value sent with this transaction.
+  - `data`: (string) _[optional]_ - Hash of the method signature and encoded parameters. See [Ethereum contract ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).
+- `block parameter`: (string) _[required]_ - A hexadecimal block number, or one of the string tags `latest`, `earliest`, `pending`, `safe`, or `finalized`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+- `tracing options`: (object) _[optional]_ - Tracing options object with the following fields:
+  - `tracer`: (string) _[optional]_ - Type of tracer. Supports `callTracer` or `prestateTracer`.
+  - `tracerConfig`: (object) _[optional]_ - Tracer configuration options:
+    - `onlyTopCall`: (boolean) _[optional]_ - When `true`, will only trace the primary (top-level) call and not any sub-calls. It eliminates the additional processing for each call frame.
+
+## Returns
+
+Depending on the specified tracer type, returns a `callTracer` object or `prestateTracer` object.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "debug_traceCall", "params": [{"from": "0x8894e0a0c962cb723c1976a4421c95949be2d4e3", "to": "0x55d398326f99059ff775485246999027b3197955", "data": "0xa9059cbb0000000000000000000000003b9f33b3a9d382fa60283c555bde8f78855957be00000000000000000000000000000000000000000000000d4e7f4f79da7c0000"}, "latest", {"tracer": "callTracer"}], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "debug_traceCall", "params": [{"from": "0x8894e0a0c962cb723c1976a4421c95949be2d4e3", "to": "0x55d398326f99059ff775485246999027b3197955", "data": "0xa9059cbb0000000000000000000000003b9f33b3a9d382fa60283c555bde8f78855957be00000000000000000000000000000000000000000000000d4e7f4f79da7c0000"}, "latest", {"tracer": "callTracer"}], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": {
+    "from": "0x8894e0a0c962cb723c1976a4421c95949be2d4e3",
+    "gas": "0x2d48c",
+    "gasUsed": "0xc7ab",
+    "to": "0x55d398326f99059ff775485246999027b3197955",
+    "input": "0xa9059cbb0000000000000000000000003b9f33b3a9d382fa60283c555bde8f78855957be00000000000000000000000000000000000000000000000d4e7f4f79da7c0000",
+    "output": "0x0000000000000000000000000000000000000000000000000000000000000001",
+    "value": "0x0",
+    "type": "CALL"
+  }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+import TracingTypes from "./_debug-tracing-types.mdx"
+
+<TracingTypes />
