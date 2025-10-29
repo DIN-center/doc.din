@@ -33,11 +33,11 @@ export const NETWORK_LINKS = [
     href: '/api-reference/base',
     logo: `${LOGO_PATH}/logo-base.svg`,
   },
-  // {
-  //   name: 'Blast',
-  //   href: '/services/reference/blast',
-  //   logo: `${LOGO_PATH}/logo-blast.svg`,
-  // },
+  {
+    name: 'Blast',
+    href: '/api-reference/blast',
+    logo: `${LOGO_PATH}/logo-blast.svg`,
+  },
   // {
   //   name: 'Celo',
   //   href: '/services/reference/celo',
