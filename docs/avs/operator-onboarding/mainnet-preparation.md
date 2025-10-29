@@ -81,7 +81,7 @@ Use one of the following wallet options:
   - Create new derivation path
   - Document recovery phrase securely
 
-- **Option 2: [Fireblocks MPC]((https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks)) (enterprise)**
+- **Option 2: [Fireblocks MPC](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks) (enterprise)**
 
   - Superior security for institutions
   - Multi-party computation

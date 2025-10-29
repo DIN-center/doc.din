@@ -72,6 +72,7 @@ jobs:
         uses: ConsenSys/github-actions/docs-link-check@main
         with:
           FILE_EXTENSION: ${{ matrix.file-extensions }}
+          CONFIG_FILE: .linkspector.yml
 
   case-check:
     name: Check for case being inconsistent

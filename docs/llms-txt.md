@@ -9,7 +9,7 @@ Plain text versions of all documentation, optimized for LLM consumption.
 
 ## Standard version
 
-**[Download llms.txt](/llms.txt)** (21KB)
+**[Download llms.txt](../static/llms.txt)** (21KB)
 
 This file contains:
 
@@ -19,7 +19,7 @@ This file contains:
 
 ## Full version
 
-**[Download llms-full.txt](/llms-full.txt)** (344KB)
+**[Download llms-full.txt](../static/llms-full.txt)** (344KB)
 
 This file contains:
 
