@@ -51,11 +51,11 @@ export const NETWORK_LINKS = [
   //   href: '/services/reference/linea',
   //   logo: `${LOGO_PATH}/logo-linea.svg`,
   // },
-  // {
-  //   name: 'Mantle',
-  //   href: '/services/reference/mantle',
-  //   logo: `${LOGO_PATH}/logo-mantle.svg`,
-  // },
+  {
+    name: 'Mantle',
+    href: '/api-reference/mantle',
+    logo: `${LOGO_PATH}/logo-mantle.svg`,
+  },
   // {
   //   name: 'opBNB',
   //   href: '/services/reference/opbnb',
