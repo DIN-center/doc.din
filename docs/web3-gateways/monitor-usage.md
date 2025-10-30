@@ -23,12 +23,20 @@ flowchart LR
 
 </p>
 
-- What dashboards can we expect to see on the performance of DIN Providers or the DIN Router? Completed relays?
-  - **Answer:** DIN Router data is added to the Open Telemetry collector and processed into a Signoz Cloud dashboard.
+## FAQs
 
-- What is the DIN Observability Dashboard? Can I get access to it?
-  - **Answer:** DIN is in the process of building app.din.build in order to provide a more "SaaS-based" interaction with the DIN Router and other DIN components.
+<details>
+<summary>What dashboards can we expect to see on the performance of DIN Providers or the DIN Router? Completed relays?</summary>
+<div>DIN Router data is added to the Open Telemetry collector and processed into a Signoz Cloud dashboard.</div>
+</details>
 
-- Can you create other dashboards for the desired data?
-  - **Answer:** Since you will be given the API of the collected metrics, you can use that to build other dashboards.
-    We will always take suggestions related to the DIN Observability Dashboard, but further customizations are best made by consuming the API and building those view into your own application.
+<details>
+<summary>What is the DIN Observability Dashboard? Can I get access to it?</summary>
+<div>DIN is in the process of building app.din.build in order to provide a more "SaaS-based" interaction with the DIN Router and other DIN components.</div>
+</details>
+
+<details>
+<summary>Can you create other dashboards for the desired data?</summary>
+<div>Since you will be given the API of the collected metrics, you can use that to build other dashboards.
+    We will always take suggestions related to the DIN Observability Dashboard, but further customizations are best made by consuming the API and building those view into your own application.</div>
+</details>

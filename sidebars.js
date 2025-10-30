@@ -72,8 +72,7 @@ const sidebars = {
       collapsed: true,
       items: [
         "web3-gateways/onboard",
-        "web3-gateways/monitor-usage",
-        "web3-gateways/manage-payments"
+        "web3-gateways/monitor-usage"
       ]
     }
   ],

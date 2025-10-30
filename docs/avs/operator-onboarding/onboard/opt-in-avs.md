@@ -18,15 +18,15 @@ Ensure the following:
 
 - You've completed Steps 1-4.
 - If set, the [allocation delay](allocation-delay.md) period has passed.
-- You've messaged DIN team (`din@consensys.net`) that you reached Step 5.
+- You've [notified the DIN team](mailto:din@consensys.net) that you reached Step 5.
 
 ## Steps
 
 :::info Important - coordination required
 When you reach Step 5, you'll see **Step 5: Configuration Required** in the app.
 
-The DIN team needs to configure your custom operator image on the backend. Contact the team at
-`din@consensys.net` when ready to proceed with this step.
+The DIN team needs to configure your custom operator image on the backend.
+Email the team at [`din@consensys.net`](mailto:din@consensys.net) when you're ready to proceed with this step.
 
 Once configured by the DIN team, the status will change to **Step 5 Ready** and you can proceed.
 :::

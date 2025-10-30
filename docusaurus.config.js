@@ -135,7 +135,7 @@ const config = {
                 to: "/",
               },
               {
-                label: "Din as an AVS",
+                label: "DIN as an AVS",
                 to: "/avs",
               },
               {
@@ -147,7 +147,7 @@ const config = {
                 to: "/watchers",
               },
               {
-                label: "Gateways",
+                label: "Web3 gateways",
                 to: "/web3-gateways",
               },
               {
@@ -185,8 +185,8 @@ const config = {
                 href: "https://github.com/DIN-center/doc.din",
               },
               {
-                label: "Discord",
-                href: "https://discord.com/invite/consensys",
+                label: "Contact DIN team",
+                href: "mailto:din@consensys.net",
               },
             ],
           },

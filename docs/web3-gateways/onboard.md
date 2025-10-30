@@ -1,5 +1,7 @@
 # Onboard as a web3 gateway
 
+For onboarding support, email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).
+
 ## DIN authentication process
 
 This section describes how a gateway would be added as an Ingress Operator for the router.
@@ -39,14 +41,22 @@ flowchart TD
 
 </p>
 
-- Is this a registered IP Address or domain that can ping the DIN Router?
-  - **Answer:** Yes, this is a DNS (registered IP address).
+### FAQs
 
-- Is there a smart contract allow list or is it a manual handshake process for now?
-  - **Answer:** It would be a manual handshake for now, with the allowlist being stored in a configuration file until the smart contract registry is up and running.
+<details>
+<summary>Is this a registered IP Address or domain that can ping the DIN Router?</summary>
+<div>Yes, this is a DNS (registered IP address).</div>
+</details>
 
-- How does Infura do this?
-  - **Answer:** Currently, Infura does not authenticate to the DIN Router, but we are adding this functionality as we expand the services to more web3 gateways.
+<details>
+<summary>Is there a smart contract allow list or is it a manual handshake process for now?</summary>
+<div>It would be a manual handshake for now, with the allowlist being stored in a configuration file until the smart contract registry is up and running.</div>
+</details>
+
+<details>
+<summary>How does Infura do this?</summary>
+<div>It would be a manual handshake for now, with the allowlist being stored in a configuration file until the smart contract registry is up and running.</div>
+</details>
 
 ### Configuration
 
@@ -175,17 +185,25 @@ flowchart LR
 
 </p>
 
-- What are the security requirements for this?
-  - **Answer:** Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new gateway is using to access the DIN Router.
+### FAQs
 
-- Is there an example handshake and what is registered (for example, IP addresses vs domains)?
-  - **Answer:** Example code is available that can be shared.
-    An Ethereum address is required in order to authenticate.
+<details>
+<summary>What are the security requirements for this?</summary>
+<div>Currently, the registration would be done via Sign In with Ethereum, and the DIN team would allowlist the Ethereum address that the new gateway is using to access the DIN Router.</div>
+</details>
 
-- What rate limiting protection is created here?
-  All rate limiting is enforced on the Gateway side, and therefore Gateway providers must be able to pay for the requests that they use.
-  - **Answer:** The DIN Router will enforce some blocking of certain methods, but the assumption is that any requests that are sent to the DIN Router by a gateway are expected to be returned.
-    Therefore, there will be a list of methods that we will suggest do not make sense to forward to the DIN Router for certain networks.
+<details>
+<summary>Is there an example handshake and what is registered (for example, IP addresses vs domains)?</summary>
+<div>Example code is available that can be shared.
+    An Ethereum address is required in order to authenticate.</div>
+</details>
+
+<details>
+<summary>What rate limiting protection is created here?
+  All rate limiting is enforced on the gateway side, and therefore gateway providers must be able to pay for the requests that they use.</summary>
+<div>The DIN Router will enforce some blocking of certain methods, but the assumption is that any requests that are sent to the DIN Router by a gateway are expected to be returned.
+    Therefore, there will be a list of methods that we will suggest do not make sense to forward to the DIN Router for certain networks.</div>
+</details>
 
 ## DIN Router network configuration
 
@@ -194,24 +212,38 @@ and their set technical requirements (for example, methods, RPS, volume, advance
 The full list of these available networks and requirements has not been rendered into a web application,
 but we can use the Infura documentation as a starting point for which networks and methods are supported.
 
-- How do I select which available networks (mainnet and testnet) where I can be added to requests?
+### FAQs
 
-  - Is this the caddy file?
-    - **Answer:** The DIN team is able to provide a list of available networks where requests can be sent.
+<details>
+<summary>How do I select which available networks (mainnet and testnet) where I can be added to requests?</summary>
+<div>
+  <details>
+  <summary>Is this the caddy file?</summary>
+  <div>The DIN team is able to provide a list of available networks where requests can be sent.
       This list will typically only include networks that are "production-ready" - they can receive requests at an RPS in the thousands.
-      Sometimes, we will make available networks that are in pre-production, largely for integration purposes and for some testing.
+      Sometimes, we will make available networks that are in pre-production, largely for integration purposes and for some testing.</div>
+  </details>
+  <details>
+  <summary>Is there a list of these chains?</summary>
+  <div>The DIN team keeps a list of supported chains that are available for your consumption.</div>
+  </details>
+  <details>
+  <summary>Do I use a fixed reference on my side? The router side?</summary>
+  <div>You will use a fixed reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.</div>
+  </details>
+  <details>
+  <summary>How can I change this?</summary>
+  <div>You will likely not need to change the DIN endpoints, but in the event you do, you will be responsible for changing to any new DIN endpoints that are provided to you.</div>
+  </details>
+</div>
+</details>
 
-  - Is there a list of these chains?
-    - **Answer:** The DIN team keeps a list of supported chains that are available for your consumption.
+<details>
+<summary>What are the expected methods available for each of the DIN Provider networks?</summary>
+<div>The DIN team will provide a list of methods for each supported chain.</div>
+</details>
 
-  - Do I use a fixed reference on my side? The router side?
-    - **Answer:** You will use a fixed reference to the relevant DIN Router endpoint for each network you are consuming within your routing logic.
-
-  - How can I change this?
-    - **Answer:** You will likely not need to change the DIN endpoints, but in the event you do, you will be responsible for changing to any new DIN endpoints that are provided to you.
-
-- What are the expected methods available for each of the DIN Provider networks?
-  - **Answer:** The DIN team will provide a list of methods for each supported chain.
-
-- Can I set any routing preferences for this particular chain?
-  - **Answer:** Potentially, if you have specific routing preferences you will work with the DIN team to see if these preferences can be implemented.
+<details>
+<summary>Can I set any routing preferences for this particular chain?</summary>
+<div>Potentially, if you have specific routing preferences you will work with the DIN team to see if these preferences can be implemented.</div>
+</details>
