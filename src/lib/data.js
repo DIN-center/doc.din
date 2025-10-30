@@ -78,11 +78,11 @@ export const NETWORK_LINKS = [
   //   href: '/services/reference/palm',
   //   logo: `${LOGO_PATH}/logo-palm.svg`,
   // },
-  // {
-  //   name: 'Polygon',
-  //   href: '/services/reference/polygon-pos',
-  //   logo: `${LOGO_PATH}/logo-polygon.svg`,
-  // },
+  {
+    name: 'Polygon',
+    href: '/api-reference/polygon-pos',
+    logo: `${LOGO_PATH}/logo-polygon.svg`,
+  },
   // {
   //   name: 'Scroll',
   //   href: '/services/reference/scroll',
