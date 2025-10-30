@@ -60,3 +60,7 @@ See the following documentation to onboard and participate as various DIN roles:
     }
   ]}
 />
+
+## Questions?
+
+If you have questions about DIN or need onboarding support, email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).

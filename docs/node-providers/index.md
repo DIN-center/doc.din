@@ -11,8 +11,11 @@ via [web3 gateways](../web3-gateways/index.md).
 Node providers earn fiat, stablecoins, or other tokens for hosting nodes in DIN.
 They are added to a Network-Services list so the DIN Router can effectively direct traffic and keep track of all relays.
 
-To participate in DIN, a node operator must [onboard as an AVS operator](../avs/operator-onboarding/index.md).
+**To participate in DIN, a node operator must [onboard as an AVS operator](../avs/operator-onboarding/index.md).**
 
 Node providers join the DIN AVS through EigenLayer restaking (or staking tokens in the staking contract).
 Upon registration, providers declare the blockchain protocols they support, such as Ethereum, Layer 2 networks, or additional Layer 1s, and detail their API capabilities in the Node Registry.
 Node providers are then available to service requests from users, governed by SLA requirements and monitored by [watchers](../watchers/index.md).
+See [DIN as an AVS](../avs/index.md) for more information about node providers' roles in the AVS.
+
+If you need onboarding support, email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).

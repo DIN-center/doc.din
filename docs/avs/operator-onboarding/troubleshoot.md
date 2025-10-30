@@ -54,7 +54,7 @@ This page provides solutions to common issues encountered during DIN AVS onboard
 #### Not allowlisted
 
 - Check the request status.
-- Contact `din@consensys.net` if you've waited over 24 hours.
+- Email [`din@consensys.net`](mailto:din@consensys.net) if you've waited over 24 hours.
 
 #### Token conversion failed
 
@@ -85,7 +85,8 @@ You cannot change this once set. You must use a new operator address if incorrec
 
 #### Configuration required
 
-The message **Step 5: Configuration Required** means you must contact the DIN team at `din@consensys.net`. They need to set up your custom operator image on the backend.
+The message **Step 5: Configuration Required** means you must email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).
+They need to set up your custom operator image on the backend.
 
 #### Can't see my operator
 
@@ -95,7 +96,7 @@ The message **Step 5: Configuration Required** means you must contact the DIN te
 
 #### Custom image not ready
 
-- Contact the DIN team at `din@consensys.net`.
+- Email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).
 - Provide the operator address and readiness confirmation.
 
 #### BLS key failed
@@ -132,11 +133,11 @@ The message **Step 5: Configuration Required** means you must contact the DIN te
 - Verify that you've completed all steps.
 - Check if the allocation delay has expired.
 - Test infrastructure connectivity.
-- Contact the DIN team at `din@consensys.net`.
+- Email the DIN team at [`din@consensys.net`](mailto:din@consensys.net).
 
 ## Get help
 
-When contacting support always provide:
+When [emailing the DIN team](mailto:din@consensys.net) for support, always provide:
 
 1. Your operator address.
 2. The step where the issue occurred.
