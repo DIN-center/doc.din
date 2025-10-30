@@ -1,0 +1,79 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `rollup_getInfo`
+
+Returns the information about a node.
+
+## Parameters
+
+None
+
+## Returns
+
+Node information object:
+
+- `mode`: Node's mode of operation - `sequencer` or `verifier`.
+- `syncing`: `true` if the node is currently syncing, otherwise `false`.
+- `ethContext`: Object containing:
+  - `blockNumber`: The latest L1 block number.
+  - `timestamp`: The timestamp of the latest L1 block.
+- `rollupContext`: Object containing:
+  - `queueIndex`: Index in the canonical transaction chain of the last L1 to L2 message ingested.
+  - `index`: Index of the last L2 transaction processed.
+  - `verifiedIndex`: Index of the last transaction that was ingested from a batch that was posted to L1.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "rollup_getInfo", "params": [], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "rollup_getInfo", "params": [], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "mode": "verifier",
+    "syncing": false,
+    "ethContext": {
+      "blockNumber": 12345678,
+      "timestamp": 1234567890
+    },
+    "rollupContext": {
+      "queueIndex": 98765,
+      "index": 87654321,
+      "verifiedIndex": 87654320
+    }
+  }
+}
+```
+
+  </TabItem>
+</Tabs>
+
