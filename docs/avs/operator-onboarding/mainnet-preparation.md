@@ -63,7 +63,9 @@ Before starting Step 1 registration, configure the DIN app for mainnet:
 ## Wallet setup options
 
 :::warning MetaMask Required for TXTX Onboarding
-**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** TXTX is only proven to work reliably with MetaMask, and we strongly recommend operators use MetaMask for their onboarding TXTX wallet interface. While you can store your keys in a hardware wallet, you must access them through MetaMask during the onboarding process. Onboarding will fail if you use other wallet connection methods (WalletConnect, Coinbase Wallet, etc.).
+**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** TXTX is only proven to work reliably with MetaMask, and we strongly recommend
+operators use MetaMask for their onboarding TXTX wallet interface. While you can store your keys in a hardware wallet, you must access them through MetaMask
+during the onboarding process. Onboarding will fail if you use other wallet connection methods (WalletConnect, Coinbase Wallet, etc.).
 :::
 
 Use one of the following wallet options:
@@ -74,7 +76,7 @@ Use one of the following wallet options:
   - Create new derivation path
   - Document recovery phrase securely
 
-- **Option 2: Software wallet (not recommended)**
+- **Option 2: Software wallet**
 
   - Higher risk profile
   - Use only if hardware unavailable
