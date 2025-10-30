@@ -2,27 +2,10 @@ const LOGO_PATH = '/img/logos'
 
 export const NETWORK_LINKS = [
   {
-    name: 'Ethereum',
-    href: '/api-reference/ethereum',
-    logo: `${LOGO_PATH}/logo-eth.svg`,
+    name: 'Arbitrum',
+    href: '/api-reference/arbitrum',
+    logo: `${LOGO_PATH}/logo-arbitrum.svg`,
   },
-  {
-    name: 'Solana',
-    href: '/api-reference/solana',
-    logo: `${LOGO_PATH}/logo-solana.svg`,
-  },
-  {
-    name: 'BNB Smart Chain',
-    href: '/api-reference/bnb-smart-chain',
-    logo: `${LOGO_PATH}/logo-bnb.svg`,
-  },
-  // Networks below are supported but documentation pages are not yet available
-  // Uncomment and update hrefs when documentation pages are created
-  // {
-  //   name: 'Arbitrum',
-  //   href: '/services/reference/arbitrum',
-  //   logo: `${LOGO_PATH}/logo-arbitrum.svg`,
-  // },
   // {
   //   name: 'Avalanche',
   //   href: '/services/reference/avalanche-c-chain',
@@ -38,20 +21,30 @@ export const NETWORK_LINKS = [
     href: '/api-reference/blast',
     logo: `${LOGO_PATH}/logo-blast.svg`,
   },
+  {
+    name: 'BNB Smart Chain',
+    href: '/api-reference/bnb-smart-chain',
+    logo: `${LOGO_PATH}/logo-bnb.svg`,
+  },
   // {
   //   name: 'Celo',
   //   href: '/services/reference/celo',
   //   logo: `${LOGO_PATH}/logo-celo.svg`,
   // },
-  // {
-  //   name: 'IPFS',
-  //   href: '/services/reference/ipfs',
-  //   logo: `${LOGO_PATH}/logo-ipfs.svg`,
-  // },
+  {
+    name: 'Ethereum',
+    href: '/api-reference/ethereum',
+    logo: `${LOGO_PATH}/logo-eth.svg`,
+  },
   // {
   //   name: 'Hemi',
   //   href: '/services/reference/hemi',
   //   logo: `${LOGO_PATH}/logo-hemi.svg`,
+  // },
+  // {
+  //   name: 'IPFS',
+  //   href: '/services/reference/ipfs',
+  //   logo: `${LOGO_PATH}/logo-ipfs.svg`,
   // },
   // {
   //   name: 'Linea',
@@ -93,6 +86,11 @@ export const NETWORK_LINKS = [
   //   href: '/services/reference/sei',
   //   logo: `${LOGO_PATH}/logo-sei.svg`,
   // },
+  {
+    name: 'Solana',
+    href: '/api-reference/solana',
+    logo: `${LOGO_PATH}/logo-solana.svg`,
+  },
   // {
   //   name: 'Starknet',
   //   href: '/services/reference/starknet',
