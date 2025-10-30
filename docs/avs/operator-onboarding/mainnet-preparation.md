@@ -29,18 +29,13 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
     - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch
       deadline if any issues occur with your primary wallet during onboarding.
 
-2. **Start Fireblocks setup (optional):**
-   - Contact [Fireblocks](https://www.fireblocks.com/) for an account.
-   - Begin the KYC/verification process.
-   - [Install and register on EigenLayer using Fireblocks](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks).
-
-3. **Secure ETH for both wallets:**
+2. **Secure ETH for both wallets:**
    - Minimum 1 ETH per wallet (EigenLayer recommendation).
    - Transfer to both operator wallets.
 
    Specific stake amounts will be calculated during [Step 2](./onboard/stake-tokens.md).
 
-4. **Register BOTH wallets with EigenLayer:**
+3. **Register BOTH wallets with EigenLayer:**
    - Access the [DIN app](https://app.din.build).
    - Complete only [Step 1](./onboard/register-operator.md) with your **primary wallet**.
    - Complete only [Step 1](./onboard/register-operator.md) again with your **backup wallet**.
@@ -67,10 +62,10 @@ Before starting Step 1 registration, configure the DIN app for mainnet:
 
 ## Wallet setup options
 
-:::warning MetaMask Required for Onboarding
-**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** While you can store your keys in a hardware wallet or
-Fireblocks, you must access them through MetaMask during the onboarding process. Onboarding may fail if you use other wallet connection methods
-(WalletConnect, Coinbase Wallet, etc.).
+:::warning MetaMask Required for TXTX Onboarding
+**You must use MetaMask wallet when connecting to the DIN app for AVS onboarding.** TXTX is only proven to work reliably with MetaMask, and we strongly recommend
+operators use MetaMask for their onboarding TXTX wallet interface. While you can store your keys in a hardware wallet, you must access them through MetaMask
+during the onboarding process. Onboarding will fail if you use other wallet connection methods (WalletConnect, Coinbase Wallet, etc.).
 :::
 
 Use one of the following wallet options:
@@ -81,13 +76,7 @@ Use one of the following wallet options:
   - Create new derivation path
   - Document recovery phrase securely
 
-- **Option 2: [Fireblocks MPC](https://docs.eigencloud.xyz/products/eigenlayer/operators/howto/registeroperators/register-operator-with-fireblocks) (enterprise)**
-
-  - Superior security for institutions
-  - Multi-party computation
-  - No single point of failure
-
-- **Option 3: Software wallet (not recommended)**
+- **Option 2: Software wallet**
 
   - Higher risk profile
   - Use only if hardware unavailable
@@ -127,8 +116,8 @@ assets and accept slashing risk.
 
 - **Using a non-MetaMask wallet connection**
 
-    _Fix_: Always connect through MetaMask when onboarding in the DIN app. You can use hardware wallets or Fireblocks for key storage, but connect
-    them through MetaMask. Other wallet providers (WalletConnect, Coinbase Wallet, etc.) may cause onboarding to fail.
+    _Fix_: Always connect through MetaMask when onboarding in the DIN app. You can use hardware wallets for key storage, but connect
+    them through MetaMask. Other wallet providers (WalletConnect, Coinbase Wallet, etc.) will cause onboarding to fail.
 
 - **Reusing a wallet from another AVS**
 
@@ -161,10 +150,6 @@ assets and accept slashing risk.
 
    _Fix_: Prefer Ledger/Trezor or MPC, enforce approvals/policies, and restrict who can sign mainnet
    transactions.
-
-- **Delayed Fireblocks setup**
-
-    _Fix_: Start KYC and workspace setup early; test a full registration flow before deadline.
 
 - **Poor allocation strategy**
 

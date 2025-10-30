@@ -8,8 +8,13 @@ Before starting the [onboarding process](./onboard/) using the [DIN app](https:/
 
 ## Wallet requirements
 
-Compatible wallets include MetaMask and WalletConnect. DIN supports
-[multiple wallet setup options](./mainnet-preparation.md#wallet-setup-options).
+:::warning TXTX Only Works with MetaMask
+**TXTX is only proven to work reliably with MetaMask.** We strongly recommend operators use MetaMask for their onboarding TXTX wallet interface. Other wallet
+connection methods (WalletConnect, Coinbase Wallet, etc.) will cause TXTX onboarding to fail.
+:::
+
+DIN supports [multiple wallet setup options](./mainnet-preparation.md#wallet-setup-options) for storing your keys (hardware wallets, software wallets), but you
+must connect through MetaMask when using TXTX for onboarding.
 
 ### Mainnet
 
