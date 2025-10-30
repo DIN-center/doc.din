@@ -1,0 +1,58 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `bor_getAuthor`
+
+Returns the author of the specified block.
+
+## Parameters
+
+- `block parameter`: (string) _[required]_ - Block number in hexadecimal, or the string tag `latest`. See the [default block parameter](https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block).
+
+## Returns
+
+`string`: Address of the author.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+```bash
+curl <ENDPOINT> \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "bor_getAuthor", "params": ["0x1000"], "id": 1}'
+```
+
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "method": "bor_getAuthor", "params": ["0x1000"], "id": 1}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x42eefcda06ead475cde3731b8eb138e88cd0bac3"
+}
+```
+
+  </TabItem>
+</Tabs>
+
+
