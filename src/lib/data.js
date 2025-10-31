@@ -106,11 +106,11 @@ export const NETWORK_LINKS = [
   //   href: '/services/reference/unichain',
   //   logo: `${LOGO_PATH}/logo-unichain.svg`,
   // },
-  // {
-  //   name: 'ZKsync Era',
-  //   href: '/services/reference/zksync',
-  //   logo: `${LOGO_PATH}/logo-zksync.svg`,
-  // },
+  {
+    name: 'ZKsync Era',
+    href: '/api-reference/zksync',
+    logo: `${LOGO_PATH}/logo-zksync.svg`,
+  },
 ]
 
 export const API_COSTS = {

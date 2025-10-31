@@ -1,0 +1,55 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `zks_L1BatchNumber`
+
+Returns the latest L1 batch number.
+
+## Parameters
+
+None.
+
+## Response
+
+The latest L1 batch number in hexadecimal format.
+
+## Example
+
+Replace `<ENDPOINT>` with an API endpoint from your DIN gateway.
+
+### Request
+
+<Tabs>
+  <TabItem value="curl">
+
+  ```bash
+  curl <ENDPOINT> \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"jsonrpc": "2.0", "id": 1, "method": "zks_L1BatchNumber", "params": []}'
+  ```
+  </TabItem>
+  <TabItem value="WSS">
+
+```bash
+wscat -c <ENDPOINT> -x '{"jsonrpc": "2.0", "id": 1, "method": "zks_L1BatchNumber", "params": []}'
+```
+
+  </TabItem>
+</Tabs>
+
+### Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+  ```json
+  {
+    "jsonrpc": "2.0",
+    "result": "0x544c",
+    "id": 1
+  }
+  ```
+
+  </TabItem>
+</Tabs>
