@@ -120,8 +120,7 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prebuilt'
-          github-comment: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-comment: false
 
       - name: Post/Update PR Comment with Preview URL
         uses: actions/github-script@v7
