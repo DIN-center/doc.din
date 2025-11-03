@@ -126,18 +126,24 @@ jobs:
       - name: Post/Update PR Comment with Preview URL
         uses: actions/github-script@v7
         if: always()
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const deploymentUrl = '${{ steps.vercel-preview.outputs.preview-url }}';
             const deploymentId = '${{ steps.vercel-preview.outputs.deployment-id }}';
+            const commitSha = '${{ github.event.pull_request.head.sha }}';
+            const shortSha = commitSha.substring(0, 7);
+            const commitMessage = `${{ github.event.pull_request.head.commit.message || '' }}`;
 
             // Create comment body
             const commentBody = `## 🚀 Vercel Preview Deployment
 
             ${deploymentUrl ? `✅ **Preview**: ${deploymentUrl}` : '⏳ Deployment in progress...'}
-            📝 **Commit**: \`${{ github.event.pull_request.head.sha.substring(0, 7) }}\` - ${{ github.event.pull_request.head.commit.message || 'No commit message' }}
-            🔍 **Inspect**: https://vercel.com/${{ secrets.VERCEL_ORG_ID }}/${{ secrets.VERCEL_PROJECT_ID }}/${deploymentId || 'deployments'}
+            📝 **Commit**: \`${shortSha}\` - ${commitMessage || 'No commit message'}
+            🔍 **Inspect**: https://vercel.com/${process.env.VERCEL_ORG_ID}/${process.env.VERCEL_PROJECT_ID}/${deploymentId || 'deployments'}
 
             ---
             *This preview deployment will be available until the PR is closed.*
@@ -227,12 +233,13 @@ jobs:
             if (mergedPRs.length > 0) {
               const pr = mergedPRs[0]; // Take the most recent one
               const productionUrl = '${{ steps.vercel-production.outputs.preview-url }}' || 'https://doc.din.io';
+              const shortCommitSha = commitSha.substring(0, 7);
 
               const commentBody = `## ✅ Production Deployment Complete
 
               🎉 **This PR has been deployed to production!**
               🌐 **Production URL**: ${productionUrl}
-              📝 **Merged Commit**: \`${commitSha.substring(0, 7)}\`
+              📝 **Merged Commit**: \`${shortCommitSha}\`
               ⏰ **Deployed at**: ${new Date().toUTCString()}
 
               ---
