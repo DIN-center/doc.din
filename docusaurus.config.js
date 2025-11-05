@@ -110,13 +110,13 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          {
-            type: "docSidebar",
-            sidebarId: "apiSidebar",
-            docId: "api-reference/supported-networks",
-            position: "left",
-            label: "API reference",
-          },
+//          {
+//            type: "docSidebar",
+//            sidebarId: "apiSidebar",
+//            docId: "api-reference/supported-networks",
+//            position: "left",
+//            label: "API reference",
+//          },
           {
             href: "https://github.com/DIN-center/doc.din",
             className: "header-github-link",
