@@ -6,7 +6,7 @@ description: Overview of node providers
 
 A node provider runs blockchain nodes and exposes API endpoints that DIN can route traffic to.
 Node providers are incentivized for providing high-quality, reliable, and secure services to DIN users
-via [web3 gateways](../web3-gateways/index.md).
+via [web3 gateways](../gateways/index.md).
 
 Node providers earn fiat, stablecoins, or other tokens for hosting nodes in DIN.
 They are added to a Network-Services list so the DIN Router can effectively direct traffic and keep track of all relays.

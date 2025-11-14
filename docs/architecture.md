@@ -6,7 +6,7 @@ DIN uses a decentralized structure composed of multiple actors:
   These providers are compensated for their fulfilled traffic.
 - [**Watchers**](watchers/index.md) - Watchers monitor the health of the network traffic.
   The DIN dashboard is the source of truth for the processed requests by node providers.
-- [**Web3 gateways**](web3-gateways/index.md) - Web3 gateways connect to DIN nodes and pay for processing traffic from node providers.
+- [**Web3 gateways**](gateways/index.md) - Web3 gateways connect to DIN nodes and pay for processing traffic from node providers.
   - **Web3 customers** - These individuals or companies interact directly with web3 gateways through their provided identities and processes.
     They receive services and pay for service level agreements covered by the web3 gateways.
 
@@ -48,7 +48,7 @@ The core layers include:
 
 **1. Request routing layer:**
 
-- [Web3 gateway](web3-gateways/index.md) API requests are routed through the DIN Router,
+- [Web3 gateway](gateways/index.md) API requests are routed through the DIN Router,
   which dynamically selects an optimal node provider based on performance,
   load balancing, reputation, and network proximity.
 - The DIN Router prioritizes responses from node providers with high uptime and low latency,
