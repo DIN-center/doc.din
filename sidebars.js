@@ -62,19 +62,14 @@ const sidebars = {
       label: "Watchers",
       link: { type: "doc", id: "watchers/index" },
       collapsed: true,
-      items: [
-
-      ]
+      items: []
     },
     {
       type: "category",
-      label: "Web3 gateways",
-      link: { type: "doc", id: "web3-gateways/index" },
+      label: "Gateways",
+      link: { type: "doc", id: "gateways/index" },
       collapsed: true,
-      items: [
-        "web3-gateways/onboard",
-        "web3-gateways/monitor-usage"
-      ]
+      items: []
     }
   ]
 };
