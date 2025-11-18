@@ -10,10 +10,9 @@ EigenLayer's AVS aligns incentives for node providers, watchers, and gateways to
 level agreements (SLAs) and incentivizes consistent performance. It enforces these standards with
 staking and real-time slashing, providing reliable, economically secure infrastructure for web3 applications.
 
-:::warning Mainnet Launch - November 14th, 2025
-DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately**
-due to a 17-day operator allocation delay. See the
-[operator onboarding information](./operator-onboarding/index.md) to get started.
+:::warning 17-day activation period
+Onboarding an operator on mainnet involves a 17-day activation period.
+See the [operator onboarding information](./operator-onboarding/index.md) to get started as soon as possible.
 :::
 
 ## AVS architecture

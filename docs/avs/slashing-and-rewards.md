@@ -11,8 +11,7 @@ attestations show sustained violations. This aligns behavior with DIN’s reliab
 :::info Operator onboarding
 Ready to operate and earn? Start with the [operator onboarding guide](./operator-onboarding/index.md).
 
-DIN AVS is launching on mainnet soon! Operators must begin onboarding immediately due to a 17-day
-operator allocation delay.
+Onboarding an operator on mainnet involves a 17-day activation period, so get started as soon as possible.
 :::
 
 ## Performance-based rewards
