@@ -5,7 +5,7 @@ description: How to complete Step 1 (register as an operator) in the DIN app dur
 # Step 1: Register as an operator
 
 Register your operator on EigenLayer. This step **must** be performed at least 17 days before you intend
-to start serving traffic because EigenLayer has 17-day operator allocation delay.
+to start serving traffic because EigenLayer has 17-day operator activation period.
 
 :::info Video tutorial
 [Watch the Step 1 tutorial.](https://www.loom.com/share/fa59256208a942a7acf14c20ddd2b77f?sid=36b11ad4-2e9c-4563-b6b1-83da6ca5812c) (5 minutes)

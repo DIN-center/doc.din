@@ -26,10 +26,8 @@ must connect through MetaMask when using TXTX for onboarding.
 Your wallet MUST be dedicated exclusively to DIN AVS. Using a wallet associated with another AVS will cause operational failures.
 :::
 
-:::warning Mainnet Launch - November 14th, 2025
-DIN AVS is launching on mainnet soon! Operators must begin onboarding with their wallets **immediately**
-due to a 17-day operator allocation delay. October 27, 2025 is the latest date to create your wallet
-and onboard in time for mainnet launch.
+:::warning 17-day activation period
+Onboarding an operator on mainnet involves a 17-day activation period, so it's important to get started as soon as possible.
 :::
 
 ### Testnet

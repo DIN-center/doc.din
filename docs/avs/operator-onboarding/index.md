@@ -7,9 +7,9 @@ description: Overview of the steps to register as a DIN AVS operator.
 A DIN Autonomous Verifiable Service (AVS) operator runs infrastructure that serves RPC requests on the
 DIN network while staking funds with one or more [operator sets](../operator-sets.md).
 
-:::warning Mainnet Launch - November 14th, 2025
-DIN AVS is launching on mainnet soon! Operators must begin onboarding **immediately**
-due to a 17-day operator allocation delay.
+:::warning 17-day activation period
+Onboarding an operator on mainnet involves a 17-day activation period.
+Follow these steps to get started as soon as possible.
 :::
 
 ## Onboarding process
@@ -19,8 +19,8 @@ The complete onboarding process consists of the following steps:
 1. [**Review the prerequisite checklist**](./prerequisites.md) - The checklist provides information about
     all the requirements (wallet, financial, account) you must meet to begin onboarding through the DIN app.
 
-1. [**Prepare for mainnet launch**](./mainnet-preparation.md) - View the time-sensitive instructions to be
-    ready for the mainnet launch on November 14, 2025.
+1. [**Prepare for mainnet**](./mainnet-preparation.md) - View the instructions to be
+    ready for the mainnet.
 
 1. [**Onboard using the DIN app**](onboard/index.md):
 

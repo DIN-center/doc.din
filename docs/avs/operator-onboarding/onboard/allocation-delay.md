@@ -10,8 +10,8 @@ Allocation delay is the time between staking tokens and when they become slashab
 on both testnet and mainnet.
 
 :::warning Important
-This is different to the 17-day wait period for your wallet to become active on EigenLayer, for mainnet.
-The allocation delay is your choice for operational safety and is in addition to the 17-day wait period.
+This is different to the 17-day period for your wallet to become active on EigenLayer, for mainnet.
+The allocation delay is your choice for operational safety and is in addition to the 17-day activation period.
 :::
 
 :::info Video tutorial

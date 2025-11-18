@@ -1,24 +1,22 @@
 ---
-description: Instructions for preparing for mainnet launch
+description: Instructions for preparing for mainnet
 ---
 
-# Prepare for mainnet launch
+# Prepare for mainnet
 
-:::danger Time Sensitive - DIN AVS Mainnet Launch: November 14th, 2025
-
-Operators must begin onboarding with their wallets immediately due to a 17-day operator allocation delay. October 27, 2025 is the latest date
-to create your wallets and onboard in time for mainnet launch.
-
-**Critical: Create and register TWO wallets (primary + backup) with EigenLayer.** If your primary wallet encounters issues during onboarding, you won't have time to activate a new wallet before the deadline.
+:::warning 17-day activation period
+Onboarding an operator on mainnet involves a 17-day activation period.
+Ensure you create and register TWO wallets (primary + backup) with EigenLayer,
+so if your primary wallet encounters issues during onboarding, you won't waste the 17-day period.
 :::
 
 :::info Video tutorial
 [Watch the mainnet preparation tutorial.](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
 :::
 
-## Immediate action items
+## Initial action items
 
-Perform the following steps before the October 27, 2025 cut-off for mainnet launch:
+Perform the following steps as soon as possible:
 
 1. **Create TWO new wallets (primary + backup):**
     - Generate **two** new externally owned account wallets. Refer to the
@@ -26,8 +24,8 @@ Perform the following steps before the October 27, 2025 cut-off for mainnet laun
     - Each wallet must not be used with any other EigenLayer Autonomous Verifiable Service (AVS).
     - Secure your private keys for both wallets.
     - Document both wallet addresses.
-    - **Why two wallets?** Due to the 17-day EigenLayer activation delay, having a backup wallet ensures you can still meet the mainnet launch
-      deadline if any issues occur with your primary wallet during onboarding.
+    - **Why two wallets?** EigenLayer requires a 17-day activation period for each new wallet.
+      If your primary wallet encounters issues during onboarding, having a backup wallet decreases the risk of wasting the 17-day period.
 
 2. **Secure ETH for both wallets:**
    - Minimum 1 ETH per wallet (EigenLayer recommendation).
@@ -133,13 +131,7 @@ assets and accept slashing risk.
 - **Not creating a backup wallet**
 
     _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (e.g., transaction
-    failures, wrong configuration), you won't have time to create and activate a new wallet before the November 14th deadline due to the 17-day
-    activation period.
-
-- **Starting after October 27th, 2025**
-
-    _Fix_: Plan for EigenLayer's protocol activation delay (17 days). Start by October 27, 2025, to be
-    active by November 14, 2025.
+    failures, wrong configuration), having a backup wallet decreases the risk of wasting the 17-day activation period.
 
 - **Insufficient ETH for gas**
 
