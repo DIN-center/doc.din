@@ -1,22 +1,24 @@
 ---
-description: Instructions for preparing for mainnet
+description: Instructions for onboarding to mainnet
 ---
 
-# Prepare for mainnet
+# Onboard to mainnet
+
+DIN launched its mainnet AVS on November 17, 2025. Follow this guide to onboard as a mainnet operator.
 
 :::warning 17-day activation period
 Onboarding an operator on mainnet involves a 17-day activation period.
-Ensure you create and register TWO wallets (primary + backup) with EigenLayer,
-so if your primary wallet encounters issues during onboarding, you won't waste the 17-day period.
+Create and register TWO wallets (primary + backup) with EigenLayer.
+If your primary wallet encounters issues during onboarding, the backup wallet prevents wasting the 17-day period.
 :::
 
 :::info Video tutorial
-[Watch the mainnet preparation tutorial.](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
+[Watch the mainnet onboarding tutorial.](https://www.loom.com/share/db796cf0b89b40b0961595f961cb1672?sid=daf8a0db-1325-444e-95b1-aeb166f1c635)
 :::
 
 ## Initial action items
 
-Perform the following steps as soon as possible:
+Complete the following steps to begin onboarding:
 
 1. **Create TWO new wallets (primary + backup):**
     - Generate **two** new externally owned account wallets. Refer to the
@@ -31,16 +33,16 @@ Perform the following steps as soon as possible:
    - Minimum 1 ETH per wallet (EigenLayer recommendation).
    - Transfer to both operator wallets.
 
-   Specific stake amounts will be calculated during [Step 2](./onboard/stake-tokens.md).
+   Specific stake amounts are calculated during [Step 2](./onboard/stake-tokens.md).
 
 3. **Register BOTH wallets with EigenLayer:**
    - Access the [DIN app](https://app.din.build).
-   - Complete only [Step 1](./onboard/register-operator.md) with your **primary wallet**.
-   - Complete only [Step 1](./onboard/register-operator.md) again with your **backup wallet**.
-   - This ensures both wallets will be ready by mainnet launch in case you need to switch.
+   - Complete [Step 1](./onboard/register-operator.md) with your **primary wallet**.
+   - Complete [Step 1](./onboard/register-operator.md) again with your **backup wallet**.
+   - This ensures both wallets are ready for activation.
 
    :::note
-   Only Step 1 (EigenLayer registration) is needed now. Steps 2-5 will be completed after the DIN contract is deployed on mainnet.
+   Begin with Step 1 (EigenLayer registration) to start the 17-day activation period. Complete Steps 2-5 while waiting for activation.
    :::
 
 ## Configuration steps
@@ -130,7 +132,7 @@ assets and accept slashing risk.
 
 - **Not creating a backup wallet**
 
-    _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (e.g., transaction
+    _Fix_: Create and register **two** wallets with EigenLayer. If your primary wallet encounters issues during onboarding (for example, transaction
     failures, wrong configuration), having a backup wallet decreases the risk of wasting the 17-day activation period.
 
 - **Insufficient ETH for gas**
