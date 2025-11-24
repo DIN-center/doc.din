@@ -41,12 +41,14 @@ Onboarding an operator on mainnet involves a 17-day activation period, so it's i
 
 ### Current strategies
 
-- stETH (Lido Staked ETH)
-- WETH (Wrapped ETH)
+DIN launched its mainnet AVS on November 17, 2025, with support for:
 
-:::note
-Additional strategies will be available after launch.
-:::
+- stETH (Lido Staked ETH)
+
+Additional strategies coming soon:
+
+- Native staked ETH
+- EIGEN token
 
 ## Technical requirements
 
