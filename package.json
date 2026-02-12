@@ -20,14 +20,18 @@
     "lint:js": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
     "lint:style": "stylelint \"**/*.css\"",
     "lint:fix": "npm run lint:js -- --fix",
-    "format": "prettier --write '{blog,docs,src,static}/**/*.{md,mdx,ts,js,tsx,jsx,json}'"
+    "format": "prettier --write '{blog,docs,src,static}/**/*.{md,mdx,ts,js,tsx,jsx,json}'",
+    "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.{ts,js,jsx,tsx}": "npm run lint:fix",
-    "**/*.{ts,tsx}": "npm run typecheck-staged",
-    "**/*.css": "npm run lint:style",
-    "**/*.{md,mdx}": "npm run lint:spelling",
-    "**/*.{md,mdx,ts,js,tsx,jsx,json}": "npm run format"
+    "src/**/*.{ts,js,jsx,tsx}": [
+      "eslint --ext js,jsx,ts,tsx --max-warnings=0 --fix",
+      "prettier --write"
+    ],
+    "**/*.{ts,tsx}": "tsc-files --noEmit",
+    "**/*.css": "stylelint",
+    "**/*.{md,mdx}": "prettier --write",
+    "**/*.json": "prettier --write"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -67,6 +71,9 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
     "semantic-release": "^24.2.9",
     "stylelint": "^15.0.0 ",
     "stylelint-config-standard": "^34.0.0",
