@@ -31,6 +31,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.SDK_REPO_TOKEN }}
 
       - name: Create Vercel output structure
         run: |
