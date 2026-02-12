@@ -1,7 +1,40 @@
 // @ts-check
 
+const fs = require("fs");
+const path = require("path");
+
+// Load the auto-generated TypeDoc sidebar (created by docusaurus-plugin-typedoc).
+const typedocSidebarPath = path.join(__dirname, "docs", "sdk", "api", "typedoc-sidebar.cjs");
+const typedocSidebarItems = fs.existsSync(typedocSidebarPath)
+  ? require(typedocSidebarPath)
+  : [];
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  sdkSidebar: [
+    {
+      type: "doc",
+      id: "sdk/index",
+      label: "Overview",
+    },
+    {
+      type: "category",
+      label: "How to",
+      collapsed: false,
+      items: [
+        "sdk/how-to/getting-started",
+        "sdk/how-to/documentation",
+        "sdk/how-to/error-handling",
+      ],
+    },
+    {
+      type: "category",
+      label: "API reference",
+      link: { type: "doc", id: "sdk/api/index" },
+      collapsed: true,
+      items: typedocSidebarItems,
+    },
+  ],
   docSidebar: [
     {
       type: "category",
