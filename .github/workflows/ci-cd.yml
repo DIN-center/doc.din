@@ -20,12 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Checkout SDK repo (for TypeDoc API generation)
-        uses: actions/checkout@v4
-        with:
-          repository: DIN-center/din-sdk-ts
-          token: ${{ secrets.SDK_REPO_TOKEN }}
-          path: ../din/din-sdk-ts
+      - name: Clone SDK repo (for TypeDoc API generation)
+        run: git clone --depth 1 https://x-access-token:${{ secrets.SDK_REPO_TOKEN }}@github.com/DIN-center/din-sdk-ts.git ../../din/din-sdk-ts
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,7 +31,7 @@ jobs:
 
       - name: Install SDK dependencies (required by TypeDoc)
         run: npm ci
-        working-directory: ../din/din-sdk-ts
+        working-directory: ../../din/din-sdk-ts
 
       - name: Install dependencies
         run: npm ci
