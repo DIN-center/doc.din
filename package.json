@@ -45,6 +45,7 @@
     "@mermaid-js/layout-elk": "^0.1.9",
     "clsx": "^1.2.1",
     "docusaurus-plugin-llms": "^0.2.2",
+    "docusaurus-plugin-remote-content": "^4.0.0",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -66,11 +67,15 @@
     "@typescript-eslint/parser": "^6.13.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "docusaurus-plugin-typedoc": "^1.4.2",
+    "dotenv": "^17.2.4",
     "eslint-plugin-react": "^7.33.2",
     "semantic-release": "^24.0.0",
     "stylelint": "^15.0.0 ",
     "stylelint-config-standard": "^34.0.0",
     "tsc-files": "^1.1.4",
+    "typedoc": "^0.28.16",
+    "typedoc-plugin-markdown": "^4.10.0",
     "typescript": "~5.3.3"
   },
   "browserslist": {

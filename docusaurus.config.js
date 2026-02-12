@@ -1,5 +1,5 @@
+require("dotenv").config();
 const { themes } = require("prism-react-renderer");
-const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
 const isDev = process.env.NODE_ENV === "development";
@@ -110,6 +110,12 @@ const config = {
             position: "left",
             label: "Documentation",
           },
+          {
+            type: "docSidebar",
+            sidebarId: "sdkSidebar",
+            position: "left",
+            label: "SDK",
+          },
 //          {
 //            type: "docSidebar",
 //            sidebarId: "apiSidebar",
@@ -194,7 +200,7 @@ const config = {
         copyright: `© ${new Date().getFullYear()} Consensys, Inc.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
         magicComments: [
           {
@@ -244,6 +250,116 @@ const config = {
       },
     }),
   plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['../../din/din-sdk-ts/src/index.ts'],
+        tsconfig: '../../din/din-sdk-ts/tsconfig.json',
+        out: 'docs/sdk/api',
+        sidebar: {
+          autoConfiguration: true,
+          pretty: true,
+        },
+        readme: 'none',
+        name: 'DIN SDK',
+        disableSources: true,
+        categorizeByGroup: true,
+        sort: ['source-order'],
+        cleanOutputDir: true,
+        useCodeBlocks: false,
+        parametersFormat: 'htmlTable',
+        interfacePropertiesFormat: 'htmlTable',
+        classPropertiesFormat: 'htmlTable',
+        enumMembersFormat: 'htmlTable',
+        typeDeclarationFormat: 'htmlTable',
+        propertyMembersFormat: 'htmlTable',
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "sdk-how-to",
+        sourceBaseUrl:
+          "https://raw.githubusercontent.com/DIN-center/din-sdk-ts/main/docs/",
+        outDir: "docs/sdk/how-to",
+        documents: [
+          "GETTING_STARTED.md",
+          "DOCS.md",
+          "ERROR_HANDLING.md",
+        ],
+        performCleanup: true,
+        requestConfig: {
+          headers: {
+            ...(process.env.GITHUB_TOKEN && {
+              Authorization: `token ${process.env.GITHUB_TOKEN}`,
+            }),
+          },
+        },
+        modifyContent(filename, content) {
+          const meta = {
+            "GETTING_STARTED.md": {
+              slug: "getting-started",
+              title: "Getting started",
+              position: 1,
+            },
+            "DOCS.md": {
+              slug: "documentation",
+              title: "SDK documentation",
+              position: 2,
+            },
+            "ERROR_HANDLING.md": {
+              slug: "error-handling",
+              title: "Error handling",
+              position: 3,
+            },
+          };
+
+          const info = meta[filename];
+          if (!info) return undefined;
+
+          // Rewrite relative links: known docs → local slugs, others → GitHub.
+          const sdkGitHub =
+            "https://github.com/DIN-center/din-sdk-ts/blob/main/docs";
+          const linkMap = {
+            "./GETTING_STARTED.md": "./getting-started.md",
+            "./DOCS.md": "./documentation.md",
+            "./ERROR_HANDLING.md": "./error-handling.md",
+          };
+
+          let body = content;
+          // Rewrite known links.
+          for (const [from, to] of Object.entries(linkMap)) {
+            body = body.split(from).join(to);
+          }
+          // Rewrite remaining relative .md links to GitHub.
+          body = body.replace(
+            /\]\(\.\/([\w.-]+\.md)\)/g,
+            `](${sdkGitHub}/$1)`
+          );
+          // Also handle docs/ prefix references (e.g. docs/ERROR_HANDLING.md).
+          body = body.replace(
+            /\]\(docs\/([\w.-]+\.md)\)/g,
+            `](${sdkGitHub}/$1)`
+          );
+
+          // Strip the first H1 heading (Docusaurus uses frontmatter title).
+          body = body.replace(/^# .+\n+/, "");
+
+          const frontmatter = [
+            "---",
+            `title: "${info.title}"`,
+            `sidebar_position: ${info.position}`,
+            "---",
+            "",
+          ].join("\n");
+
+          return {
+            filename: `${info.slug}.md`,
+            content: `${frontmatter}${body}`,
+          };
+        },
+      },
+    ],
     [
       "@docusaurus/plugin-google-gtag",
       {
